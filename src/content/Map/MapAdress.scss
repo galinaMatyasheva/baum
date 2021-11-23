@@ -1,0 +1,47 @@
+.address-container-info {
+  .address-content {
+    width: 85%;
+    margin: 0 auto;
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  .address-links {
+    display: flex;
+
+    .address-link {
+      &:first-child {
+        margin-right: 1rem;
+        background-color: #09ba87;
+        border: 1px solid #09ba87;
+
+        a {
+          color: #fff;
+          font-size: 1rem;
+        }
+      }
+
+      &:last-child {
+        padding: 0.5rem 4rem;
+
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+  .address-info {
+    width: 50%;
+
+    &:first-child {
+      padding: 8% 0;
+    }
+
+    a {
+      color: #000;
+      font-size: 14px;
+    }
+  }
+}

@@ -6,7 +6,7 @@
 
     .footer-top-links {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: baseline;
       width: 50%;
       margin: 0 auto;
@@ -24,7 +24,7 @@
     }
 
     .footer-top-contacts {
-      width: 50%;
+      // width: 50%;
       padding-left: 22%;
 
       .footer-contacts {

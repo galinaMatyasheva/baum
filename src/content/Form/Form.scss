@@ -1,0 +1,80 @@
+.form-container-info {
+  background-color: #474f56;
+
+  h2 {
+    color: #fff;
+  }
+
+  .form-content {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .form-img {
+    background-image: url("/assets/shd.png");
+  }
+
+  .form-info {
+    a {
+      color: #000;
+      font-size: 14px;
+    }
+  }
+
+  .form-submit-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding-top: 2%;
+
+    .form-checkbox {
+      display: flex;
+      align-items: center;
+
+      .MuiTypography-body1 {
+        font-size: 0.8rem;
+        width: 65%;
+      }
+
+      .MuiSvgIcon-root {
+        font-size: 35px;
+        color: #fff;
+      }
+    }
+
+    .MuiButton-outlined {
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 0.5rem 2rem;
+      text-transform: capitalize;
+    }
+  }
+
+  .textfield {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    width: 100%;
+
+    .MuiFormControl-root {
+      width: 48%;
+    }
+  }
+
+  textarea {
+    padding: 3%;
+    resize: none;
+    outline: none;
+  }
+
+  .MuiOutlinedInput-input {
+    background-color: #fff;
+  }
+
+  .PrivateNotchedOutline-root-1 {
+    border-radius: initial;
+    outline: none;
+    border: none;
+  }
+}

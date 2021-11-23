@@ -1,0 +1,125 @@
+.about-us-container {
+  .about-us-container-info {
+    .about-us-content {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .about-us-img {
+      background-image: url("/assets/shd.png");
+    }
+
+    .about-us-links {
+      display: flex;
+
+      .about-us-link {
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    .about-us-info {
+      a {
+        color: #000;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .about-us-goal-container-info {
+    h2 {
+      text-transform: uppercase;
+      color: #acacac;
+    }
+
+    .info-text {
+      span {
+        font-weight: bold;
+      }
+
+      li {
+        list-style-type: none;
+        margin-bottom: 1.5rem;
+
+        &:before {
+          content: "— ";
+        }
+
+        &:first-child {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    .about-us-goal-text {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .about-us-goal-img {
+      background-image: url("/assets/shd.png");
+    }
+
+    .goal-link {
+      width: 130px;
+    }
+
+    .about-us-goal-info {
+      a {
+        color: #000;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.statistics-container-info {
+  background-color: #e8f5ff;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .statistics-info {
+    width: 100%;
+
+    .statistics-column {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      .statistics-block-info {
+        background-color: #fff;
+        width: 22%;
+        text-align: center;
+        font-weight: bold;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          &:last-child {
+            padding-bottom: 2rem;
+          }
+        }
+
+        .statistics-digitals {
+          font-size: 4rem;
+          color: #6da2c7;
+        }
+
+        .MuiSvgIcon-root {
+          font-size: 4rem;
+          color: #6da2c7;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.baum-inform-create-container {
+  display: flex;
+
+  .baum-inform-create-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .baum-inform-create-content {
+    background: #000;
+    color: #fff;
+    width: 50%;
+    padding: 5%;
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .main-info-link {
+      color: #fff;
+    }
+  }
+  .baum-inform-create-link {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
