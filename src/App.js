@@ -13,30 +13,29 @@ import BaumUds from "./components/Storage/BaumUds/BaumUds";
 import Team from "./components/Team/Team";
 
 const App = () => {
-
   return (
     <div className="app-container">
-      <Header/> 
-     <Routes>
-       <Route path="/" element={<Main/>}/>
-       <Route path='/about-us' element={<AboutUs/>}/>
-       <Route path='/our-team' element={<Team/>}/>
-       <Route path='/news' element={<News/>}/>
-       <Route path="/contact-us" element={<ContactUs/>}/>
-       <Route path="/baum-uds" element={<BaumUds/>}/>
-       <Route path="/baum-swarm" element={<BaumSwarm/>}/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-       <Route/>
-     </Routes>
-     <Footer/>
+      <Header />
+      <Routes>
+        <Route path="/main" element={<Main />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/our-team" element={<Team />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/baum-uds" element={<BaumUds />} />
+        <Route path="/baum-swarm" element={<BaumSwarm />} />
+        <Route path="/baum-uds/:function" element />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+        <Route />
+      </Routes>
+      <Footer />
     </div>
   );
 };

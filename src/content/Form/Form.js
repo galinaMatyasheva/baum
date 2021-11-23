@@ -56,7 +56,7 @@ const Form = () => {
                 />
               </FormGroup>
             </div>
-            <Button type="submit" variant="outlined">
+            <Button type="submit" className="btn btn-form">
               Отправить
             </Button>
           </div>

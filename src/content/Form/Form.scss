@@ -11,7 +11,7 @@
   }
 
   .form-img {
-    background-image: url("/assets/shd.png");
+    background-image: url("/assets/form/form.png");
   }
 
   .form-info {
@@ -33,7 +33,7 @@
       align-items: center;
 
       .MuiTypography-body1 {
-        font-size: 0.8rem;
+        font-size: 1.4rem;
         width: 65%;
       }
 
@@ -66,6 +66,7 @@
     padding: 3%;
     resize: none;
     outline: none;
+    font-size: 1.25rem;
   }
 
   .MuiOutlinedInput-input {

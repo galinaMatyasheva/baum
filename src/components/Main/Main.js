@@ -1,5 +1,6 @@
 import React from "react";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { Button } from "@material-ui/core";
 
 import Form from "../../content/Form/Form";
 import MapAdress from "../../content/Map/MapAdress";
@@ -7,6 +8,8 @@ import TeamInfo from "../../content/TeamInfo/TeamInfo";
 import logo from "../../assets/logo.svg";
 import "./Main.scss";
 import BaumInformCreate from "../../content/BaumInformCreate/BaumInformCreate";
+
+import cubeImg from "../../assets/main/cube.png";
 
 const Main = () => {
   return (
@@ -18,7 +21,9 @@ const Main = () => {
               <img src={logo} alt="logo" />
             </div>
             <p>Надёжное хранение данных</p>
-            <button>Обратная связь</button>
+            <Button variant="contained" className="btn btn-dark">
+              Обратная связь
+            </Button>
           </div>
         </div>
         <div className="main-feedback-img feedback-info"></div>
@@ -37,14 +42,13 @@ const Main = () => {
               самых требовательных средств хранения данных.
             </p>
             <div className="shd-links">
-              <div className="main-container-link shd-link">
-                <a href="">BAUM UDS (scale up)</a>
-                <ArrowRightAltIcon />
-              </div>
-              <div className="main-container-link shd-link">
-                <a href="">BAUM SWARM (scale out)</a>
-                <ArrowRightAltIcon />
-              </div>
+              <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+                BAUM UDS (scale up)
+              </Button>
+
+              <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+                BAUM SWARM (scale out)
+              </Button>
             </div>
           </div>
         </div>
@@ -53,18 +57,24 @@ const Main = () => {
 
       <div className="store-info-about">
         <div className="store-info info-about-left">
-          <h3>Больше вариантов хранения, больше вариантов оплаты</h3>
-          <p className="info-text">
-            Выберите AUM SWARM и размещайте данные именно там.ю где они вам
-            нужны: в собственном ЦОД, в обычном или гиблидном облаке. Теперь
-            доступно по подписке с оплатой по мере использования ресурсов.
-          </p>
-          <div className="store-info-link">
-            <a href="">Узнать подробнее</a>
-            <ArrowRightAltIcon />
+          <div className="store-info-text">
+            <h3>Больше вариантов хранения, больше вариантов оплаты</h3>
+            <p className="info-text">
+              Выберите BAUM SWARM и размещайте данные именно там, где они вам
+              нужны: в собственном ЦОД, в обычном или гибридном облаке. Теперь
+              доступно по подписке с оплатой по мере использования ресурсов.
+            </p>
+            <Button
+              className="btn btn-outlined-light"
+              endIcon={<ArrowRightAltIcon />}
+            >
+              Узнать подробнее
+            </Button>
           </div>
         </div>
-        <div className="store-info-right"></div>
+        <div className="store-info-right">
+          <img src={cubeImg} alt="img" />
+        </div>
       </div>
 
       <div className="ai-container-info">
@@ -83,10 +93,9 @@ const Main = () => {
               предобученные модели искусственного интеллекта без необходимости
               прямого кодирования по принципу drag-and-drop.
             </p>
-            <div className="main-container-link ai-link">
-              <a href="">Читать</a>
-              <ArrowRightAltIcon />
-            </div>
+            <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+              Читать
+            </Button>
           </div>
         </div>
       </div>
@@ -102,14 +111,12 @@ const Main = () => {
               рады обсудить ваши пожелания и идеи.
             </p>
             <div className="community-links">
-              <div className="main-container-link community-link">
-                <a href="">Читать</a>
-                <ArrowRightAltIcon />
-              </div>
-              <div className="main-container-link community-link">
-                <a href="">Анкета</a>
-                <ArrowRightAltIcon />
-              </div>
+              <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+                Читать
+              </Button>
+              <Button className="btn btn-dark" endIcon={<ArrowRightAltIcon />}>
+                Анкета
+              </Button>
             </div>
           </div>
         </div>

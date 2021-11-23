@@ -9,7 +9,7 @@ body {
 
 @font-face {
   font-family: "HelveticaNeueCyr", sans-serif;
-  src: url('/fonts/helveticaneuecyr_roman.otf');
+  src: url("/fonts/helveticaneuecyr_roman.otf");
 }
 
 .app-container {
@@ -25,6 +25,22 @@ body {
     margin: 0 auto;
   }
 
+  ::-webkit-input-placeholder {
+    color: #b4b4b4;
+  }
+
+  :-moz-placeholder {
+    color: #b4b4b4;
+  }
+
+  ::-moz-placeholder {
+    color: #b4b4b4;
+  }
+
+  :-ms-input-placeholder {
+    color: #b4b4b4;
+  }
+
   .MuiSlider-thumb:not(.MuiSlider-active) {
     transition: left 1s ease-in;
   }
@@ -37,14 +53,14 @@ body {
     display: none;
   }
 
-  .MuiButton-text {
-    text-transform: capitalize;
-    padding: 6px 10px;
-    white-space: nowrap;
-
+  .MuiButtonBase-root {
     span {
-      font-size: 0.9rem;
+      font-size: 1.4rem;
     }
+  }
+
+  .MuiButton-root {
+    padding: 0.8rem 4rem;
   }
 
   .MuiOutlinedInput-input {
@@ -57,24 +73,22 @@ body {
     color: #fff;
     padding: 0.5rem 2rem;
     text-transform: capitalize;
-    font-size: 1.25rem;
     width: 80%;
   }
 
   a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .info-text {
-    margin-bottom: 1.5rem;
-    width: 77%;
+    margin-bottom: 2rem;
     line-height: 1.5;
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3.125rem;
     margin-bottom: 3rem;
   }
 
@@ -84,22 +98,90 @@ body {
   }
 
   h3 {
-    font-size: 1.1rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
   h4 {
     padding-top: 1rem;
     padding-bottom: 0.4rem;
+    font-size: 1.5rem;
   }
 
   h5 {
+    font-size: 1.5rem;
     padding-top: 2rem;
     padding-bottom: 1.5rem;
   }
 
+  .title-dark {
+    background-color: #000;
+    color: #fff;
+    padding: 7% 0;
+    text-align: center;
+  }
+
   p {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    box-shadow: none;
+    text-transform: none;
+    border-radius: 0;
+    transition: 0.7s;
+    white-space: nowrap;
+  }
+
+  .btn-dark {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .btn-light {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  .btn-outlined-light {
+    color: #fff;
+    padding: 0;
+  }
+
+  .btn-green {
+    background-color: #12b886;
+    border: 1px solid #12b886;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #12b886;
+      color: #12b886;
+    }
+  }
+
+  .btn-form {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+      background-color: #12b886;
+      border: 1px solid #12b886;
+      color: #fff;
+    }
   }
 
   .shd-link,
@@ -124,18 +206,18 @@ body {
     display: flex;
 
     .feedback-info,
-    .shd-info,
-    .ai-info,
-    .community-info,
     .about-us-info,
+    .community-info,
     .about-us-goal-info,
-    .baum-uds-info {
+    .baum-uds-info,
+    .shd-info {
       width: 50%;
       padding: 10% 0;
     }
 
     .team-info,
-    .form-info {
+    .form-info,
+    .ai-info {
       padding: 5% 0;
       width: 50%;
     }
@@ -149,7 +231,8 @@ body {
   .main-form-img,
   .about-us-img .about-us-goal-img,
   .baum-uds-img,
-  .baum-uds-pages-img {
+  .baum-uds-pages-img,
+  .form-img {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;

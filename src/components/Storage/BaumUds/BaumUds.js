@@ -6,32 +6,30 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  Checkbox,
-  FormGroup,
-  FormControlLabel,
-  TextField,
-  TextareaAutosize,
 } from "@material-ui/core";
 
 import "./BaumUds.scss";
 import BaumInformCreate from "../../../content/BaumInformCreate/BaumInformCreate";
 import table from "../../../assets/table.png";
+import ApplicationForm from "../../../content/ApplicationForm/ApplicationForm";
 
 const BaumUds = () => {
   return (
     <section className="baum-uds-container">
       <div className="baum-uds-container-info">
         <div className="baum-uds-info">
-          <div className="baum-uds-content">
-            <h2>BAUM UDS (scale up)</h2>
-            <p className="info-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <div className="baum-uds-link main-container-link">
-              <a href="">Оставить заявку</a>
+          <div>
+            <h1 className="title-dark">BAUM UDS (scale up)</h1>
+            <div className="baum-uds-content">
+              <p className="info-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <Button className="btn-dark" variant="contained">
+                Оставить заявку
+              </Button>
             </div>
           </div>
         </div>
@@ -111,57 +109,7 @@ const BaumUds = () => {
         </Card>
       </div>
 
-      <div className="application-form-container-info">
-        <div className="application-form-img"></div>
-        <div className="application-form-info">
-          <form className="application-form-content">
-            <h2>Оставьте заявку и мы с вами свяжемся!</h2>
-            <div className="application-form-content-info">
-              <div className="application-form-textfields">
-                <div className="application-form-textfield">
-                  <TextField
-                    name="name"
-                    placeholder="Ваше имя"
-                    variant="outlined"
-                    type="text"
-                  />
-                  <TextField
-                    name="firm-name"
-                    placeholder="Название организации"
-                    variant="outlined"
-                    type="text"
-                  />
-                </div>
-                <div className="application-form-textfield">
-                  <TextField
-                    name="phone"
-                    placeholder="Телефон"
-                    variant="outlined"
-                  />
-                  <TextField
-                    name="mail"
-                    placeholder="E-mail"
-                    variant="outlined"
-                  />
-                </div>
-              </div>
-              <div className="application-form-submit-info">
-                <div className="application-form-checkbox">
-                  <FormGroup>
-                    <FormControlLabel
-                      control={<Checkbox defaultChecked />}
-                      label="Даю согласие на обработку персональных данных"
-                    />
-                  </FormGroup>
-                </div>
-                <Button type="submit" variant="outlined">
-                  Отправить
-                </Button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+      <ApplicationForm />
     </section>
   );
 };

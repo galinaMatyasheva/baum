@@ -10,7 +10,7 @@
   .MuiSlider-thumb {
     display: none;
   }
-  
+
   .team-content {
     width: 85%;
     margin: 0 auto;
@@ -39,7 +39,15 @@
       text-align: center;
       margin-left: 1rem;
       margin-right: 1rem;
+
+      p {
+        font-size: 1.2rem;
+      }
     }
+  }
+
+  .MuiIconButton-root {
+    color: #000;
   }
 
   .gallery-slider {

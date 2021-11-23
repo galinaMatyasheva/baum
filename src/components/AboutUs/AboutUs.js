@@ -11,15 +11,17 @@ const AboutUs = () => {
     <section className="about-us-container">
       <div className="about-us-container-info">
         <div className="about-us-info">
-          <div className="about-us-content">
-            <h1>О нас</h1>
-            <p className="info-text">
-              <span>BAUM Inform</span> – центр компетенций по разработке,
-              производству и продвижению российских продуктов и услуг в сфере
-              IT-технологий: система хранения данных (СХД), аналитика Big DATA,
-              готовые модули Internet of things, цифровая безопасность,
-              искусственный интеллект.
-            </p>
+          <div>
+            <h1 className="title-dark">О нас</h1>
+            <div className="about-us-content">
+              <p className="info-text">
+                BAUM Inform – центр компетенций по разработке, производству и
+                продвижению российских продуктов и услуг в сфере IT-технологий:
+                система хранения данных (СХД), аналитика Big DATA, готовые
+                модули Internet of things, цифровая безопасность, искусственный
+                интеллект.
+              </p>
+            </div>
           </div>
         </div>
         <div className="about-us-img about-us-info"></div>

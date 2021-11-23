@@ -1,0 +1,73 @@
+.application-form-container-info {
+  background-color: #474f56;
+  display: flex;
+
+  h2 {
+    color: #fff;
+  }
+
+  .application-form-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .application-form-img {
+    width: 33.33%;
+    background-image: url("/assets/shd.png");
+  }
+
+  .application-form-info {
+    width: 67.33%;
+    padding: 5% 0;
+
+    a {
+      color: #000;
+      font-size: 14px;
+    }
+
+    .application-form-content-info {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .application-form-submit-info {
+    color: #fff;
+
+    .application-form-checkbox {
+      display: flex;
+      align-items: center;
+
+      .MuiTypography-body1 {
+        font-size: 0.8rem;
+        width: 65%;
+      }
+
+      .MuiSvgIcon-root {
+        font-size: 35px;
+        color: #fff;
+      }
+    }
+  }
+
+  .application-form-textfields {
+    margin-right: 2rem;
+    width: 100%;
+  }
+
+  .application-form-textfield {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+
+    .MuiFormControl-root {
+      width: 48%;
+    }
+  }
+
+  .PrivateNotchedOutline-root-1 {
+    border-radius: initial;
+    outline: none;
+    border: none;
+  }
+}

@@ -11,27 +11,17 @@
   .address-links {
     display: flex;
 
-    .address-link {
+    .btn {
+      width: 50%;
+    }
+
+    .btn {
       &:first-child {
-        margin-right: 1rem;
-        background-color: #09ba87;
-        border: 1px solid #09ba87;
-
-        a {
-          color: #fff;
-          font-size: 1rem;
-        }
-      }
-
-      &:last-child {
-        padding: 0.5rem 4rem;
-
-        a {
-          color: #000;
-        }
+        margin-right: 2rem;
       }
     }
   }
+  
   .address-info {
     width: 50%;
 

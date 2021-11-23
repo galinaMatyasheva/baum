@@ -4,7 +4,7 @@ import Form from "../../content/Form/Form";
 const ContactUs = () => {
   return (
     <section className="contact-us-container">
-      <Form/>
+      <Form />
     </section>
   );
 };

@@ -60,7 +60,7 @@ const Header = () => {
     <header className="header-container">
       <nav className="navbar">
         <div className="img">
-          <Link to="/">
+          <Link to="/main">
             <img src={logo} alt="logo" />
           </Link>
         </div>
@@ -90,11 +90,19 @@ const Header = () => {
             <div className="navbar-menu-bottom-links">
               <div className="submenu">
                 <Button
-                 className={!openLinkStorage ? "button" : "button-active"}
+                  className={!openLinkStorage ? "button" : "button-active"}
                   ref={anchorStorageRef}
                   aria-haspopup="true"
                   onClick={handleClickOpenLinkStorage}
-                  endIcon={!openLinkStorage ? <KeyboardArrowDownIcon /> : <KeyboardArrowDownIcon style={{ transform:'rotate(180deg)'}}/>}
+                  endIcon={
+                    !openLinkStorage ? (
+                      <KeyboardArrowDownIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon
+                        style={{ transform: "rotate(180deg)" }}
+                      />
+                    )
+                  }
                 >
                   Storage
                 </Button>
@@ -120,11 +128,19 @@ const Header = () => {
 
               <div className="submenu">
                 <Button
-                 className={!openLinkAI ? "button" : "button-active"}
+                  className={!openLinkAI ? "button" : "button-active"}
                   ref={anchorAIRef}
                   aria-haspopup="true"
                   onClick={handleClickOpenLinkAI}
-                  endIcon={!openLinkAI ? <KeyboardArrowDownIcon /> : <KeyboardArrowDownIcon style={{ transform:'rotate(180deg)'}}/>}
+                  endIcon={
+                    !openLinkAI ? (
+                      <KeyboardArrowDownIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon
+                        style={{ transform: "rotate(180deg)" }}
+                      />
+                    )
+                  }
                 >
                   AI
                 </Button>
@@ -135,13 +151,11 @@ const Header = () => {
                   open={openLinkAI}
                   onClose={handleCloseLinkAI}
                   anchorEl={anchorAIRef.current}
-                   anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
                   transformOrigin={{ vertical: "top", horizontal: "center" }}
                   getContentAnchorEl={null}
                 >
-                  <MenuItem onClick={handleCloseLinkAI}>
-                    Платформа
-                  </MenuItem>
+                  <MenuItem onClick={handleCloseLinkAI}>Платформа</MenuItem>
                   <MenuItem onClick={handleCloseLinkAI}>
                     Решения для баз знаний
                   </MenuItem>
@@ -152,11 +166,19 @@ const Header = () => {
               </div>
               <div className="submenu">
                 <Button
-                 className={!openLinkCommunity ? "button" : "button-active"}
+                  className={!openLinkCommunity ? "button" : "button-active"}
                   ref={anchorCommunityRef}
                   aria-haspopup="true"
                   onClick={handleClickOpenLinkCommunity}
-                  endIcon={!openLinkCommunity ? <KeyboardArrowDownIcon /> : <KeyboardArrowDownIcon style={{ transform:'rotate(180deg)'}}/>}
+                  endIcon={
+                    !openLinkCommunity ? (
+                      <KeyboardArrowDownIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon
+                        style={{ transform: "rotate(180deg)" }}
+                      />
+                    )
+                  }
                 >
                   Community
                 </Button>
@@ -183,7 +205,7 @@ const Header = () => {
                 </Menu>
               </div>
               <div className="submenu">
-                <Button>Обучение</Button>
+                <Button className="btn-padding">Обучение</Button>
               </div>
               <div className="submenu">
                 <Button
@@ -191,7 +213,15 @@ const Header = () => {
                   ref={anchorCompanyRef}
                   aria-haspopup="true"
                   onClick={handleClickOpenLinkCompany}
-                  endIcon={!openLinkCompany ? <KeyboardArrowDownIcon /> : <KeyboardArrowDownIcon style={{ transform:'rotate(180deg)'}}/>}
+                  endIcon={
+                    !openLinkCompany ? (
+                      <KeyboardArrowDownIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon
+                        style={{ transform: "rotate(180deg)" }}
+                      />
+                    )
+                  }
                 >
                   О компании
                 </Button>

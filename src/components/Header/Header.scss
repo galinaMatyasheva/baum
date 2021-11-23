@@ -2,6 +2,23 @@ header {
   border-bottom: 1px solid #eff1f4;
 }
 
+.MuiPopover-root {
+  a {
+    text-decoration: none;
+    color: #000;
+    
+    &:hover {
+      color: #bababa;
+    }
+  }
+
+  li {
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -23,7 +40,7 @@ header {
     padding: 0.5rem;
 
     a {
-      text-decoration: none;
+      text-decoration: none !important;
       font-size: 0.9rem;
       color: black;
       white-space: nowrap;
@@ -55,6 +72,7 @@ header {
 
       a {
         color: #bababa;
+        font-size: 1rem;
       }
     }
   }
@@ -73,6 +91,27 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .MuiButtonBase-root {
+          span {
+            font-size: 1rem;
+            padding-right: 0.5rem;
+          }
+        }
+
+        .MuiButton-root {
+          padding: 0;
+        }
+
+        button {
+          text-transform: none;
+        }
+
+        .btn-padding {
+          span {
+            padding-right: 1rem;
+          }
+        }
 
         .button {
           color: #000;
