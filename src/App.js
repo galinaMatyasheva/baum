@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.scss";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Community from "./components/Community/Community";
 import ContactUs from "./components/ContactUs/ContactUs";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -11,6 +12,7 @@ import News from "./components/News/News";
 import BaumSwarm from "./components/Storage/BaumSwarm/BaumSwarm";
 import BaumUds from "./components/Storage/BaumUds/BaumUds";
 import Team from "./components/Team/Team";
+import Vacancies from "./components/Vacancies/Vacancies";
 
 const App = () => {
   return (
@@ -24,8 +26,8 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/baum-uds" element={<BaumUds />} />
         <Route path="/baum-swarm" element={<BaumSwarm />} />
-        <Route path="/baum-uds/:function" element />
-        <Route />
+        <Route path="/vacancies" element={<Vacancies/>} />
+        <Route path="/community" element={<Community/>}/>
         <Route />
         <Route />
         <Route />

@@ -2,7 +2,13 @@
   .MuiSlider-thumb:not(.MuiSlider-active) {
     transition: left 1s ease-in;
   }
+.makeStyles-itemWrapper-3 {
+  height: 350px !important;
+}
 
+.makeStyles-indicators-4 {
+  display: none;
+}
   .MuiSlider-track {
     transition: width 1s ease-in;
   }
@@ -34,11 +40,12 @@
   .team-gallery {
     display: flex;
     justify-content: center;
+    width: 100%;
 
     .team-gallery-items {
       text-align: center;
-      margin-left: 1rem;
-      margin-right: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
 
       p {
         font-size: 1.2rem;

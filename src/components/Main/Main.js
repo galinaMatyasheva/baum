@@ -100,9 +100,9 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="community-container-info">
-        <div className="main-community-content community-info">
-          <div className="community-content">
+      <div className="main-community-container-info">
+        <div className="main-community-content main-community-info">
+          <div className="main-community-content-info">
             <h2>Community</h2>
             <p className="info-text">
               Наша IT - команда строит модели, выбирает самые современные
@@ -120,7 +120,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="main-community-img community-info"></div>
+        <div className="main-community-img main-community-info"></div>
       </div>
 
       <TeamInfo />

@@ -16,7 +16,7 @@ const Form = () => {
       <div className="form-img form-info"></div>
       <div className="form-info">
         <form className="form-content">
-          <h2>Остались вопросы? Свяжитесь с нами!</h2>
+          <h1>Остались вопросы? Свяжитесь с нами!</h1>
           <div className="form-textfields">
             <div className="textfield">
               <TextField

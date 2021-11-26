@@ -1,7 +1,7 @@
 .form-container-info {
   background-color: #474f56;
 
-  h2 {
+  h1 {
     color: #fff;
   }
 
@@ -27,21 +27,6 @@
     align-items: center;
     color: #fff;
     padding-top: 2%;
-
-    .form-checkbox {
-      display: flex;
-      align-items: center;
-
-      .MuiTypography-body1 {
-        font-size: 1.4rem;
-        width: 65%;
-      }
-
-      .MuiSvgIcon-root {
-        font-size: 35px;
-        color: #fff;
-      }
-    }
 
     .MuiButton-outlined {
       border: 1px solid #fff;

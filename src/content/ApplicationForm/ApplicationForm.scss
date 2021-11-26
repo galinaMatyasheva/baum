@@ -2,18 +2,21 @@
   background-color: #474f56;
   display: flex;
 
-  h2 {
+  h1 {
     color: #fff;
   }
 
   .application-form-content {
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
   }
 
   .application-form-img {
     width: 33.33%;
-    background-image: url("/assets/shd.png");
+    background-size: cover;
+    background-position: 38%;
+    background-repeat: no-repeat;
+    background-image: url("/assets/form/application-form.png");
   }
 
   .application-form-info {
@@ -37,15 +40,10 @@
     .application-form-checkbox {
       display: flex;
       align-items: center;
+      margin-bottom: 1.5rem;
 
       .MuiTypography-body1 {
-        font-size: 0.8rem;
-        width: 65%;
-      }
-
-      .MuiSvgIcon-root {
-        font-size: 35px;
-        color: #fff;
+        width: 100%;
       }
     }
   }

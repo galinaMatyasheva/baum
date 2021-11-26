@@ -15,7 +15,7 @@ const ApplicationForm = () => {
       <div className="application-form-img"></div>
       <div className="application-form-info">
         <form className="application-form-content">
-          <h2>Оставьте заявку и мы с вами свяжемся!</h2>
+          <h1>Оставьте заявку и мы с вами свяжемся!</h1>
           <div className="application-form-content-info">
             <div className="application-form-textfields">
               <div className="application-form-textfield">
@@ -54,7 +54,7 @@ const ApplicationForm = () => {
                   />
                 </FormGroup>
               </div>
-              <Button type="submit" variant="outlined">
+              <Button type="submit" className="btn btn-form">
                 Отправить
               </Button>
             </div>

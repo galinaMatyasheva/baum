@@ -10,7 +10,9 @@ import {
 
 import "./BaumUds.scss";
 import BaumInformCreate from "../../../content/BaumInformCreate/BaumInformCreate";
-import table from "../../../assets/table.png";
+import baumCard1 from "../../../assets/baum-uds/baum-card1.png";
+import baumCard2 from "../../../assets/baum-uds/baum-card2.png";
+import baumCard3 from "../../../assets/baum-uds/baum-card3.png";
 import ApplicationForm from "../../../content/ApplicationForm/ApplicationForm";
 
 const BaumUds = () => {
@@ -19,7 +21,7 @@ const BaumUds = () => {
       <div className="baum-uds-container-info">
         <div className="baum-uds-info">
           <div>
-            <h1 className="title-dark">BAUM UDS (scale up)</h1>
+            <h1 className="title title-dark">BAUM UDS (scale up)</h1>
             <div className="baum-uds-content">
               <p className="info-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -42,18 +44,18 @@ const BaumUds = () => {
           <div className="baum-uds-pages-content">
             <div className="baum-uds-pages-links">
               <div className="baum-uds-pages-link">
-                <Button endIcon={<ArrowRightAltIcon />}>Функционал</Button>
+                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Функционал</Button>
               </div>
               <div className="baum-uds-pages-link">
-                <Button endIcon={<ArrowRightAltIcon />}>Модели</Button>
+                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Модели</Button>
               </div>
             </div>
             <div className="baum-uds-pages-links">
               <div className="baum-uds-pages-link">
-                <Button endIcon={<ArrowRightAltIcon />}>Документация</Button>
+                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Документация</Button>
               </div>
               <div className="baum-uds-pages-link">
-                <Button endIcon={<ArrowRightAltIcon />}>Поддержка</Button>
+                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Поддержка</Button>
               </div>
             </div>
           </div>
@@ -63,7 +65,7 @@ const BaumUds = () => {
 
       <div className="baum-uds-container-cards">
         <Card sx={{ maxWidth: 345 }}>
-          <CardMedia component="img" height="300" image={table} alt="img" />
+          <CardMedia component="img" height="300" image={baumCard1} alt="img" />
           <CardContent>
             <h3>BAUM на Эльбрусе</h3>
             <p>
@@ -72,13 +74,13 @@ const BaumUds = () => {
             </p>
           </CardContent>
           <CardActions>
-            <Button size="large" endIcon={<ArrowRightAltIcon />}>
+            <Button className="btn-background-none" size="large" endIcon={<ArrowRightAltIcon />}>
               Читать
             </Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 345 }}>
-          <CardMedia component="img" height="300" image={table} alt="img" />
+          <CardMedia component="img" height="300" image={baumCard2} alt="img" />
           <CardContent>
             <h3>Система предиктивной аналитики для ТЭЦ</h3>
             <p>
@@ -87,13 +89,13 @@ const BaumUds = () => {
             </p>
           </CardContent>
           <CardActions>
-            <Button size="large" endIcon={<ArrowRightAltIcon />}>
+            <Button className="btn-background-none" size="large" endIcon={<ArrowRightAltIcon />}>
               Читать
             </Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 345 }}>
-          <CardMedia component="img" height="300" image={table} alt="img" />
+          <CardMedia component="img" height="300" image={baumCard3} alt="img" />
           <CardContent>
             <h3>BAUM на "Российской неделе Высоких технологий"</h3>
             <p>
@@ -102,7 +104,7 @@ const BaumUds = () => {
             </p>
           </CardContent>
           <CardActions>
-            <Button size="large" endIcon={<ArrowRightAltIcon />}>
+            <Button className="btn-background-none" size="large" endIcon={<ArrowRightAltIcon />}>
               Читать
             </Button>
           </CardActions>

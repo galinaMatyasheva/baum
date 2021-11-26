@@ -10,7 +10,7 @@
     }
 
     .baum-uds-img {
-      background-image: url("/assets/shd.png");
+      background-image: url("/assets/baum-uds/baum-uds.png");
     }
 
     .baum-uds-link {
@@ -35,7 +35,7 @@
   }
 
   .baum-uds-pages-img {
-    background-image: url("/assets/shd.png");
+    background-image: url("/assets/baum-uds/baum-links.png");
   }
 
   .baum-uds-pages-content {
@@ -82,7 +82,7 @@
     }
 
     p {
-      height: 80px;
+      height: 75px;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -107,4 +107,9 @@
     box-shadow: none;
     padding-bottom: 1.5rem;
   }
+
+  .MuiCardContent-root {
+    padding: 3rem;
+  }
+
 }

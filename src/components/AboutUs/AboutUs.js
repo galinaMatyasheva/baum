@@ -1,9 +1,10 @@
 import React from "react";
-import Form from "../../content/Form/Form";
-import MapAdress from "../../content/Map/MapAdress";
 import DescriptionIcon from "@material-ui/icons/Description";
+import { Button } from "@material-ui/core";
 
 import Team from "../../content/TeamInfo/TeamInfo";
+import Form from "../../content/Form/Form";
+import MapAdress from "../../content/Map/MapAdress";
 import "./AboutUs.scss";
 
 const AboutUs = () => {
@@ -12,7 +13,7 @@ const AboutUs = () => {
       <div className="about-us-container-info">
         <div className="about-us-info">
           <div>
-            <h1 className="title-dark">О нас</h1>
+            <h1 className="title title-dark">О нас</h1>
             <div className="about-us-content">
               <p className="info-text">
                 BAUM Inform – центр компетенций по разработке, производству и
@@ -21,6 +22,7 @@ const AboutUs = () => {
                 модули Internet of things, цифровая безопасность, искусственный
                 интеллект.
               </p>
+              <Button className="btn btn-dark">Подробнее</Button>
             </div>
           </div>
         </div>

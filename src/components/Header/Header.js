@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Header.scss";
 import logo from "../../assets/logo.svg";
@@ -16,8 +16,17 @@ import logo from "../../assets/logo.svg";
 const Header = () => {
   const [openLinkStorage, setOpenLinkStorage] = useState(null);
   const [openLinkAI, setOpenLinkAI] = useState(null);
-  const [openLinkCommunity, setOpenLinkCommunity] = useState(null);
   const [openLinkCompany, setOpenLinkCompany] = useState(null);
+
+  const anchorStorageRef = useRef(null);
+  const anchorAIRef = useRef(null);
+  const anchorCompanyRef = useRef(null);
+
+  let navigate = useNavigate();
+
+  const handleClickCommunity = () => {
+    navigate('/community')
+  }
 
   const handleClickOpenLinkStorage = (e) => {
     setOpenLinkStorage(e.currentTarget);
@@ -25,10 +34,6 @@ const Header = () => {
 
   const handleClickOpenLinkAI = (e) => {
     setOpenLinkAI(e.currentTarget);
-  };
-
-  const handleClickOpenLinkCommunity = (e) => {
-    setOpenLinkCommunity(e.currentTarget);
   };
 
   const handleClickOpenLinkCompany = (e) => {
@@ -43,18 +48,9 @@ const Header = () => {
     setOpenLinkAI(null);
   };
 
-  const handleCloseLinkCommunity = () => {
-    setOpenLinkCommunity(null);
-  };
-
   const handleCloseLinkCompany = () => {
     setOpenLinkCompany(null);
   };
-
-  const anchorStorageRef = useRef(null);
-  const anchorAIRef = useRef(null);
-  const anchorCommunityRef = useRef(null);
-  const anchorCompanyRef = useRef(null);
 
   return (
     <header className="header-container">
@@ -165,47 +161,10 @@ const Header = () => {
                 </Menu>
               </div>
               <div className="submenu">
-                <Button
-                  className={!openLinkCommunity ? "button" : "button-active"}
-                  ref={anchorCommunityRef}
-                  aria-haspopup="true"
-                  onClick={handleClickOpenLinkCommunity}
-                  endIcon={
-                    !openLinkCommunity ? (
-                      <KeyboardArrowDownIcon />
-                    ) : (
-                      <KeyboardArrowDownIcon
-                        style={{ transform: "rotate(180deg)" }}
-                      />
-                    )
-                  }
-                >
-                  Community
-                </Button>
-                <Menu
-                  id="community"
-                  openLink={openLinkCommunity}
-                  keepMounted
-                  open={openLinkCommunity}
-                  onClose={handleCloseLinkCommunity}
-                  anchorEl={anchorCommunityRef.current}
-                  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-                  transformOrigin={{ vertical: "top", horizontal: "center" }}
-                  getContentAnchorEl={null}
-                >
-                  <MenuItem onClick={handleCloseLinkCommunity}>
-                    База знаний
-                  </MenuItem>
-                  <MenuItem onClick={handleCloseLinkCommunity}>
-                    Сообщество СХД и ИИ
-                  </MenuItem>
-                  <MenuItem onClick={handleCloseLinkCommunity}>
-                    Партнеры и дистрибьюторы
-                  </MenuItem>
-                </Menu>
+                <Button className="btn-padding" onClick={handleClickCommunity}>Community</Button>
               </div>
               <div className="submenu">
-                <Button className="btn-padding">Обучение</Button>
+                <Button className="btn-padding" >Обучение</Button>
               </div>
               <div className="submenu">
                 <Button
@@ -236,9 +195,10 @@ const Header = () => {
                   transformOrigin={{ vertical: "top", horizontal: "center" }}
                   getContentAnchorEl={null}
                 >
-                  <MenuItem onClick={handleCloseLinkCompany}>О нас</MenuItem>
-                  <MenuItem onClick={handleCloseLinkCompany}>Новости</MenuItem>
-                  <MenuItem onClick={handleCloseLinkCompany}>Контакты</MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/about-us">О нас</Link></MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/news">Новости</Link></MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/contact-us">Контакты</Link></MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/vacancies">Вакансии</Link></MenuItem>
                 </Menu>
               </div>
             </div>

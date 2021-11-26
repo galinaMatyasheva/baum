@@ -12,17 +12,47 @@ body {
   src: url("/fonts/helveticaneuecyr_roman.otf");
 }
 
+/*header*/
+.MuiPopover-root {
+  a {
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      color: #bababa;
+    }
+  }
+
+  li {
+    &:hover {
+      background: #fff;
+    }
+  }
+}
+
 .app-container {
+  background-color: #e5e5e5;
+
   .main-container,
+  .main-community-container,
   .about-us-container,
+  .vacancies-container,
   .team-container,
   .news-container,
   .baum-uds-container,
   .baum-swarm-container,
   .footer-top,
   .navbar {
-    width: 95vw;
+    width: 97vw;
     margin: 0 auto;
+    background-color: #fff;
+  }
+
+  .community-container,
+  .footer-bottom {
+    width: 97vw;
+    margin: 0 auto;
+    background-color: #e5e5e5;
   }
 
   ::-webkit-input-placeholder {
@@ -55,7 +85,7 @@ body {
 
   .MuiButtonBase-root {
     span {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -93,7 +123,7 @@ body {
   }
 
   h2 {
-    font-size: 3.125rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
 
@@ -113,18 +143,20 @@ body {
     padding-top: 2rem;
     padding-bottom: 1.5rem;
   }
-
+  .title {
+    padding: 10% 0;
+    text-align: center;
+  }
   .title-dark {
     background-color: #000;
     color: #fff;
-    padding: 7% 0;
-    text-align: center;
   }
 
   p {
     font-size: 1.5rem;
   }
 
+  /*buttons*/
   .btn {
     box-shadow: none;
     text-transform: none;
@@ -184,6 +216,56 @@ body {
     }
   }
 
+  .btn-background-none {
+    padding: 0.8rem 3rem;
+    &:hover{
+      background: #fff;
+    }
+  }
+
+  .MuiTouchRipple-rippleVisible {
+    color: #fff;
+  }
+
+  /*accordion*/
+  .accordion-text {
+    margin-bottom: 3rem;
+  }
+
+  .MuiAccordion-root.Mui-expanded {
+    margin: 0;
+  }
+
+  .MuiPaper-elevation1 {
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .MuiAccordionSummary-root {
+    padding: 0px 4rem;
+  }
+
+  .MuiAccordionDetails-root {
+    padding: 1rem 4rem 3rem;
+  }
+
+  /*checkbox*/
+  .form-checkbox,
+  .application-form-checkbox {
+    display: flex;
+    align-items: center;
+
+    .MuiTypography-body1 {
+      font-size: 1.25rem;
+      width: 65%;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 35px;
+      color: #fff;
+    }
+  }
+
   .shd-link,
   .ai-link,
   .community-link,
@@ -196,20 +278,24 @@ body {
   .shd-container-info,
   .ai-container-info,
   .community-container-info,
+  .main-community-container-info,
   .team-container-info,
   .address-container-info,
   .form-container-info,
   .about-us-container-info,
+  .vacancies-container-info,
   .about-us-goal-container-info,
   .baum-uds-container-info,
-  .app-form-container-info {
+  .app-form-container-info,
+  .community-container-info {
     display: flex;
 
     .feedback-info,
     .about-us-info,
-    .community-info,
+    .vacancies-info,
     .about-us-goal-info,
     .baum-uds-info,
+    .main-community-info,
     .shd-info {
       width: 50%;
       padding: 10% 0;
@@ -230,9 +316,11 @@ body {
   .main-community-img,
   .main-form-img,
   .about-us-img .about-us-goal-img,
+  .vacancies-img,
   .baum-uds-img,
   .baum-uds-pages-img,
-  .form-img {
+  .form-img,
+  .community-img {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;
