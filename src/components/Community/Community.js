@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -9,13 +9,24 @@ import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 import "./Community.scss";
 import arrowBottomImg from "../../assets/arrow-bottom.svg";
-import arrowBottomBlackImg from "../../assets/arrow-bottom-black.svg"
+import arrowBottomBlackImg from "../../assets/arrow-bottom-black.svg";
 import ApplicationForm from "../../content/ApplicationForm/ApplicationForm";
 
 const Community = () => {
-  const [buttonHovered, setButtonHovered] = useState(false);
-  const [buttonHovered1, setButtonHovered1] = useState(false);
-  const [buttonHovered2, setButtonHovered2] = useState(false);
+  const [isButtonHovered, setIsButtonHovered] = useState({
+    isButtonHovered: [false, false, false],
+  });
+
+  const changedArrow = (hoverIndex) => {
+    isButtonHovered.isButtonHovered = [false, false, false];
+    isButtonHovered.isButtonHovered[hoverIndex] = true;
+    setIsButtonHovered({ ...isButtonHovered });
+  };
+
+  const changedArrowLeave = () => {
+    isButtonHovered.isButtonHovered = [false, false, false];
+    setIsButtonHovered({ ...isButtonHovered });
+  };
 
   return (
     <section className="community-container">
@@ -26,9 +37,15 @@ const Community = () => {
         <div className="community-info">
           <Accordion>
             <AccordionSummary
-             onMouseEnter={() => setButtonHovered(true)} 
-             onMouseLeave={() => setButtonHovered(false)}
-              expandIcon={!buttonHovered ? <img src={arrowBottomImg} alt="img"/> : <img src={arrowBottomBlackImg} alt="img"/>}
+              onMouseEnter={() => changedArrow(0)}
+              onMouseLeave={() => changedArrowLeave()}
+              expandIcon={
+                !isButtonHovered.isButtonHovered[0] ? (
+                  <img src={arrowBottomImg} alt="img" />
+                ) : (
+                  <img src={arrowBottomBlackImg} alt="img" />
+                )
+              }
             >
               <h4>База знаний</h4>
             </AccordionSummary>
@@ -50,9 +67,15 @@ const Community = () => {
           </Accordion>
           <Accordion>
             <AccordionSummary
-             onMouseEnter={() => setButtonHovered1(true)} 
-             onMouseLeave={() => setButtonHovered1(false)}
-             expandIcon={!buttonHovered1 ? <img src={arrowBottomImg} alt="img"/> : <img src={arrowBottomBlackImg} alt="img"/>}
+              onMouseEnter={() => changedArrow(1)}
+              onMouseLeave={() => changedArrowLeave()}
+              expandIcon={
+                !isButtonHovered.isButtonHovered[1] ? (
+                  <img src={arrowBottomImg} alt="img" />
+                ) : (
+                  <img src={arrowBottomBlackImg} alt="img" />
+                )
+              }
             >
               <h4>Сообщество СХД и ИИ</h4>
             </AccordionSummary>
@@ -66,9 +89,15 @@ const Community = () => {
           </Accordion>
           <Accordion>
             <AccordionSummary
-             onMouseEnter={() => setButtonHovered2(true)} 
-             onMouseLeave={() => setButtonHovered2(false)}
-             expandIcon={!buttonHovered2 ? <img src={arrowBottomImg} alt="img"/> : <img src={arrowBottomBlackImg} alt="img"/>}
+              onMouseEnter={() => changedArrow(2)}
+              onMouseLeave={() => changedArrowLeave()}
+              expandIcon={
+                !isButtonHovered.isButtonHovered[2] ? (
+                  <img src={arrowBottomImg} alt="img" />
+                ) : (
+                  <img src={arrowBottomBlackImg} alt="img" />
+                )
+              }
             >
               <h4>Партнёры и дистрибьюторы</h4>
             </AccordionSummary>

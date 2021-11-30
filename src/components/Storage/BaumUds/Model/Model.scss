@@ -1,0 +1,14 @@
+.model-container {
+  .model-container-info {
+    .title-purple {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #5F3DC4, #7048E8);
+    }
+
+    .model-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/baum-uds/model.png");
+    }
+  }
+}

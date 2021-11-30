@@ -10,13 +10,17 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import News from "./components/News/News";
 import BaumSwarm from "./components/Storage/BaumSwarm/BaumSwarm";
+import Functional from "./components/Storage/BaumUds/Functional/Functional";
 import BaumUds from "./components/Storage/BaumUds/BaumUds";
 import Team from "./components/Team/Team";
 import Vacancies from "./components/Vacancies/Vacancies";
+import Support from "./components/Storage/BaumUds/Support/Support";
+import Documentation from "./components/Storage/BaumUds/Documentation/Documentation";
+import Model from "./components/Storage/BaumUds/Model/Model";
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div id="app" className="app-container">
       <Header />
       <Routes>
         <Route path="/main" element={<Main />} />
@@ -28,10 +32,10 @@ const App = () => {
         <Route path="/baum-swarm" element={<BaumSwarm />} />
         <Route path="/vacancies" element={<Vacancies/>} />
         <Route path="/community" element={<Community/>}/>
-        <Route />
-        <Route />
-        <Route />
-        <Route />
+        <Route path="/baum-uds/functional" element={<Functional/>}/>
+        <Route path="/baum-uds/support" element={<Support/>}/>
+        <Route path="/baum-uds/documentation" element={<Documentation/>}/>
+        <Route path="/baum-uds/model" element={<Model/>}/>
         <Route />
         <Route />
         <Route />

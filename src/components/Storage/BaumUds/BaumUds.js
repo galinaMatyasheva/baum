@@ -7,6 +7,7 @@ import {
   CardContent,
   CardMedia,
 } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import "./BaumUds.scss";
 import BaumInformCreate from "../../../content/BaumInformCreate/BaumInformCreate";
@@ -16,6 +17,35 @@ import baumCard3 from "../../../assets/baum-uds/baum-card3.png";
 import ApplicationForm from "../../../content/ApplicationForm/ApplicationForm";
 
 const BaumUds = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickFunctional = () => {
+    navigate("/baum-uds/functional");
+    scrollToTop();
+  };
+
+  const handleClickSupport = () => {
+    navigate("/baum-uds/support");
+    scrollToTop();
+  };
+
+  const handleClickDocumentation = () => {
+    navigate("/baum-uds/documentation");
+    scrollToTop();
+  };
+
+  const handleClickModel = () => {
+    navigate("/baum-uds/model");
+    scrollToTop();
+  };
+
   return (
     <section className="baum-uds-container">
       <div className="baum-uds-container-info">
@@ -44,18 +74,42 @@ const BaumUds = () => {
           <div className="baum-uds-pages-content">
             <div className="baum-uds-pages-links">
               <div className="baum-uds-pages-link">
-                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Функционал</Button>
+                <Button
+                  className="btn btn-background-none"
+                  endIcon={<ArrowRightAltIcon />}
+                  onClick={handleClickFunctional}
+                >
+                  Функционал
+                </Button>
               </div>
               <div className="baum-uds-pages-link">
-                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Модели</Button>
+                <Button
+                  className="btn btn-background-none"
+                  endIcon={<ArrowRightAltIcon />}
+                  onClick={handleClickModel}
+                >
+                  Модели
+                </Button>
               </div>
             </div>
             <div className="baum-uds-pages-links">
               <div className="baum-uds-pages-link">
-                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Документация</Button>
+                <Button
+                  className="btn btn-background-none"
+                  onClick={handleClickDocumentation}
+                  endIcon={<ArrowRightAltIcon />}
+                >
+                  Документация
+                </Button>
               </div>
               <div className="baum-uds-pages-link">
-                <Button className="btn btn-background-none" endIcon={<ArrowRightAltIcon />}>Поддержка</Button>
+                <Button
+                  className="btn btn-background-none"
+                  endIcon={<ArrowRightAltIcon />}
+                  onClick={handleClickSupport}
+                >
+                  Поддержка
+                </Button>
               </div>
             </div>
           </div>
@@ -74,7 +128,11 @@ const BaumUds = () => {
             </p>
           </CardContent>
           <CardActions>
-            <Button className="btn-background-none" size="large" endIcon={<ArrowRightAltIcon />}>
+            <Button
+              className="btn-background-none"
+              size="large"
+              endIcon={<ArrowRightAltIcon />}
+            >
               Читать
             </Button>
           </CardActions>
@@ -89,7 +147,11 @@ const BaumUds = () => {
             </p>
           </CardContent>
           <CardActions>
-            <Button className="btn-background-none" size="large" endIcon={<ArrowRightAltIcon />}>
+            <Button
+              className="btn-background-none"
+              size="large"
+              endIcon={<ArrowRightAltIcon />}
+            >
               Читать
             </Button>
           </CardActions>
@@ -104,7 +166,11 @@ const BaumUds = () => {
             </p>
           </CardContent>
           <CardActions>
-            <Button className="btn-background-none" size="large" endIcon={<ArrowRightAltIcon />}>
+            <Button
+              className="btn-background-none"
+              size="large"
+              endIcon={<ArrowRightAltIcon />}
+            >
               Читать
             </Button>
           </CardActions>

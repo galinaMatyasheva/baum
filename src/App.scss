@@ -42,6 +42,8 @@ body {
   .baum-uds-container,
   .baum-swarm-container,
   .footer-top,
+  .support-container,
+  .documentation-container,
   .navbar {
     width: 97vw;
     margin: 0 auto;
@@ -49,7 +51,9 @@ body {
   }
 
   .community-container,
-  .footer-bottom {
+  .footer-bottom,
+  .model-container,
+  .model-container {
     width: 97vw;
     margin: 0 auto;
     background-color: #e5e5e5;
@@ -143,12 +147,20 @@ body {
     padding-top: 2rem;
     padding-bottom: 1.5rem;
   }
+
   .title {
     padding: 10% 0;
     text-align: center;
+    color: #fff;
   }
+
   .title-dark {
     background-color: #000;
+  }
+
+  .title-baum {
+    padding: 5% 0;
+    text-align: center;
     color: #fff;
   }
 
@@ -232,6 +244,10 @@ body {
     margin-bottom: 3rem;
   }
 
+  .css-i4bv87-MuiSvgIcon-root {
+    font-size: 2.5rem;
+  }
+
   .MuiAccordion-root.Mui-expanded {
     margin: 0;
   }
@@ -287,7 +303,12 @@ body {
   .about-us-goal-container-info,
   .baum-uds-container-info,
   .app-form-container-info,
-  .community-container-info {
+  .community-container-info,
+  .functional-container-info,
+  .support-container-info,
+  .documentation-container-info,
+  .model-container-info,
+  .documentation-models-info {
     display: flex;
 
     .feedback-info,
@@ -320,10 +341,23 @@ body {
   .baum-uds-img,
   .baum-uds-pages-img,
   .form-img,
-  .community-img {
+  .functional-img,
+  .support-img,
+  .documentation-img,
+  .model-img,
+  .community-img,
+  .functional-about-baum-swarm-img,
+  .documentation-about-company-img {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;
     width: 50%;
+  }
+
+  .functional-img,
+  .support-img,
+  .documentation-img,
+  .model-img {
+    width: 60%;
   }
 }
