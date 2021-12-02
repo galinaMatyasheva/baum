@@ -38,9 +38,7 @@ body {
   .about-us-container,
   .vacancies-container,
   .team-container,
-  .news-container,
   .baum-uds-container,
-  .baum-swarm-container,
   .footer-top,
   .support-container,
   .documentation-container,
@@ -51,9 +49,12 @@ body {
   }
 
   .community-container,
+  .functional-container,
   .footer-bottom,
   .model-container,
-  .model-container {
+  .model-container,
+  .news-container,
+  .baum-swarm-container {
     width: 97vw;
     margin: 0 auto;
     background-color: #e5e5e5;
@@ -312,7 +313,8 @@ body {
   .support-container-info,
   .documentation-container-info,
   .model-container-info,
-  .documentation-models-info {
+  .documentation-models-info,
+  .news-container-info {
     display: flex;
 
     .feedback-info,
@@ -351,7 +353,8 @@ body {
   .model-img,
   .community-img,
   .functional-about-baum-swarm-img,
-  .documentation-about-company-img {
+  .documentation-about-company-img,
+  .news-img {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;
@@ -361,7 +364,8 @@ body {
   .functional-img,
   .support-img,
   .documentation-img,
-  .model-img {
+  .model-img,
+  .news-img {
     width: 60%;
   }
 }

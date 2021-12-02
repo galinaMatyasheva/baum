@@ -28,6 +28,10 @@ const Header = () => {
     navigate('/community')
   }
 
+  const handleClickEducation = () => {
+    navigate('/education')
+  }
+
   const handleClickOpenLinkStorage = (e) => {
     setOpenLinkStorage(e.currentTarget);
   };
@@ -151,12 +155,12 @@ const Header = () => {
                   transformOrigin={{ vertical: "top", horizontal: "center" }}
                   getContentAnchorEl={null}
                 >
-                  <MenuItem onClick={handleCloseLinkAI}>Платформа</MenuItem>
+                  <MenuItem onClick={handleCloseLinkAI}><Link to="/ai/platform">Платформа</Link></MenuItem>
                   <MenuItem onClick={handleCloseLinkAI}>
-                    Решения для баз знаний
+                    <Link to="/ai/solutionDB">Решения для баз знаний</Link>
                   </MenuItem>
                   <MenuItem onClick={handleCloseLinkAI}>
-                    Решения для ТОИР
+                    <Link to="/ai/solutionTOIR">Решения для ТОИР</Link>
                   </MenuItem>
                 </Menu>
               </div>
@@ -164,7 +168,7 @@ const Header = () => {
                 <Button className="btn-padding" onClick={handleClickCommunity}>Community</Button>
               </div>
               <div className="submenu">
-                <Button className="btn-padding" >Обучение</Button>
+                <Button className="btn-padding" onClick={handleClickEducation}>Обучение</Button>
               </div>
               <div className="submenu">
                 <Button
@@ -204,6 +208,9 @@ const Header = () => {
             </div>
           </div>
         </div>
+      </nav>
+      <nav className="">
+
       </nav>
     </header>
   );

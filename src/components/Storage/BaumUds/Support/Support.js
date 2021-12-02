@@ -2,10 +2,13 @@ import React from "react";
 
 import "./Support.scss";
 import Form from "../../../../content/Form/Form";
+import Navbar from "../../../../content/Navbar/Navbar";
 
 const Support = () => {
   return (
     <div className="support-container">
+
+      <Navbar/>
       <div className="support-container-info">
         <h1 className="title-baum title-blue">Поддержка</h1>
         <div className="support-img"></div>

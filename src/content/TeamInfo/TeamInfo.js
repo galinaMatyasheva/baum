@@ -8,7 +8,7 @@ import cto from "../../assets/team/cto.png";
 import cso from "../../assets/team/cso.png";
 import cao from "../../assets/team/cao.png";
 import clo from "../../assets/team/clo.png";
-import cspo from "../../assets/team/cspo.png"
+import cspo from "../../assets/team/cspo.png";
 import "./TeamInfo.scss";
 
 const TeamInfo = () => {
@@ -21,9 +21,7 @@ const TeamInfo = () => {
   return (
     <div className="team-container-info">
       <div className="team-img team-info">
-        <Carousel
-        
-        >
+        <Carousel>
           <div className="team-gallery">
             <div className="team-gallery-items">
               <img src={ceo} alt="img" />

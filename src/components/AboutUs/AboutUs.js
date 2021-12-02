@@ -6,10 +6,13 @@ import Team from "../../content/TeamInfo/TeamInfo";
 import Form from "../../content/Form/Form";
 import MapAdress from "../../content/Map/MapAdress";
 import "./AboutUs.scss";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const AboutUs = () => {
   return (
     <section className="about-us-container">
+      <Header />
       <div className="about-us-container-info">
         <div className="about-us-info">
           <div>
@@ -121,10 +124,10 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
       <Team />
       <MapAdress />
       <Form />
+      <Footer />
     </section>
   );
 };

@@ -1,11 +1,14 @@
 import React from "react";
 
 import Form from "../../content/Form/Form";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 import "./Vacancies.scss";
 
 const Vacancies = () => {
   return (
     <section className="vacancies-container">
+      <Header/>
       <div className="vacancies-container-info">
         <div className="vacancies-info">
           <div>
@@ -25,6 +28,7 @@ const Vacancies = () => {
         <div className="vacancies-img vacancies-info"></div>
       </div>
       <Form />
+      <Footer/>
     </section>
   );
 };

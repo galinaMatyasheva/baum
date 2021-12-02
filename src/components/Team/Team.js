@@ -1,13 +1,15 @@
 import React from "react";
 import TeamInfo from "../../content/TeamInfo/TeamInfo";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 const Team = () => {
-
   return (
-    <div className="team-container">
-     <TeamInfo/>
-    
-    </div>
+    <section className="team-container">
+      <Header />
+      <TeamInfo />
+      <Footer />
+    </section>
   );
 };
 

@@ -1,45 +1,107 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 import "./Footer.scss";
 import logo from "../../assets/logo.svg";
 
 const Footer = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickBaumUds = () => {
+    navigate("/baum-uds");
+    scrollToTop();
+  };
+
+  const handleClickBaumSwarm = () => {
+    navigate("/baum-uds");
+    scrollToTop();
+  };
+
+  const handleClickContactUs = () => {
+    navigate("/contact-us");
+    scrollToTop();
+  };
+
+  const handleClickCommunity = () => {
+    navigate("/contact-us");
+    scrollToTop();
+  };
+
+  const handleClickAboutUs = () => {
+    navigate("/about-us");
+    scrollToTop();
+  };
+
+  const handleClickTeam = () => {
+    navigate("/our-team");
+    scrollToTop();
+  };
+
+  const handleClickNews = () => {
+    navigate("/news");
+    scrollToTop();
+  };
+
+  const handleClickEducation = () => {
+    navigate("/education");
+    scrollToTop();
+  };
+
+  const handleClickPlatform = () => {
+    navigate("/ai/platform");
+    scrollToTop();
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-top">
         <div className="footer-top-links">
           <ul>
             <li>
-              <a href="">О компании</a>
+              <Button onClick={handleClickAboutUs}>О компании</Button>
             </li>
             <li>
-              <a href="">О нас</a>
+              <Button onClick={handleClickAboutUs}>О нас</Button>
             </li>
             <li>
-              <a href="">Наша команда</a>
+              <Button onClick={handleClickTeam}>Наша команда</Button>
             </li>
             <li>
-              <a href="">Новости</a>
+              <Button onClick={handleClickNews}>Новости</Button>
             </li>
             <li>
-              <a href="">Контакты</a>
+              <Button onClick={handleClickContactUs}>Контакты</Button>
             </li>
           </ul>
           <ul>
             <li>
-              <a href="">Community</a>
+              <Button onClick={handleClickCommunity}>Community</Button>
             </li>
             <li>
-              <a href="">Обучение</a>
+              <Button onClick={handleClickEducation}>Обучение</Button>
             </li>
             <li>
-              <a href="">AI</a>
+              <Button className="footer-ai" onClick={handleClickPlatform}>
+                AI
+              </Button>
             </li>
             <li>
-              <a href="">BAUM SWARM (scale out)</a>
+              <Button onClick={handleClickBaumUds}>
+                BAUM SWARM (scale out)
+              </Button>
             </li>
             <li>
-              <a href="">BAUM UDS (scale up)</a>
+              <Button onClick={handleClickBaumSwarm}>
+                BAUM UDS (scale up)
+              </Button>
             </li>
           </ul>
         </div>
@@ -78,7 +140,7 @@ const Footer = () => {
             </a>
           </p>
           <p>
-            <a href="">Обратная связь с сайтом</a>
+            <a href="/contact-us">Обратная связь с сайтом</a>
           </p>
         </div>
       </div>

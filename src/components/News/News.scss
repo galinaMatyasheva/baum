@@ -1,0 +1,67 @@
+.news-container {
+  .news-container-info {
+    .title-purple {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #5f3dc4, #7048e8);
+    }
+
+    .news-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/news/news.png");
+    }
+  }
+}
+
+.news-years-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  h1 {
+    margin: 0;
+  }
+}
+
+.news-container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+
+  h3 {
+    font-size: 1.625rem;
+    min-height: 90px;
+    height: 100%;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    height: 75px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .MuiButton-text {
+    span {
+      font-size: 1.25rem;
+      color: #9a9a9a;
+    }
+  }
+
+  .MuiCardActions-root {
+    padding: 16px 8px;
+  }
+
+  .card {
+    background-color: #fff;
+    width: 32.5%;
+    margin-bottom: 1%;
+  }
+
+  .btn-background-none {
+    padding: 0.8rem 0.6rem;
+  }
+}

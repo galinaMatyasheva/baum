@@ -13,12 +13,18 @@ import modelIcon3 from "../../../../assets/baum-uds/model-icon-3.svg";
 import modelIcon4 from "../../../../assets/baum-uds/model-icon-4.svg";
 import TableModel from "../../../../content/TableModel/TableModel";
 import data from "../../../../content/TableData";
+import Navbar from "../../../../content/Navbar/Navbar";
+import Header from "../../../Header/Header";
+import Footer from "../../../Footer/Footer";
 
 const Model = () => {
   const [curModel, setCurModel] = useState(data[0]);
 
   return (
     <div className="model-container">
+      <Header/>
+      <Navbar />
+
       <div className="model-container-info">
         <h1 className="title-baum title-purple">Модели</h1>
         <div className="model-img"></div>
@@ -270,6 +276,7 @@ const Model = () => {
       </div>
 
       <TableModel data={curModel} />
+      <Footer/>
     </div>
   );
 };

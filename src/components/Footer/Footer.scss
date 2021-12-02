@@ -20,6 +20,25 @@
           text-decoration: none;
           color: #000;
         }
+
+        .footer-ai {
+          margin-left: -20px;
+        }
+
+        button {
+          text-decoration: none;
+          color: #000;
+          text-transform: none;
+          font-weight: bold;
+          padding: 0;
+          &:hover {
+            background-color: #fff;
+          }
+        }
+
+        .MuiButtonBase-root span {
+          font-size: 1.5rem;
+        }
       }
     }
 

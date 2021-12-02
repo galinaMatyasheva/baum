@@ -11,6 +11,8 @@ import "./Community.scss";
 import arrowBottomImg from "../../assets/arrow-bottom.svg";
 import arrowBottomBlackImg from "../../assets/arrow-bottom-black.svg";
 import ApplicationForm from "../../content/ApplicationForm/ApplicationForm";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const Community = () => {
   const [isButtonHovered, setIsButtonHovered] = useState({
@@ -30,6 +32,7 @@ const Community = () => {
 
   return (
     <section className="community-container">
+      <Header/>
       <div className="community-container-info">
         <div className="community-img community-info">
           <h1>Community</h1>
@@ -120,6 +123,7 @@ const Community = () => {
       </div>
 
       <ApplicationForm />
+      <Footer/>
     </section>
   );
 };

@@ -15,6 +15,8 @@ import baumCard1 from "../../../assets/baum-uds/baum-card1.png";
 import baumCard2 from "../../../assets/baum-uds/baum-card2.png";
 import baumCard3 from "../../../assets/baum-uds/baum-card3.png";
 import ApplicationForm from "../../../content/ApplicationForm/ApplicationForm";
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
 
 const BaumUds = () => {
   let navigate = useNavigate();
@@ -48,6 +50,7 @@ const BaumUds = () => {
 
   return (
     <section className="baum-uds-container">
+      <Header/>
       <div className="baum-uds-container-info">
         <div className="baum-uds-info">
           <div>
@@ -178,6 +181,7 @@ const BaumUds = () => {
       </div>
 
       <ApplicationForm />
+      <Footer/>
     </section>
   );
 };

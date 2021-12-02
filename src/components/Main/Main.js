@@ -1,6 +1,7 @@
 import React from "react";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import { Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import Form from "../../content/Form/Form";
 import MapAdress from "../../content/Map/MapAdress";
@@ -8,12 +9,53 @@ import TeamInfo from "../../content/TeamInfo/TeamInfo";
 import logo from "../../assets/logo.svg";
 import "./Main.scss";
 import BaumInformCreate from "../../content/BaumInformCreate/BaumInformCreate";
-
 import cubeImg from "../../assets/main/cube.png";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 const Main = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickBaumUds = () => {
+    navigate("/baum-uds");
+    scrollToTop();
+  };
+
+  const handleClickBaumSwarm = () => {
+    navigate("/baum-uds");
+    scrollToTop();
+  };
+
+  const handleClickPlatform = () => {
+    navigate("/ai/platform");
+    scrollToTop();
+  };
+
+  const handleClickContactUs = () => {
+    navigate("/contact-us");
+    scrollToTop();
+  };
+
+  const handleClickCommunity = () => {
+    navigate("/contact-us");
+    scrollToTop();
+  };
+
+  const handleClickQuestionnaire = () => {
+    navigate("http://npobaum1.tilda.ws/anketa1");
+    scrollToTop();
+  };
+
   return (
     <section className="main-container">
+      <Header />
       <div className="main-container-info">
         <div className="main-feedback-content feedback-info">
           <div>
@@ -21,7 +63,11 @@ const Main = () => {
               <img src={logo} alt="logo" />
             </div>
             <p>Надёжное хранение данных</p>
-            <Button variant="contained" className="btn btn-dark">
+            <Button
+              onClick={handleClickContactUs}
+              variant="contained"
+              className="btn btn-dark"
+            >
               Обратная связь
             </Button>
           </div>
@@ -42,11 +88,19 @@ const Main = () => {
               самых требовательных средств хранения данных.
             </p>
             <div className="shd-links">
-              <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+              <Button
+                className="btn btn-light"
+                endIcon={<ArrowRightAltIcon />}
+                onClick={handleClickBaumUds}
+              >
                 BAUM UDS (scale up)
               </Button>
 
-              <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+              <Button
+                className="btn btn-light"
+                endIcon={<ArrowRightAltIcon />}
+                onClick={handleClickBaumSwarm}
+              >
                 BAUM SWARM (scale out)
               </Button>
             </div>
@@ -93,7 +147,11 @@ const Main = () => {
               предобученные модели искусственного интеллекта без необходимости
               прямого кодирования по принципу drag-and-drop.
             </p>
-            <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+            <Button
+              className="btn btn-light"
+              endIcon={<ArrowRightAltIcon />}
+              onClick={handleClickPlatform}
+            >
               Читать
             </Button>
           </div>
@@ -111,12 +169,22 @@ const Main = () => {
               рады обсудить ваши пожелания и идеи.
             </p>
             <div className="community-links">
-              <Button className="btn btn-light" endIcon={<ArrowRightAltIcon />}>
+              <Button
+                onClick={handleClickCommunity}
+                className="btn btn-light"
+                endIcon={<ArrowRightAltIcon />}
+              >
                 Читать
               </Button>
-              <Button className="btn btn-dark" endIcon={<ArrowRightAltIcon />}>
-                Анкета
-              </Button>
+              <div className="btn btn-dark questionnaire">
+                <a
+                  href="http://npobaum1.tilda.ws/anketa1"
+                  endIcon={<ArrowRightAltIcon />}
+                >
+                  Анкета
+                </a>
+                <ArrowRightAltIcon/>
+              </div>
             </div>
           </div>
         </div>
@@ -126,6 +194,7 @@ const Main = () => {
       <TeamInfo />
       <MapAdress />
       <Form />
+      <Footer />
     </section>
   );
 };

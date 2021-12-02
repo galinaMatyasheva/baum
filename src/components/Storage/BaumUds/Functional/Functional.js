@@ -9,6 +9,9 @@ import {
 import "./Functional.scss";
 import arrowBottomImg from "../../../../assets/arrow-bottom.svg";
 import arrowBottomBlackImg from "../../../../assets/arrow-bottom-black.svg";
+import Navbar from "../../../../content/Navbar/Navbar";
+import Header from "../../../Header/Header";
+import Footer from "../../../Footer/Footer";
 
 const Functional = () => {
   const [isButtonHoveredLeft, setIsButtonHoveredLeft] = useState({
@@ -69,6 +72,8 @@ const Functional = () => {
 
   return (
     <div className="functional-container">
+      <Header/>
+      <Navbar/>
       <div className="functional-container-info">
         <h1 className="title-baum title-orange">Функционал</h1>
         <div className="functional-img"></div>
@@ -457,6 +462,7 @@ const Functional = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

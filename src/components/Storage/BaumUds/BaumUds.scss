@@ -1,5 +1,4 @@
 .baum-uds-container {
-
   .baum-uds-container-info {
     .baum-uds-content {
       width: 85%;
@@ -96,21 +95,20 @@
         color: #9a9a9a;
       }
     }
-  }
 
-  .MuiCard-root {
-    overflow: hidden;
-    width: 33.33%;
-    margin: 0 auto;
-  }
+    .MuiCard-root {
+      overflow: hidden;
+      width: 33.33%;
+      margin: 0 auto;
+    }
 
-  .MuiPaper-elevation1 {
-    box-shadow: none;
-    padding-bottom: 1.5rem;
-  }
+    .MuiPaper-elevation1 {
+      box-shadow: none;
+      padding-bottom: 1.5rem;
+    }
 
-  .MuiCardContent-root {
-    padding: 3rem;
+    .MuiCardContent-root {
+      padding: 3rem;
+    }
   }
-
 }
