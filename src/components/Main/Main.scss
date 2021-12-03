@@ -36,7 +36,6 @@
       background: linear-gradient(to top, #0ca678, #20c997);
       position: relative;
       background-size: cover;
-      min-height: 300px;
 
       &::before {
         content: "";
@@ -58,7 +57,7 @@
 
       .btn {
         width: 50%;
-        
+
         span {
           font-size: 1.2rem;
         }
@@ -160,7 +159,7 @@
 
     .community-links {
       display: flex;
-      
+
       .btn {
         &:first-child {
           margin-right: 2rem;
@@ -179,7 +178,7 @@
 
       a {
         &:hover {
-          color:#000;
+          color: #000;
         }
       }
     }

@@ -38,6 +38,7 @@
 
         .MuiButtonBase-root span {
           font-size: 1.5rem;
+          text-align: left;
         }
       }
     }
@@ -101,6 +102,65 @@
       p {
         white-space: nowrap;
         padding: 0 2%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    .footer-top {
+      flex-direction: column;
+      padding: 3rem 2rem 2rem;
+
+      .footer-top-links {
+        width: 100%;
+        flex-direction: column;
+
+        li {
+          padding: 0;
+        }
+      }
+
+      .footer-top-contacts {
+        padding: 2rem 0;
+      }
+    }
+    .footer-bottom {
+      .footer-bottom-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 2rem;
+        p {
+          padding-bottom: 1rem;
+          white-space: inherit;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .main-container {
+    .main-community-container-info {
+      .main-community-img {
+        &::before {
+          background-size: contain;
+        }
+      }
+    }
+  }  
+}
+
+@media (max-width: 400px) {
+  .footer-container {
+    .footer-top {
+      .footer-top-contacts {
+        .footer-contacts {
+          p {
+            white-space: normal;
+          }
+        }
       }
     }
   }

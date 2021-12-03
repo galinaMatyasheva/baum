@@ -235,7 +235,7 @@ body {
 
   .btn-background-none {
     padding: 0.8rem 3rem;
-    &:hover{
+    &:hover {
       background: #fff;
     }
   }
@@ -314,7 +314,9 @@ body {
   .documentation-container-info,
   .model-container-info,
   .documentation-models-info,
-  .news-container-info {
+  .news-container-info,
+  .baum-inform-create-container,
+  .store-info-about {
     display: flex;
 
     .feedback-info,
@@ -330,7 +332,8 @@ body {
 
     .team-info,
     .form-info,
-    .ai-info {
+    .ai-info,
+    .baum-inform-create-content {
       padding: 5% 0;
       width: 50%;
     }
@@ -355,6 +358,7 @@ body {
   .functional-about-baum-swarm-img,
   .documentation-about-company-img,
   .news-img {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;
@@ -367,5 +371,263 @@ body {
   .model-img,
   .news-img {
     width: 60%;
+  }
+
+  @media (max-width: 1200px) {
+    .MuiButtonBase-root {
+      span {
+        font-size: 1.5rem;
+      }
+      .MuiButton-iconSizeMedium > *:first-child {
+        font-size: 1.5rem;
+      }
+    }
+    .main-container-info,
+    .shd-container-info,
+    .ai-container-info,
+    .community-container-info,
+    .main-community-container-info,
+    .team-container-info,
+    .address-container-info,
+    .form-container-info,
+    .about-us-container-info,
+    .vacancies-container-info,
+    .about-us-goal-container-info,
+    .baum-uds-container-info,
+    .app-form-container-info,
+    .community-container-info,
+    .functional-container-info,
+    .support-container-info,
+    .documentation-container-info,
+    .model-container-info,
+    .documentation-models-info,
+    .news-container-info,
+    .baum-inform-create-container,
+    .store-info-about {
+      flex-direction: column;
+
+      .feedback-info,
+      .about-us-info,
+      .vacancies-info,
+      .about-us-goal-info,
+      .baum-uds-info,
+      .main-community-info,
+      .shd-info,
+      .address-info {
+        width: 100%;
+        min-height: 650px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .team-info,
+      .form-info,
+      .ai-info {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 650px;
+        height: 100%;
+        padding: 10% 0;
+      }
+
+      .baum-inform-create-content {
+        width: 100%;
+        padding: 3rem;
+
+        &:last-child {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .main-feedback-img,
+    .main-shd-img,
+    .store-info-right,
+    .main-ai-img,
+    .main-community-img,
+    .main-form-img,
+    .about-us-img .about-us-goal-img,
+    .vacancies-img,
+    .baum-uds-img,
+    .baum-uds-pages-img,
+    .form-img,
+    .functional-img,
+    .support-img,
+    .documentation-img,
+    .model-img,
+    .community-img,
+    .functional-about-baum-swarm-img,
+    .documentation-about-company-img,
+    .news-img {
+      width: 100%;
+    }
+
+    .functional-img,
+    .support-img,
+    .documentation-img,
+    .model-img,
+    .news-img {
+      width: 100%;
+    }
+
+    .ai-container-info {
+      flex-direction: column-reverse;
+    }
+
+    .btn-light,
+    .btn-form {
+      width: 100%;
+    }
+
+    .address-container-info {
+      .address-links {
+        flex-direction: column;
+        .btn {
+          margin-right: 0;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+      }
+    }
+
+    .form-container-info {
+      .form-submit-info {
+        flex-direction: column;
+      }
+
+      .textfield {
+        flex-direction: column;
+        padding-bottom: 0;
+
+        .MuiFormControl-root {
+          width: 100%;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+
+    .form-checkbox,
+    .application-form-checkbox {
+      margin-bottom: 1rem;
+      .MuiTypography-body1 {
+        width: 100%;
+      }
+    }
+
+    .main-container {
+      .main-community-container-info {
+        .community-links {
+          flex-direction: column;
+
+          .btn {
+            margin-right: 0;
+            margin-bottom: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            a {
+              padding: 1.5rem 0;
+            }
+          }
+        }
+      }
+
+      .shd-container-info {
+        .shd-links {
+          flex-direction: column;
+          .btn {
+            width: 100%;
+            &:first-child {
+              margin-right: 0;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+      .store-info-about {
+        .store-info-right {
+          img {
+            width: 100%;
+          }
+        }
+
+        .store-info {
+          width: 100%;
+          padding: 3rem;
+
+          .store-info-text {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 695px) {
+    .main-container-info,
+    .shd-container-info,
+    .ai-container-info,
+    .community-container-info,
+    .main-community-container-info,
+    .team-container-info,
+    .address-container-info,
+    .form-container-info,
+    .about-us-container-info,
+    .vacancies-container-info,
+    .about-us-goal-container-info,
+    .baum-uds-container-info,
+    .app-form-container-info,
+    .community-container-info,
+    .functional-container-info,
+    .support-container-info,
+    .documentation-container-info,
+    .model-container-info,
+    .documentation-models-info,
+    .news-container-info,
+    .baum-inform-create-container,
+    .store-info-about {
+    .feedback-info,
+    .about-us-info,
+    .vacancies-info,
+    .about-us-goal-info,
+    .baum-uds-info,
+    .main-community-info,
+    .shd-info,
+    .address-info {
+      min-height: 450px;
+    }
+
+    .team-info,
+    .form-info,
+    .ai-info {
+      min-height: 450px;
+    }
+  }
+    .main-container {
+      .ai-container-info {
+        .main-ai-img {
+          &::before {
+            background-size: 85%;
+          }
+        }
+      }
+
+      .main-container-info {
+        .main-feedback-content {
+          padding: 2rem;
+          button {
+            width: 100%;
+          }
+          .content-img {
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
   }
 }
