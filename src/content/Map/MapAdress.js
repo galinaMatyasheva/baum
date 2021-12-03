@@ -1,29 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   YMaps,
   Map,
   Placemark,
   ZoomControl,
   GeolocationControl,
+  TrafficControl
 } from "react-yandex-maps";
 import { Button } from "@material-ui/core";
 
 import "./MapAdress.scss";
+import { display } from "@mui/system";
 
 const MapAdress = () => {
+  const [isAddress, setIsAddress] = useState("Lab");
+
+  const onClickAdressLab = () => {
+    setIsAddress("Lab");
+  };
+
+  const onClickAddressOffice = () => {
+    setIsAddress("Office");
+  };
+
   return (
     <div className="address-container-info">
       <div className="address-info">
         <div className="address-content">
           <h2>Мы расположены по адресам:</h2>
           <div className="address-links">
-            <Button className="btn btn-green">Лаборатория</Button>
-
-            <Button className="btn btn-light">Офис</Button>
+            <Button className="btn btn-green" onClick={onClickAdressLab}>
+              Лаборатория
+            </Button>
+            <Button className="btn btn-light" onClick={onClickAddressOffice}>
+              Офис
+            </Button>
           </div>
-          <h5>Адрес лаборатории</h5>
-          <p>г.Москва, Лефортовская наб., 1 Корпус</p>
-          <p> Энергомашиностроения МГТУ им. Н.Э.Баумана</p>
+          {isAddress === "Lab" ? (
+            <div className="address-lab">
+              <h5>Адрес лаборатории</h5>
+              <p>г.Москва, Лефортовская наб., 1 Корпус</p>
+              <p> Энергомашиностроения МГТУ им. Н.Э.Баумана</p>
+              <p>Лаборатория</p>
+            </div>
+          ) : (
+            <div>
+              <h5 className="address-office">Адрес офиса</h5>
+              <p>г.Москва, Бауманская 68/8 с1</p>
+              <p>Телефон: +7 495 249-11-13</p>
+              <p>E-mail: info@baum-inform.ru</p>
+            </div>
+          )}
         </div>
       </div>
       <div className="address-info">
@@ -49,6 +76,7 @@ const MapAdress = () => {
                 },
               }}
             />
+               <TrafficControl options={{ float: 'right' }} />
             <GeolocationControl options={{ float: "right" }} />
           </Map>
         </YMaps>

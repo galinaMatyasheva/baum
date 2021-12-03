@@ -34,4 +34,17 @@
       font-size: 14px;
     }
   }
+
+  .address-lab {
+    p {
+      &:last-child {
+        visibility: hidden;
+      }
+    }
+  }
+
+  // .address-lab,
+  // .address-office {
+  //   height: 135px;
+  // }
 }

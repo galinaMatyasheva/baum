@@ -1,6 +1,4 @@
 header {
-  
-
   .navbar {
     display: flex;
     align-items: center;
@@ -31,6 +29,7 @@ header {
     }
 
     .navbar-content {
+      align-items: center;
       width: 85%;
       border-left: 1px solid #eff1f4;
     }
@@ -150,6 +149,80 @@ header {
       border-bottom: 0;
       border-left: 0;
       border-right: 0;
+    }
+  }
+
+  .navbar-phone {
+    display: none;
+
+    .navbar-content-phone {
+      flex-direction: column;
+      flex-basis: 100%;
+      flex-grow: 1;
+      background-color: #fff;
+      padding: 2rem;
+
+      .MuiFormControl-root {
+        width: 100%;
+      }
+
+      .navbar-form-search {
+        border: 1px solid #eff1f4;
+        width: 90%;
+      }
+
+      li {
+        list-style-type: none;
+        padding-bottom: 0.5rem;
+
+        & > a {
+          padding-left: 2rem;
+        }
+      }
+
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .navbar {
+      display: none;
+    }
+
+    .navbar-phone {
+      display: block;
+
+      .navbar-phone-icons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+    }
+
+    .icon-menu {
+      display: block;
+    }
+
+    .MuiSvgIcon-root {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 695px) {
+    .navbar-phone {
+      .navbar-content-phone {
+        .navbar-form-search {
+          width: 100%;
+        }
+        
+        a {
+          font-size: 1.3rem;
+        }
+      }
     }
   }
 }

@@ -7,6 +7,8 @@ import {
   Button,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -17,6 +19,7 @@ const Header = () => {
   const [openLinkStorage, setOpenLinkStorage] = useState(null);
   const [openLinkAI, setOpenLinkAI] = useState(null);
   const [openLinkCompany, setOpenLinkCompany] = useState(null);
+  const [openPhoneMenu, setOpenPhoneMenu] = useState(false);
 
   const anchorStorageRef = useRef(null);
   const anchorAIRef = useRef(null);
@@ -24,13 +27,19 @@ const Header = () => {
 
   let navigate = useNavigate();
 
+  const handleClickOpenPhoneMenu = () => {
+     console.log("handleClickOpenPhoneMenu");
+     setOpenPhoneMenu(!openPhoneMenu);
+   
+  };
+
   const handleClickCommunity = () => {
-    navigate('/community')
-  }
+    navigate("/community");
+  };
 
   const handleClickEducation = () => {
-    navigate('/education')
-  }
+    navigate("/education");
+  };
 
   const handleClickOpenLinkStorage = (e) => {
     setOpenLinkStorage(e.currentTarget);
@@ -80,6 +89,7 @@ const Header = () => {
               <Link to="/contact-us">Контакты</Link>
             </li>
           </ul>
+
           <div className="navbar-menu-bottom">
             <form className="navbar-form-search">
               <TextField placeholder="Что вы ищете?" variant="outlined" />
@@ -155,7 +165,9 @@ const Header = () => {
                   transformOrigin={{ vertical: "top", horizontal: "center" }}
                   getContentAnchorEl={null}
                 >
-                  <MenuItem onClick={handleCloseLinkAI}><Link to="/ai/platform">Платформа</Link></MenuItem>
+                  <MenuItem onClick={handleCloseLinkAI}>
+                    <Link to="/ai/platform">Платформа</Link>
+                  </MenuItem>
                   <MenuItem onClick={handleCloseLinkAI}>
                     <Link to="/ai/solutionDB">Решения для баз знаний</Link>
                   </MenuItem>
@@ -165,10 +177,14 @@ const Header = () => {
                 </Menu>
               </div>
               <div className="submenu">
-                <Button className="btn-padding" onClick={handleClickCommunity}>Community</Button>
+                <Button className="btn-padding" onClick={handleClickCommunity}>
+                  Community
+                </Button>
               </div>
               <div className="submenu">
-                <Button className="btn-padding" onClick={handleClickEducation}>Обучение</Button>
+                <Button className="btn-padding" onClick={handleClickEducation}>
+                  Обучение
+                </Button>
               </div>
               <div className="submenu">
                 <Button
@@ -199,18 +215,107 @@ const Header = () => {
                   transformOrigin={{ vertical: "top", horizontal: "center" }}
                   getContentAnchorEl={null}
                 >
-                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/about-us">О нас</Link></MenuItem>
-                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/news">Новости</Link></MenuItem>
-                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/contact-us">Контакты</Link></MenuItem>
-                  <MenuItem onClick={handleCloseLinkCompany}><Link to="/vacancies">Вакансии</Link></MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}>
+                    <Link to="/about-us">О нас</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}>
+                    <Link to="/news">Новости</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}>
+                    <Link to="/contact-us">Контакты</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseLinkCompany}>
+                    <Link to="/vacancies">Вакансии</Link>
+                  </MenuItem>
                 </Menu>
               </div>
             </div>
           </div>
         </div>
       </nav>
-      <nav className="">
+      <nav className="navbar-phone">
+        <div className="navbar-phone-icons">
+          <IconButton
+            type="submit"
+            aria-label="search"
+            onClick={handleClickOpenPhoneMenu}
+          >
+            {openPhoneMenu ? (
+              <CloseIcon className="icon-menu"  />
+            ) : (
+              <MenuIcon className="icon-menu" />
+            )}
+          </IconButton>
+          <div className="img">
+            <Link to="/main">
+              <img src={logo} alt="logo" />
+            </Link>
+          </div>
+        </div>
+        { openPhoneMenu ?
+        <div className="navbar-content-phone">
+            <form className="navbar-form-search">
+              <TextField placeholder="Что вы ищете?" variant="outlined" />
+              <IconButton type="submit" aria-label="search">
+                <SearchIcon fontSize="small" />
+              </IconButton>
+            </form>
 
+            <div className="navbar-content-phone-links">
+              <ul>
+                <li>
+                  <h4>Storage</h4>
+                </li>
+                <li>
+                  <Link to="/baum-uds">BAUM UDS (scale up)</Link>
+                </li>
+                <li>
+                  <Link to="/baum-swarm">BAUM SWARM (scale out)</Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <h4>AI</h4>
+                </li>
+                <li>
+                  <Link to="/ai/platform">Платформа</Link>
+                </li>
+
+                <li>
+                  <Link to="/ai/solutionDB">Решения для баз знаний</Link>
+                </li>
+
+                <li>
+                  <Link to="/ai/solutionTOIR">Решения для ТОИР</Link>
+                </li>
+              </ul>
+              <Link to="/community">
+                <h4>Community</h4>
+              </Link>
+              <Link to="/education">
+                <h4>Обучение</h4>
+              </Link>
+              <ul>
+                <li>
+                  <h4>О компании</h4>
+                </li>
+                <li>
+                  <Link to="/about-us">О нас</Link>
+                </li>
+                <li>
+                  <Link to="/news">Новости</Link>
+                </li>
+                <li>
+                  <Link to="/contact-us">Контакты</Link>
+                </li>
+                <li>
+                  <Link to="/vacancies">Вакансии</Link>
+                </li>
+              </ul>
+            </div>
+        </div>
+        : ''
+}
       </nav>
     </header>
   );
