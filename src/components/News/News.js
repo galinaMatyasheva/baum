@@ -13,6 +13,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { useNavigate } from "react-router-dom";
 
 import news from "../../content/NewsData";
 import "./News.scss";
@@ -20,16 +21,26 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 const News = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickDetails = (key) => {
+    navigate("/news/details/" + key);
+    scrollToTop();
+  };
+
   const [curYear, setCurYear] = useState("2021");
   const uniqueYearsSet = new Set();
   Object.keys(news).map((key) => uniqueYearsSet.add(news[key].year));
-  console.log("uniqueYears: ", uniqueYearsSet);
   const uniqueYears = Array.from(uniqueYearsSet);
 
   const handleYearClick = (e, value) => {
-    console.log(e, "e");
-    console.log(e.target.value, "e.target.value");
-    console.log(value, "value");
     setCurYear(value);
     setPage(1);
     filteredNewsKeysPaginated.jump(1);
@@ -38,7 +49,6 @@ const News = () => {
   const filteredNewsKeys = Object.keys(news).filter((key) => {
     return news[key].year === curYear;
   });
-  console.log(filteredNewsKeys, "filteredNewsKeys");
   let [page, setPage] = useState(1);
   const PER_PAGE = 9;
 
@@ -70,7 +80,12 @@ const News = () => {
                   handleYearClick(e, value);
                 }}
               >
-                {value}
+                <div
+                  className={value === curYear ? "new-year-btn-underline" : ""}
+                >
+                  {" "}
+                  {value}
+                </div>
               </Button>
             ))}
             <div>
@@ -96,6 +111,7 @@ const News = () => {
             </CardContent>
             <CardActions>
               <Button
+                onClick={() => handleClickDetails(key)}
                 className="btn-background-none"
                 size="large"
                 endIcon={<ArrowRightAltIcon />}

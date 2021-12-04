@@ -28,7 +28,6 @@ const Header = () => {
   let navigate = useNavigate();
 
   const handleClickOpenPhoneMenu = () => {
-     console.log("handleClickOpenPhoneMenu");
      setOpenPhoneMenu(!openPhoneMenu);
    
   };
@@ -69,7 +68,7 @@ const Header = () => {
     <header className="header-container">
       <nav className="navbar">
         <div className="img">
-          <Link to="/main">
+          <Link to="/">
             <img src={logo} alt="logo" />
           </Link>
         </div>
@@ -247,7 +246,7 @@ const Header = () => {
             )}
           </IconButton>
           <div className="img">
-            <Link to="/main">
+            <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </div>

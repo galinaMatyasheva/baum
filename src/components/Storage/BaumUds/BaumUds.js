@@ -48,6 +48,11 @@ const BaumUds = () => {
     scrollToTop();
   };
 
+  const handleClickDetails = (key) => {
+    navigate("/news/details/" + key);
+    scrollToTop();
+  };
+
   return (
     <section className="baum-uds-container">
       <Header/>
@@ -132,6 +137,7 @@ const BaumUds = () => {
           </CardContent>
           <CardActions>
             <Button
+            onClick={()=>{handleClickDetails("68")}}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -151,6 +157,7 @@ const BaumUds = () => {
           </CardContent>
           <CardActions>
             <Button
+             onClick={()=>{handleClickDetails("73")}}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -170,6 +177,7 @@ const BaumUds = () => {
           </CardContent>
           <CardActions>
             <Button
+             onClick={()=>{handleClickDetails("71")}}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}

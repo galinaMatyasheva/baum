@@ -34,6 +34,16 @@
       font-size: 1.25rem;
       font-weight: bold;
     }
+
+    .new-year-btn-underline {
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+      font-size: 1.6rem;
+    }
+  }
+
+  .MuiButtonBase-root span {
+    font-size: 1.25rem;
   }
 }
 
@@ -79,10 +89,29 @@
     padding: 0.8rem 0.6rem;
   }
 }
+
 .css-1oj2twp-MuiPagination-root {
   background-color: #e7f5ff;
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
   padding: 2rem 0;
+}
+
+.news-details-container {
+  margin: 0 auto;
+  .news-details-info {
+    display: flex;
+    .news-details-img {
+      height: 100%;
+      width: 50%;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      margin-right: 1.5em;
+    }
+    .news-details-about {
+      margin-top: 2rem;
+      padding: 0 2rem;
+    }
+  }
 }

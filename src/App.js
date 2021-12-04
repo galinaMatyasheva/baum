@@ -5,10 +5,9 @@ import "./App.scss";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Community from "./components/Community/Community";
 import ContactUs from "./components/ContactUs/ContactUs";
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import News from "./components/News/News";
+import NewsDetails from "./components/News/NewsDetails";
 import BaumSwarm from "./components/Storage/BaumSwarm/BaumSwarm";
 import Functional from "./components/Storage/BaumUds/Functional/Functional";
 import BaumUds from "./components/Storage/BaumUds/BaumUds";
@@ -27,7 +26,7 @@ const App = () => {
     <div id="app" className="app-container">
       {/* <Header /> */}
       <Routes>
-        <Route path="/main" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/our-team" element={<Team />} />
         <Route path="/news" element={<News />} />
@@ -44,6 +43,7 @@ const App = () => {
         <Route path="/ai/solutionDB" element={<SolutionDB/>}/>
         <Route path="/ai/solutionTOIR" element={<SolutionTOIR/>}/>
         <Route path="/education" element={<Education/>}/>
+        <Route path="/news/details/:key" element={<NewsDetails/>}/>
       </Routes>
       {/* <Footer /> */}
     </div>

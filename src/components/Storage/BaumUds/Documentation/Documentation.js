@@ -26,12 +26,10 @@ const Documentation = () => {
 
   const handleChangeModel = (e) => {
     setModel(e.target.value);
-    console.log(e.target.value, "model");
   };
 
   const handleChangeVersion = (e) => {
     setVersion(e.target.value);
-    console.log(e.target.value, "version");
   };
 
   const imageMapper = (model) => {
