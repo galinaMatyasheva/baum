@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -6,6 +6,12 @@ import {
   CardContent,
   CardMedia,
 } from "@material-ui/core";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import usePagination from "./Pagination";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 import news from "../../content/NewsData";
@@ -14,28 +20,67 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 const News = () => {
+  const [curYear, setCurYear] = useState("2021");
+  const uniqueYearsSet = new Set();
+  Object.keys(news).map((key) => uniqueYearsSet.add(news[key].year));
+  console.log("uniqueYears: ", uniqueYearsSet);
+  const uniqueYears = Array.from(uniqueYearsSet);
+
+  const handleYearClick = (e, value) => {
+    console.log(e, "e");
+    console.log(e.target.value, "e.target.value");
+    console.log(value, "value");
+    setCurYear(value);
+    setPage(1);
+    filteredNewsKeysPaginated.jump(1);
+  };
+
+  const filteredNewsKeys = Object.keys(news).filter((key) => {
+    return news[key].year === curYear;
+  });
+  console.log(filteredNewsKeys, "filteredNewsKeys");
+  let [page, setPage] = useState(1);
+  const PER_PAGE = 9;
+
+  const count = Math.ceil(filteredNewsKeys.length / PER_PAGE);
+  const filteredNewsKeysPaginated = usePagination(filteredNewsKeys, PER_PAGE);
+
+  const handleChangePage = (e, p) => {
+    setPage(p);
+    filteredNewsKeysPaginated.jump(p);
+  };
+
   return (
     <section className="news-container">
-      <Header/>
+      <Header />
       <div className="news-container-info">
         <h1 className="title-baum title-purple">Новости</h1>
         <div className="news-img"></div>
       </div>
 
-     <div className="news-years-container">
-       <h1>2021</h1>
-       <div>
-         <div>
-           <p>Выберите год:</p>
-           <div>
+      <div className="news-years-container">
+        <h1>{curYear}</h1>
+
+        <div>
+          <div className="new-years-nav">
+            <p>Выберите год:</p>
+            {uniqueYears.map((value) => (
+              <Button
+                onClick={(e) => {
+                  handleYearClick(e, value);
+                }}
+              >
+                {value}
+              </Button>
+            ))}
+            <div>
               <a href=""></a>
-           </div>
-         </div>
-        
-       </div>
-     </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="news-container-cards">
-        {Object.keys(news).map((key, index) => (
+        {filteredNewsKeysPaginated.currentData().map((key, index) => (
           <Card sx={{ maxWidth: 345 }} className="card">
             <div className="img">
               <CardMedia
@@ -61,7 +106,18 @@ const News = () => {
           </Card>
         ))}
       </div>
-      <Footer/>
+      <Pagination
+        count={count}
+        page={page}
+        onChange={handleChangePage}
+        renderItem={(item) => (
+          <PaginationItem
+            components={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+            {...item}
+          />
+        )}
+      />
+      <Footer />
     </section>
   );
 };

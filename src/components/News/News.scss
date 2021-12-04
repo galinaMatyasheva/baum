@@ -17,9 +17,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
   h1 {
     margin: 0;
+  }
+
+  .new-years-nav {
+    display: flex;
+    align-items: center;
+
+    .MuiButton-root {
+      padding: 0;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
   }
 }
 
@@ -64,4 +78,11 @@
   .btn-background-none {
     padding: 0.8rem 0.6rem;
   }
+}
+.css-1oj2twp-MuiPagination-root {
+  background-color: #e7f5ff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0;
 }

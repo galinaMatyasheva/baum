@@ -378,17 +378,21 @@ body {
       span {
         font-size: 1.5rem;
       }
+
       .MuiButton-iconSizeMedium > *:first-child {
         font-size: 2.5rem;
       }
     }
+
     .application-form-container-info {
       display: flex;
       flex-direction: column-reverse;
+
       .application-form-img {
         width: 100%;
         height: 450px;
       }
+
       .application-form-info {
         width: 100%;
       }
@@ -400,6 +404,7 @@ body {
           width: 100%;
         }
       }
+
       .baum-uds-container-cards {
         flex-direction: column;
 
@@ -410,12 +415,26 @@ body {
         .MuiCard-root {
           width: 100%;
         }
+
         .MuiCardMedia-media {
           width: 100%;
           height: 100%;
         }
+
         .MuiCardContent-root {
           padding: 3rem 3rem 0 3rem;
+        }
+      }
+    }
+
+    .functional-container {
+      .functional-about-baum-swarm-content {
+        flex-direction: column-reverse;
+        .functional-about-baum-swarm-info {
+          width: 100%;
+        }
+        .functional-about-baum-swarm-img {
+          height: 400px;
         }
       }
     }
@@ -563,6 +582,24 @@ body {
       }
     }
 
+    .application-form-container-info {
+      .application-form-textfield {
+        flex-direction: column;
+        padding: 0;
+
+        .MuiFormControl-root {
+          width: 100%;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .application-form-info {
+        .application-form-content-info {
+          flex-direction: column;
+        }
+      }
+    }
+
     .main-container {
       .main-community-container-info {
         .community-links {
@@ -594,6 +631,7 @@ body {
           }
         }
       }
+
       .store-info-about {
         .store-info-right {
           img {
@@ -611,15 +649,69 @@ body {
         }
       }
     }
+
+    .news-container-info,
+    .functional-container .functional-container-info,
+    .model-container .model-container-info,
+    .documentation-container .documentation-container-info,
+    .support-container .support-container-info {
+      .title-baum {
+        width: 100%;
+      }
+    }
   }
 
+  @media (max-width: 895px) {
+    .functional-container {
+      .accordion-container {
+        flex-direction: column;
+        .accordion-info {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .navbar-container {
+      .navbar-baum {
+        flex-direction: column;
+        li {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+
   @media (max-width: 695px) {
+    .baum-uds-container {
+      .baum-uds-pages-content {
+        .baum-uds-pages-links {
+          flex-direction: column;
+          border-top: none;
+          .baum-uds-pages-link {
+            justify-content: center;
+            width: 100%;
+            border-left: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+
     .address-container-info {
       .address-links {
         .btn {
           width: 100%;
         }
       }
+    }
+
+    .btn-light,
+    .btn-form,
+    .btn-dark {
+      width: 100%;
     }
 
     .main-container {
@@ -629,11 +721,6 @@ body {
             width: 100%;
           }
         }
-      }
-
-      .btn-light,
-      .btn-form {
-        width: 100%;
       }
 
       .shd-container-info {
@@ -702,6 +789,25 @@ body {
           .content-img {
             img {
               width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .MuiAccordionDetails-root {
+      padding: 1rem 2rem 3rem;
+    }
+
+    .functional-container {
+      .accordion-container {
+        .pools-structure {
+          flex-direction: column;
+          .pools-structure-block {
+            &:first-child {
+              margin-right: 0;
             }
           }
         }

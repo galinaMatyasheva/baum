@@ -62,7 +62,7 @@ const BaumUds = () => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-              <Button className="btn-dark" variant="contained">
+              <Button className="btn btn-dark" variant="contained">
                 Оставить заявку
               </Button>
             </div>
