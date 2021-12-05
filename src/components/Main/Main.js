@@ -29,7 +29,7 @@ const Main = () => {
   };
 
   const handleClickBaumSwarm = () => {
-    navigate("/baum-uds");
+    navigate("/baum-swarm");
     scrollToTop();
   };
 

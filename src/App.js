@@ -21,6 +21,7 @@ import Platform from "./components/AI/Platform/Platform";
 import SolutionDB from "./components/AI/SolutionsDB/SolutionDB";
 import SolutionTOIR from "./components/AI/SolutionsTOIR/SolutionTOIR";
 import Education from "./components/Education/Education";
+import AppForm from "./components/AppForm/AppForm";
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="/ai/solutionTOIR" element={<SolutionTOIR />} />
         <Route path="/education" element={<Education />} />
         <Route path="/news/details/:key" element={<NewsDetails />} />
+        <Route path="/app-form" element={<AppForm/>}/>
       </Routes>
     </div>
   );

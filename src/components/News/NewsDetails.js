@@ -25,14 +25,13 @@ const NewsDetails = () => {
         Новости
       </Button>
       <div className="news-details-info">
-        <img
-          className="news-details-img"
-          src={"/assets/news" + news[key].photo_links}
-          image={"assets/news" + news[key].photo_links}
-          alt="img"
-        />
-
         <div className="news-details-about">
+          <img
+            className="news-details-img"
+            src={"/assets/news" + news[key].photo_links}
+            image={"assets/news" + news[key].photo_links}
+            alt="img"
+          />
           <h3>{news[key].list_title}</h3>
           <p>{news[key].list_text}</p>
           {news[key].html_blocks.map((htmlBlock) => {

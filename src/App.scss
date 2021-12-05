@@ -55,7 +55,8 @@ body {
   .model-container,
   .news-container,
   .baum-swarm-container,
-  .news-details-container {
+  .news-details-container,
+  .app-form-container {
     width: 97vw;
     margin: 0 auto;
     background-color: #e5e5e5;
@@ -469,7 +470,8 @@ body {
     .news-container-info,
     .baum-inform-create-container,
     .store-info-about,
-    .baum-uds-container-info {
+    .baum-uds-container-info,
+    .news-details-info {
       flex-direction: column;
 
       .feedback-info,
@@ -689,6 +691,7 @@ body {
         width: 85%;
         .news-details-img {
           width: 100%;
+          padding: 0;
           object-fit: cover;
         }
       }

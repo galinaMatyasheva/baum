@@ -53,6 +53,11 @@ const BaumUds = () => {
     scrollToTop();
   };
 
+  const handleClickContactUs = () => {
+    navigate("/app-form");
+    scrollToTop();
+  };
+
   return (
     <section className="baum-uds-container">
       <Header/>
@@ -67,7 +72,7 @@ const BaumUds = () => {
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
               </p>
-              <Button className="btn btn-dark" variant="contained">
+              <Button className="btn btn-dark" variant="contained" onClick={handleClickContactUs}>
                 Оставить заявку
               </Button>
             </div>
