@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import "./App.scss";
 import AboutUs from "./components/AboutUs/AboutUs";
@@ -24,7 +25,11 @@ import Education from "./components/Education/Education";
 const App = () => {
   return (
     <div id="app" className="app-container">
-      {/* <Header /> */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Baum Inform</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -39,13 +44,12 @@ const App = () => {
         <Route path="/baum-swarm" element={<BaumSwarm />} />
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/ai/platform" element={<Platform/>}/>
-        <Route path="/ai/solutionDB" element={<SolutionDB/>}/>
-        <Route path="/ai/solutionTOIR" element={<SolutionTOIR/>}/>
-        <Route path="/education" element={<Education/>}/>
-        <Route path="/news/details/:key" element={<NewsDetails/>}/>
+        <Route path="/ai/platform" element={<Platform />} />
+        <Route path="/ai/solutionDB" element={<SolutionDB />} />
+        <Route path="/ai/solutionTOIR" element={<SolutionTOIR />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/news/details/:key" element={<NewsDetails />} />
       </Routes>
-      {/* <Footer /> */}
     </div>
   );
 };

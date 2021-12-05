@@ -53,7 +53,7 @@ const Community = () => {
               <h4>База знаний</h4>
             </AccordionSummary>
             <AccordionDetails>
-              <div>
+              <div className="accordion-content">
                 <p className="accordion-text">
                   В нашей базе знаний можно узнать об описании системы,
                   разобраться с настройками, скачать инструкции и найти решение
@@ -105,7 +105,7 @@ const Community = () => {
               <h4>Партнёры и дистрибьюторы</h4>
             </AccordionSummary>
             <AccordionDetails>
-              <div>
+              <div className="accordion-content">
                 <p className="accordion-text">
                   Мы объединили наши усилия для ускорения и реализации наших
                   проектов вместе

@@ -167,3 +167,13 @@
     }
   }
 }
+
+@media (max-width: 550px) {
+  .model-wrap {
+    overflow-x: scroll;
+    width: auto;
+    .model-buttons {
+      width: 550px;
+    }
+  }
+}

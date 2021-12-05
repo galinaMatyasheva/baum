@@ -47,3 +47,11 @@
     }
   }
 }
+
+@media (max-width: 550px) {
+  .model-wrap {
+    .table-container {
+      width: 550px;
+    }
+  }
+}

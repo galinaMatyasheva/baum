@@ -83,14 +83,10 @@ const News = () => {
                 <div
                   className={value === curYear ? "new-year-btn-underline" : ""}
                 >
-                  {" "}
                   {value}
                 </div>
               </Button>
             ))}
-            <div>
-              <a href=""></a>
-            </div>
           </div>
         </div>
       </div>

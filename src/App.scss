@@ -42,8 +42,7 @@ body {
   .footer-top,
   .support-container,
   .documentation-container,
-  .navbar,
-  .news-details-container {
+  .navbar {
     width: 97vw;
     margin: 0 auto;
     background-color: #fff;
@@ -55,7 +54,8 @@ body {
   .model-container,
   .model-container,
   .news-container,
-  .baum-swarm-container {
+  .baum-swarm-container,
+  .news-details-container {
     width: 97vw;
     margin: 0 auto;
     background-color: #e5e5e5;
@@ -172,6 +172,13 @@ body {
 
   p {
     font-size: 1.5rem;
+  }
+
+  ol {
+    list-style-position: inside;
+    li {
+      font-size: 1.5rem;
+    }
   }
 
   /*buttons*/
@@ -335,7 +342,7 @@ body {
     .form-info,
     .ai-info,
     .baum-inform-create-content {
-      padding: 5% 0;
+      padding: 4rem 2rem;
       width: 50%;
     }
   }
@@ -462,8 +469,7 @@ body {
     .news-container-info,
     .baum-inform-create-container,
     .store-info-about,
-    .baum-uds-container-info,
-    .news-details-info {
+    .baum-uds-container-info {
       flex-direction: column;
 
       .feedback-info,
@@ -676,7 +682,11 @@ body {
     }
 
     .news-details-container {
+      .MuiButtonBase-root .MuiButton-iconSizeMedium > *:first-child {
+        font-size: 1.5rem;
+      }
       .news-details-info {
+        width: 85%;
         .news-details-img {
           width: 100%;
           object-fit: cover;
@@ -699,8 +709,39 @@ body {
     .documentation-container {
       .documentation-models-info {
         .documentation-models-img {
-          margin: 0 auto;
-          width: 65%;
+          width: 100%;
+        }
+      }
+
+      .documentation-container-content {
+        padding: 0 2rem 4rem;
+        width: 100%;
+      }
+
+      .documentation-models-info {
+        .documentation-models-form {
+          flex-direction: column;
+
+          & > div {
+            margin-bottom: 2rem;
+          }
+
+          .documentation-model-form {
+            margin-bottom: 2rem;
+          }
+
+          .MuiFormControl-fullWidth {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .documentation-container {
+      .documentation-models-info {
+        .documentation-models-img {
+          margin: 2rem auto 0;
+          width: 75%;
         }
       }
 
@@ -731,6 +772,28 @@ body {
 
     .MuiAccordionDetails-root {
       padding: 1rem 2rem 3rem;
+    }
+  }
+
+  @media (max-width: 1090px) {
+    .model-container {
+      .model-buttons {
+        flex-wrap: wrap;
+
+        .models-group {
+          width: 85%;
+          margin: 0 auto;
+        }
+      }
+      .model-levels {
+        display: none;
+      }
+    }
+
+    .table-container {
+      .table-row {
+        width: 95%;
+      }
     }
   }
 
@@ -951,11 +1014,26 @@ body {
         }
       }
     }
+
+    .community-container-info {
+      .accordion-content {
+        width: 100%;
+      }
+    }
+
+    .model-container {
+      .model-buttons {
+        .models-group {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
   }
 
   @media (max-width: 450px) {
     .MuiAccordionDetails-root {
-      padding: 1rem 2rem 3rem;
+      padding: 1rem 1rem 3rem;
     }
 
     .functional-container {
@@ -970,13 +1048,21 @@ body {
         }
       }
     }
-  }
 
-  .statistics-container-info {
-    .statistics-info {
-      .statistics-column {
-        .statistics-block-info {
-          width: 90%;
+    .statistics-container-info {
+      .statistics-info {
+        .statistics-column {
+          .statistics-block-info {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    .community-container-info {
+      .accordion-content {
+        span {
+          font-size: 1.2rem;
         }
       }
     }

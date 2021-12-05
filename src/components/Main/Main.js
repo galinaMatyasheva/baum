@@ -48,11 +48,6 @@ const Main = () => {
     scrollToTop();
   };
 
-  const handleClickQuestionnaire = () => {
-    navigate("http://npobaum1.tilda.ws/anketa1");
-    scrollToTop();
-  };
-
   return (
     <section className="main-container">
       <Header />
