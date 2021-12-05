@@ -346,7 +346,8 @@ body {
   .main-ai-img,
   .main-community-img,
   .main-form-img,
-  .about-us-img .about-us-goal-img,
+  .about-us-img,
+  .about-us-goal-img,
   .vacancies-img,
   .baum-uds-img,
   .baum-uds-pages-img,
@@ -466,7 +467,7 @@ body {
       flex-direction: column;
 
       .feedback-info,
-      .about-us-info,
+      .about-us-img,
       .vacancies-info,
       .about-us-goal-info,
       .baum-uds-img,
@@ -490,6 +491,10 @@ body {
         min-height: 650px;
         height: 100%;
         padding: 10% 0;
+      }
+
+      .about-us-info {
+        width: 100%;
       }
 
       .baum-inform-create-content {
@@ -678,6 +683,55 @@ body {
         }
       }
     }
+
+    .support-container {
+      .support-container-content {
+        flex-direction: column;
+        padding: 2rem;
+
+        .support-content {
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+
+    .documentation-container {
+      .documentation-models-info {
+        .documentation-models-img {
+          margin: 0 auto;
+          width: 65%;
+        }
+      }
+
+      .documentation-about-company-content {
+        flex-direction: column-reverse;
+        .documentation-about-company-info {
+          width: 100%;
+          .documentation-text {
+            width: 100%;
+            padding: 0 2rem;
+          }
+        }
+
+        .documentation-about-company-img {
+          height: 650px;
+        }
+      }
+    }
+
+    .community-container {
+      .community-container-info {
+        margin: 2rem 0;
+        .community-info {
+          padding-top: 2rem;
+        }
+      }
+    }
+
+    .MuiAccordionDetails-root {
+      padding: 1rem 2rem 3rem;
+    }
   }
 
   @media (max-width: 895px) {
@@ -705,6 +759,29 @@ body {
         width: 85%;
       }
     }
+
+    .documentation-container {
+      .documentation-about-company-content {
+        .documentation-about-company-img {
+          height: 450px;
+        }
+      }
+    }
+
+    .statistics-container-info {
+      .statistics-info {
+        .statistics-column {
+          &:first-child {
+            margin-bottom: 0;
+          }
+
+          .statistics-block-info {
+            width: 45%;
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
   }
 
   @media (max-width: 800px) {
@@ -724,6 +801,7 @@ body {
         .baum-uds-pages-links {
           flex-direction: column;
           border-top: none;
+
           .baum-uds-pages-link {
             justify-content: center;
             width: 100%;
@@ -795,7 +873,7 @@ body {
     .baum-inform-create-container,
     .store-info-about {
       .feedback-info,
-      .about-us-info,
+      .about-us-img,
       .vacancies-info,
       .about-us-goal-info,
       .baum-uds-info,
@@ -834,6 +912,45 @@ body {
         }
       }
     }
+
+    .documentation-container {
+      .documentation-models-info {
+        .documentation-models-img {
+          width: 100%;
+        }
+      }
+
+      .documentation-container-content {
+        padding: 0 2rem 4rem;
+        width: 100%;
+      }
+
+      .documentation-models-info {
+        .documentation-models-form {
+          flex-direction: column;
+
+          & > div {
+            margin-bottom: 2rem;
+          }
+
+          .documentation-model-form {
+            margin-bottom: 2rem;
+          }
+
+          .MuiFormControl-fullWidth {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .about-us-container {
+      .about-us-goal-container-info {
+        .about-us-goal-img {
+          display: none;
+        }
+      }
+    }
   }
 
   @media (max-width: 450px) {
@@ -850,6 +967,16 @@ body {
               margin-right: 0;
             }
           }
+        }
+      }
+    }
+  }
+
+  .statistics-container-info {
+    .statistics-info {
+      .statistics-column {
+        .statistics-block-info {
+          width: 90%;
         }
       }
     }
