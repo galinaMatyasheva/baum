@@ -1,29 +1,20 @@
 .team-container-info {
-  .carousel.carousel-slider {
-    .control-arrow {
-      height: 260px;
-      &:hover {
-        height: 260px;
-      }
-    }
+  .MuiSlider-thumb:not(.MuiSlider-active) {
+    transition: left 1s ease-in;
+  }
+.makeStyles-itemWrapper-3 {
+  height: 350px !important;
+}
+
+.makeStyles-indicators-4 {
+  display: none;
+}
+  .MuiSlider-track {
+    transition: width 1s ease-in;
   }
 
-  .carousel {
-    .carousel-status {
-      display: none;
-    }
-
-    .slide {
-      img {
-        height: 260px;
-        width: 232px;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .MuiButton-root {
-    color: #000;
+  .MuiSlider-thumb {
+    display: none;
   }
 
   .team-content {
@@ -62,14 +53,22 @@
     }
   }
 
-  @media (max-width: 1200px) {
-    .team-gallery {
-      height: 365px;
+  .MuiIconButton-root {
+    color: #000;
+  }
+
+  .gallery-slider {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+    .arrow-left {
+      transform: rotate(180deg);
+    }
+
+    .MuiSlider-root {
+      color: #000;
     }
   }
-
-  @media (max-width: 965px) {
-   
-  }
-
 }

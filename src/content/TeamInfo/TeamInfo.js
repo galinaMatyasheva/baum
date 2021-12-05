@@ -1,20 +1,43 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
-import { Carousel } from "react-responsive-carousel";
+import React, { useState } from "react";
+import { Slider, IconButton } from "@material-ui/core";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import Carousel from "react-material-ui-carousel";
 
 import ceo from "../../assets/team/ceo.png";
 import cto from "../../assets/team/cto.png";
 import cso from "../../assets/team/cso.png";
 import cao from "../../assets/team/cao.png";
 import clo from "../../assets/team/clo.png";
-import cspo from "../../assets/team/cspo.png";
+import cspo from "../../assets/team/cspo.png"
 import "./TeamInfo.scss";
 
 const TeamInfo = () => {
+  const [value, setValue] = useState(0);
+  const [index, setIndex] = useState(0);
+
+  const updateValue = (e, newValue) => {
+    setValue(newValue);
+  };
+
+  const handleChange = (direction) => {
+    console.log('index: ', index);
+    if (index >= 0 && index <= 2) {
+      setIndex(direction === 'left' ? index - 1 : index + 1)
+    }
+    if (index === 3)
+      setIndex(direction === 'left' ? index - 2 : index)
+
+    if (index === 0)
+      setIndex(direction === 'right' ? index +1 : index)
+  }
+
   return (
     <div className="team-container-info">
       <div className="team-img team-info">
-        <Carousel>
+        <Carousel
+          autoPlay={false}
+          index={index}
+        >
           <div className="team-gallery">
             <div className="team-gallery-items">
               <img src={ceo} alt="img" />
@@ -52,15 +75,43 @@ const TeamInfo = () => {
             </div>
           </div>
         </Carousel>
+        <div className="gallery-slider ">
+          <IconButton
+            className="arrow-left "
+            variant="contained"
+            onClick={() => {
+              handleChange('left')
+              setValue(value - 40);
+            }}
+          >
+            <ArrowRightAltIcon />
+          </IconButton>
+          <Slider
+            value={value}
+            step={1}
+            min={0}
+            max={90}
+            onChange={updateValue}
+          />
+          <IconButton
+            variant="contained"
+            onClick={() => {
+              handleChange('right')
+              setValue(value + 40);
+            }}
+          >
+            <ArrowRightAltIcon />
+          </IconButton>
+        </div>
       </div>
       <div className="team-info">
         <div className="team-content">
           <h2>Наша команда</h2>
           <p className="info-text">
-            Наша команда – это команда энергичных и целеустремленных
-            профессионалов, использующих творческий подход и обладающих
-            нестандартным мышлением, обширными практическими знаниями и
-            результативным опытом работы в различных отраслях.
+            Наша IT - команда строит модели, выбирает самые современные
+            технологии, пишет код, оптимизирует его для различного железа,
+            отлаживает, тестирует у заказчиков, вносит коррективы. Мы будем рады
+            обсудить ваши пожелания и идеи.
           </p>
         </div>
       </div>
