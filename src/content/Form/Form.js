@@ -24,12 +24,14 @@ const Form = () => {
                 placeholder="Ваше имя"
                 variant="outlined"
                 type="text"
+                required="true"
               />
               <TextField
                 name="firm-name"
                 placeholder="Название организации"
                 variant="outlined"
                 type="text"
+                required="true"
               />
             </div>
             <div className="textfield">
@@ -37,21 +39,23 @@ const Form = () => {
                 name="phone"
                 placeholder="Телефон"
                 variant="outlined"
+                required="true"
               />
-              <TextField name="mail" placeholder="E-mail" variant="outlined" />
+              <TextField required="true" type="email" name="mail" placeholder="E-mail" variant="outlined" />
             </div>
             <TextareaAutosize
               name="message"
               minRows={1.5}
               placeholder="Текст сообщения"
               style={{ width: "100%" }}
+              required="true"
             />
           </div>
           <div className="form-submit-info">
             <div className="form-checkbox">
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox defaultChecked />}
+                  control={<Checkbox defaultChecked required="true"/>}
                   label="Даю согласие на обработку персональных данных"
                 />
               </FormGroup>

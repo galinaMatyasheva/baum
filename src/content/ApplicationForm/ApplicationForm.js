@@ -24,12 +24,14 @@ const ApplicationForm = () => {
                   placeholder="Ваше имя"
                   variant="outlined"
                   type="text"
+                  required="true"
                 />
                 <TextField
                   name="firm-name"
                   placeholder="Название организации"
                   variant="outlined"
                   type="text"
+                  required="true"
                 />
               </div>
               <div className="application-form-textfield">
@@ -37,11 +39,14 @@ const ApplicationForm = () => {
                   name="phone"
                   placeholder="Телефон"
                   variant="outlined"
+                  required="true"
                 />
                 <TextField
                   name="mail"
                   placeholder="E-mail"
                   variant="outlined"
+                  required="true"
+                  type="email"
                 />
               </div>
             </div>
@@ -49,7 +54,7 @@ const ApplicationForm = () => {
               <div className="application-form-checkbox">
                 <FormGroup>
                   <FormControlLabel
-                    control={<Checkbox defaultChecked />}
+                    control={<Checkbox defaultChecked required="true"/>}
                     label="Даю согласие на обработку персональных данных"
                   />
                 </FormGroup>
