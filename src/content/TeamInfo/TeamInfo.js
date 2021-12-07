@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Slider, IconButton } from "@material-ui/core";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import Carousel from "react-material-ui-carousel";
 import WestIcon from "@mui/icons-material/West";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import EastIcon from "@mui/icons-material/East";
 
 import ceo from "../../assets/team/ceo.png";

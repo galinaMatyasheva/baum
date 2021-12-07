@@ -8,18 +8,14 @@ import {
 } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
-import "./Documentation.scss";
-import imgModelB1000F1000 from "../../../../assets/baum-uds/models-img/B1000-F1000.png";
-import imgSPACE3500Nx6500Nx from "../../../../assets/baum-uds/models-img/SPACE3500Nx-6500Nx.png";
-import imgUDS1000 from "../../../../assets/baum-uds/models-img/UDS1000.png";
-import imgUDS2000 from "../../../../assets/baum-uds/models-img/UDS2000.png";
-import imgUDS80002500F4500F from "../../../../assets/baum-uds/models-img/UDS8000-2500F-4500F.png";
-import imgBFMS220 from "../../../../assets/baum-uds/models-img/BF.MS.2.20.png";
+import "./DocumentationSwarm.scss";
+import imgFlash from "../../../../assets/baum-swarm/models-img/flash.png";
+import imgArchive from "../../../../assets/baum-swarm/models-img/archive.png";
 import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 
-const Documentation = () => {
+const DocumentationSwarm = () => {
   const elementRef = useRef();
   const [model, setModel] = useState("");
   const [version, setVersion] = useState("");
@@ -33,55 +29,21 @@ const Documentation = () => {
   };
 
   const imageMapper = (model) => {
-    if (model === "B1000" || model === "F1000") {
-      return imgModelB1000F1000;
-    } else if (model === "UDS1000") {
-      return imgUDS1000;
-    } else if (model === "UDS2000") {
-      return imgUDS2000;
-    } else if (
-      model === "UDS8000" ||
-      model === "UDS2500F" ||
-      model === "UDS4500F"
-    ) {
-      return imgUDS80002500F4500F;
-    } else if (model === "БФ.MS.2-20") {
-      return imgBFMS220;
-    } else if (model === "SPACE3500NX" || model === "SPACE6500NX") {
-      return imgSPACE3500Nx6500Nx;
+    if (model === "Flash") {
+      return imgFlash;
+    } else if (model === "Archive") {
+      return imgArchive;
     }
-    return imgModelB1000F1000;
+    return imgFlash;
   };
 
-  const models = [
-    "B1000",
-    "F1000",
-    "UDS1000",
-    "UDS2000",
-    "UDS8000",
-    "UDS2500F",
-    "UDS4500F",
-    "БФ.MS.2-20",
-    "SPACE3500NX",
-    "SPACE6500NX",
-  ];
+  const models = ["Flash", "Archive"];
 
-  const versions = [
-    "3.4",
-    "3.5",
-    "4.0",
-    "4.1",
-    "4.2",
-    "4.3",
-    "4.3.3",
-    "4.4.0",
-    "4.4.1",
-    "5.0.0",
-  ];
+  const versions = ["Версия 1", "Версия 2"];
 
   return (
     <div className="documentation-container">
-      <Header/>
+      <Header />
       <Navbar />
 
       <div className="documentation-container-info">
@@ -152,7 +114,7 @@ const Documentation = () => {
           </div>
           <a
             ref={elementRef}
-            href={`/pdf/models-baum-uds/${model}/${version}.pdf`}
+            // href={`/pdf/models-baum-swarm/${model}/${version}.pdf`}
             download
             className="btn btn-dark"
           >
@@ -182,8 +144,8 @@ const Documentation = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
-export default Documentation;
+export default DocumentationSwarm;

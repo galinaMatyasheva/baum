@@ -23,6 +23,7 @@ import SolutionTOIR from "./components/AI/SolutionsTOIR/SolutionTOIR";
 import Education from "./components/Education/Education";
 import AppForm from "./components/AppForm/AppForm";
 import FunctionalSwarm from "./components/Storage/BaumSwarm/Functional/FunctionalSwarm";
+import DocumentationSwarm from "./components/Storage/BaumSwarm/Documentation/DocumentationSwarm";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/baum-uds/model" element={<Model />} />
         <Route path="/baum-swarm" element={<BaumSwarm />} />
         <Route path="/baum-swarm/functional" element={<FunctionalSwarm/>}/>
+        <Route path="/baum-swarm/documentation" element={<DocumentationSwarm/>}/>
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/community" element={<Community />} />
         <Route path="/ai/platform" element={<Platform />} />

@@ -34,17 +34,17 @@ const BaumSwarm = () => {
   };
 
   const handleClickSupport = () => {
-    navigate("/baum-uds/support");
+    navigate("/baum-swarm/support");
     scrollToTop();
   };
 
   const handleClickDocumentation = () => {
-    navigate("/baum-uds/documentation");
+    navigate("/baum-swarm/documentation");
     scrollToTop();
   };
 
   const handleClickModel = () => {
-    navigate("/baum-uds/model");
+    navigate("/baum-swarm/model");
     scrollToTop();
   };
 
