@@ -24,6 +24,7 @@ import Education from "./components/Education/Education";
 import AppForm from "./components/AppForm/AppForm";
 import FunctionalSwarm from "./components/Storage/BaumSwarm/Functional/FunctionalSwarm";
 import DocumentationSwarm from "./components/Storage/BaumSwarm/Documentation/DocumentationSwarm";
+import SupportSwarm from "./components/Storage/BaumSwarm/Support/SupportSwarm";
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/baum-swarm" element={<BaumSwarm />} />
         <Route path="/baum-swarm/functional" element={<FunctionalSwarm/>}/>
         <Route path="/baum-swarm/documentation" element={<DocumentationSwarm/>}/>
+        <Route path="/baum-swarm/support" element={<SupportSwarm/>}/>
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/community" element={<Community />} />
         <Route path="/ai/platform" element={<Platform />} />
