@@ -1,0 +1,48 @@
+.navbar-container {
+  width: 97vw;
+  margin: 0 auto;
+  background-color: #000;
+  // color: #fff;
+
+  .navbar-baum {
+    display: flex;
+
+    li {
+      list-style-type: none;
+      padding: 3rem;
+      border-bottom: 2px solid #000;
+      color: #fff;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.6);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+      }
+
+      a {
+        &:hover {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+    }
+  }
+
+  // .PrivateTabIndicator-colorSecondary-7 {
+  //   background: rgba(255, 255, 255, 0.6);
+  // }
+
+  // .MuiTab-root {
+  //   padding: 35px 12px;
+  //   font-size: 1.5rem;
+  // }
+
+  // .MuiButtonBase-root {
+  //   span {
+  //     font-size: 1.5rem;
+  //   }
+  // }
+
+  // span {
+  //   text-transform: none;
+  //   color: #fff;
+  // }
+}

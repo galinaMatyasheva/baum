@@ -1,22 +1,4 @@
 .team-container-info {
-  .MuiSlider-thumb:not(.MuiSlider-active) {
-    transition: left 1s ease-in;
-  }
-.makeStyles-itemWrapper-3 {
-  height: 350px !important;
-}
-
-.makeStyles-indicators-4 {
-  display: none;
-}
-  .MuiSlider-track {
-    transition: width 1s ease-in;
-  }
-
-  .MuiSlider-thumb {
-    display: none;
-  }
-
   .team-content {
     width: 85%;
     margin: 0 auto;
@@ -34,6 +16,55 @@
     a {
       color: #000;
       font-size: 14px;
+    }
+
+    .carousel-content {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      .carousel-gallery {
+        margin: 0 1rem;
+        width: 45%;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 245px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .team-info-phone {
+    padding: 4rem 2rem;
+    display: none;
+    &:last-child {
+      padding: 12% 0;
+    }
+
+    a {
+      color: #000;
+      font-size: 14px;
+    }
+
+    .carousel-content {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      .carousel-gallery {
+        margin: 0 1rem;
+        width: 70%;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 366px;
+          object-fit: cover;
+        }
+      }
     }
   }
 

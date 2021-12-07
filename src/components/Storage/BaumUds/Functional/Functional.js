@@ -9,7 +9,7 @@ import {
 import "./Functional.scss";
 import arrowBottomImg from "../../../../assets/arrow-bottom.svg";
 import arrowBottomBlackImg from "../../../../assets/arrow-bottom-black.svg";
-import Navbar from "../../../../content/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 

@@ -15,7 +15,7 @@ import imgUDS1000 from "../../../../assets/baum-uds/models-img/UDS1000.png";
 import imgUDS2000 from "../../../../assets/baum-uds/models-img/UDS2000.png";
 import imgUDS80002500F4500F from "../../../../assets/baum-uds/models-img/UDS8000-2500F-4500F.png";
 import imgBFMS220 from "../../../../assets/baum-uds/models-img/BF.MS.2.20.png";
-import Navbar from "../../../../content/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 

@@ -13,7 +13,7 @@ import modelIcon3 from "../../../../assets/baum-uds/model-icon-3.svg";
 import modelIcon4 from "../../../../assets/baum-uds/model-icon-4.svg";
 import TableModel from "../../../../content/TableModel/TableModel";
 import data from "../../../../content/TableData";
-import Navbar from "../../../../content/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 

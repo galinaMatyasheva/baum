@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Support.scss";
 import Form from "../../../../content/Form/Form";
-import Navbar from "../../../../content/Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 

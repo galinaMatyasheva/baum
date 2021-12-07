@@ -2,89 +2,117 @@ import React, { useState } from "react";
 import { Slider, IconButton } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import Carousel from "react-material-ui-carousel";
+import WestIcon from "@mui/icons-material/West";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import EastIcon from "@mui/icons-material/East";
 
 import ceo from "../../assets/team/ceo.png";
 import cto from "../../assets/team/cto.png";
 import cso from "../../assets/team/cso.png";
 import cao from "../../assets/team/cao.png";
 import clo from "../../assets/team/clo.png";
-import cspo from "../../assets/team/cspo.png"
+import cspo from "../../assets/team/cspo.png";
 import "./TeamInfo.scss";
 
 const TeamInfo = () => {
-  const [value, setValue] = useState(0);
   const [index, setIndex] = useState(0);
+  const [indexPhone, setIndexPhone] = useState(0);
+  const [value, setValue] = useState(30);
+  const [valuePhone, setValuePhone] = useState(6);
+
+  const picList = [ceo, cto, cso, cao, clo, cspo];
+  const titleList = [
+    {
+      name: "Алексей Бородулин",
+      position: "CEO (Chief Executive Officer)",
+    },
+    {
+      name: "Андрей Гантимуров",
+      position: "CTO (Chief Technology Officer)",
+    },
+    {
+      name: "Павел Гундин",
+      position: "CSO (Chief Sales Officer)",
+    },
+    {
+      name: "Александр Сапожников",
+      position: "CAO (Chief Administrative Officer)",
+    },
+    {
+      name: "Маргарита Стоянова",
+      position: "CLO (Chief Learning Officer)",
+    },
+    {
+      name: "Руслан Чиняков",
+      position: "CSPO (Chief Strategic Planning Officer)",
+    },
+  ];
 
   const updateValue = (e, newValue) => {
     setValue(newValue);
   };
 
-  const handleChange = (direction) => {
-    console.log('index: ', index);
-    if (index >= 0 && index <= 2) {
-      setIndex(direction === 'left' ? index - 1 : index + 1)
+  const updateValuePhone = (e, newValue) => {
+    setValuePhone(newValue);
+  };
+
+  const onClickNext = () => {
+    if (index + 2 === picList.length) {
+      setIndex(0);
+      setValue(30);
+    } else {
+      setIndex(index + 2);
+      setValue(value + 30);
     }
-    if (index === 3)
-      setIndex(direction === 'left' ? index - 2 : index)
+  };
 
-    if (index === 0)
-      setIndex(direction === 'right' ? index +1 : index)
-  }
+  const onClickPrevious = () => {
+    if (index - 2 < 0) {
+      setIndex(picList.length - 2);
+      setValue(90);
+    } else {
+      setIndex(index - 2);
+      setValue(value - 30);
+    }
+  };
 
+  const onClickNextPhone = () => {
+    if (indexPhone + 1 === picList.length) {
+      setIndexPhone(0);
+      setValuePhone(6);
+    } else {
+      setIndexPhone(indexPhone + 1);
+      setValuePhone(valuePhone + 6);
+    }
+  };
+
+  const onClickPreviousPhone = () => {
+    if (indexPhone - 1 < 0) {
+      setIndexPhone(picList.length - 1);
+      setValuePhone(36);
+    } else {
+      setIndexPhone(indexPhone - 1);
+      setValuePhone(valuePhone - 6);
+    }
+  };
   return (
     <div className="team-container-info">
       <div className="team-img team-info">
-        <Carousel
-          autoPlay={false}
-          index={index}
-        >
-          <div className="team-gallery">
-            <div className="team-gallery-items">
-              <img src={ceo} alt="img" />
-              <h4>Алексей Бородулин</h4>
-              <p>CEO (Chief Executive Officer)</p>
-            </div>
-            <div className="team-gallery-items">
-              <img src={cto} alt="img" />
-              <h4>Андрей Гантимуров</h4>
-              <p>CTO (Chief Technology Officer)</p>
-            </div>
+        <div className="carousel-content">
+          <div className="carousel-gallery">
+            <img src={picList[index]} />
+            <h4>{titleList[index].name}</h4>
+            <p>{titleList[index].position}</p>
           </div>
-          <div className="team-gallery">
-            <div className="team-gallery-items">
-              <img src={cso} alt="img" />
-              <h4>Павел Гундин</h4>
-              <p>CSO (Chief Sales Officer)</p>
-            </div>
-            <div className="team-gallery-items">
-              <img src={cao} alt="img" />
-              <h4>Александр Сапожников</h4>
-              <p>CAO (Chief Administrative Officer)</p>
-            </div>
+          <div className="carousel-gallery">
+            <img src={picList[index + 1]} />
+            <h4>{titleList[index + 1].name}</h4>
+            <p>{titleList[index + 1].position}</p>
           </div>
-          <div className="team-gallery">
-            <div className="team-gallery-items">
-              <img src={clo} alt="img" />
-              <h4>Маргарита Стоянова</h4>
-              <p>CLO (Chief Learning Officer)</p>
-            </div>
-            <div className="team-gallery-items">
-              <img src={cspo} alt="img" />
-              <h4>Руслан Чиняков</h4>
-              <p>CSPO (Chief Strategic Planning Officer)</p>
-            </div>
-          </div>
-        </Carousel>
+        </div>
         <div className="gallery-slider ">
-          <IconButton
-            className="arrow-left "
-            variant="contained"
-            onClick={() => {
-              handleChange('left')
-              setValue(value - 40);
-            }}
-          >
-            <ArrowRightAltIcon />
+          <IconButton style={{ fontSize: "18px" }} onClick={onClickPrevious}>
+            <WestIcon />
           </IconButton>
           <Slider
             value={value}
@@ -94,13 +122,40 @@ const TeamInfo = () => {
             onChange={updateValue}
           />
           <IconButton
-            variant="contained"
-            onClick={() => {
-              handleChange('right')
-              setValue(value + 40);
-            }}
+            style={{ "margin-left": "5px", fontSize: "18px" }}
+            onClick={onClickNext}
           >
-            <ArrowRightAltIcon />
+            <EastIcon />
+          </IconButton>
+        </div>
+      </div>
+      <div className="team-img team-info-phone">
+        <div className="carousel-content">
+          <div className="carousel-gallery">
+            <img src={picList[indexPhone]} />
+            <h4>{titleList[indexPhone].name}</h4>
+            <p>{titleList[indexPhone].position}</p>
+          </div>
+        </div>
+        <div className="gallery-slider ">
+          <IconButton
+            style={{ fontSize: "18px" }}
+            onClick={onClickPreviousPhone}
+          >
+            <WestIcon />
+          </IconButton>
+          <Slider
+            value={valuePhone}
+            step={1}
+            min={0}
+            max={36}
+            onChange={updateValuePhone}
+          />
+          <IconButton
+            style={{ "margin-left": "5px", fontSize: "18px" }}
+            onClick={onClickNextPhone}
+          >
+            <EastIcon />
           </IconButton>
         </div>
       </div>

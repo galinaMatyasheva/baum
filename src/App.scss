@@ -39,6 +39,7 @@ body {
   .vacancies-container,
   .team-container,
   .baum-uds-container,
+  .baum-swarm-container,
   .footer-top,
   .support-container,
   .documentation-container,
@@ -54,7 +55,6 @@ body {
   .model-container,
   .model-container,
   .news-container,
-  .baum-swarm-container,
   .news-details-container,
   .app-form-container {
     width: 97vw;
@@ -316,6 +316,7 @@ body {
   .vacancies-container-info,
   .about-us-goal-container-info,
   .baum-uds-container-info,
+  .baum-swarm-container-info,
   .app-form-container-info,
   .community-container-info,
   .functional-container-info,
@@ -333,6 +334,7 @@ body {
     .vacancies-info,
     .about-us-goal-info,
     .baum-uds-info,
+    .baum-swarm-info,
     .main-community-info,
     .shd-info {
       width: 50%;
@@ -359,6 +361,8 @@ body {
   .vacancies-img,
   .baum-uds-img,
   .baum-uds-pages-img,
+  .baum-swarm-img,
+  .baum-swarm-pages-img,
   .form-img,
   .functional-img,
   .support-img,
@@ -437,6 +441,35 @@ body {
       }
     }
 
+    .baum-swarm-container {
+      .baum-swarm-container-info {
+        .baum-swarm-info {
+          width: 100%;
+        }
+      }
+
+      .baum-swarm-container-cards {
+        flex-direction: column;
+
+        h3 {
+          min-height: 0;
+        }
+
+        .MuiCard-root {
+          width: 100%;
+        }
+
+        .MuiCardMedia-media {
+          width: 100%;
+          height: 100%;
+        }
+
+        .MuiCardContent-root {
+          padding: 3rem 3rem 0 3rem;
+        }
+      }
+    }
+
     .functional-container {
       .functional-about-baum-swarm-content {
         flex-direction: column-reverse;
@@ -471,6 +504,7 @@ body {
     .baum-inform-create-container,
     .store-info-about,
     .baum-uds-container-info,
+    .baum-swarm-container-info,
     .news-details-info {
       flex-direction: column;
 
@@ -480,6 +514,8 @@ body {
       .about-us-goal-info,
       .baum-uds-img,
       .baum-uds-pages-img,
+      .baum-swarm-img,
+      .baum-swarm-pages-img,
       .main-community-info,
       .shd-info,
       .address-info {
@@ -490,7 +526,6 @@ body {
         align-items: center;
       }
 
-      .team-info,
       .form-info,
       .ai-info {
         display: flex;
@@ -501,7 +536,8 @@ body {
         padding: 10% 0;
       }
 
-      .about-us-info {
+      .about-us-info,
+      .team-info {
         width: 100%;
       }
 
@@ -525,6 +561,8 @@ body {
     .vacancies-img,
     .baum-uds-img,
     .baum-uds-pages-img,
+    .baum-swarm-img,
+    .baum-swarm-pages-img,
     .form-img,
     .functional-img,
     .support-img,
@@ -552,6 +590,14 @@ body {
     .baum-uds-container {
       .baum-uds-container-info {
         .baum-uds-pages-info {
+          width: 100%;
+        }
+      }
+    }
+
+    .baum-swarm-container {
+      .baum-swarm-container-info {
+        .baum-swarm-pages-info {
           width: 100%;
         }
       }
@@ -776,6 +822,19 @@ body {
     .MuiAccordionDetails-root {
       padding: 1rem 2rem 3rem;
     }
+
+    .team-container-info {
+      .team-info {
+        .carousel-content {
+          width: 65%;
+          margin: 0 auto;
+
+          .carousel-gallery img {
+            height: 300px;
+          }
+        }
+      }
+    }
   }
 
   @media (max-width: 1090px) {
@@ -796,6 +855,16 @@ body {
     .table-container {
       .table-row {
         width: 95%;
+      }
+    }
+  }
+
+  @media (max-width: 965px) {
+    .team-container-info {
+      .team-info {
+        .carousel-content {
+          width: 85%;
+        }
       }
     }
   }
@@ -859,6 +928,14 @@ body {
         }
       }
     }
+
+    .team-container-info {
+      .team-info {
+        .carousel-content {
+          width: 95%;
+        }
+      }
+    }
   }
 
   @media (max-width: 695px) {
@@ -869,6 +946,22 @@ body {
           border-top: none;
 
           .baum-uds-pages-link {
+            justify-content: center;
+            width: 100%;
+            border-left: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+
+    .baum-swarm-container {
+      .baum-swarm-pages-content {
+        .baum-swarm-pages-links {
+          flex-direction: column;
+          border-top: none;
+
+          .baum-swarm-pages-link {
             justify-content: center;
             width: 100%;
             border-left: none;
@@ -921,13 +1014,13 @@ body {
     .ai-container-info,
     .community-container-info,
     .main-community-container-info,
-    .team-container-info,
     .address-container-info,
     .form-container-info,
     .about-us-container-info,
     .vacancies-container-info,
     .about-us-goal-container-info,
     .baum-uds-container-info,
+    .baum-swarm-container-info,
     .app-form-container-info,
     .community-container-info,
     .functional-container-info,
@@ -943,13 +1036,13 @@ body {
       .vacancies-info,
       .about-us-goal-info,
       .baum-uds-info,
+      .baum-swarm-info,
       .main-community-info,
       .shd-info,
       .address-info {
         min-height: 450px;
       }
 
-      .team-info,
       .form-info,
       .ai-info {
         min-height: 450px;
@@ -1034,6 +1127,30 @@ body {
     }
   }
 
+  @media (max-width: 675px) {
+    .team-container-info {
+      .team-info-phone {
+        display: block;
+      }
+
+      .team-info {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    .team-container-info {
+      .team-info-phone {
+        .carousel-content {
+          .carousel-gallery {
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 450px) {
     .MuiAccordionDetails-root {
       padding: 1rem 1rem 3rem;
@@ -1067,6 +1184,25 @@ body {
         span {
           font-size: 1.2rem;
         }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .team-container-info {
+      .team-info-phone {
+        padding: 4rem 1rem;
+        .carousel-content {
+          .carousel-gallery {
+            width: 100%;
+            img {
+              height: 285px;
+            }
+          }
+        }
+      }
+      .gallery-slider {
+        width: 100%;
       }
     }
   }
