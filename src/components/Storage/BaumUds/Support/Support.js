@@ -9,8 +9,8 @@ import Footer from "../../../Footer/Footer";
 const Support = () => {
   return (
     <div className="support-container">
-      <Header/>
-      <Navbar/>
+      <Header />
+      <Navbar />
       <div className="support-container-info">
         <h1 className="title-baum title-blue">Поддержка</h1>
         <div className="support-img"></div>
@@ -33,7 +33,7 @@ const Support = () => {
         </div>
       </div>
       <Form />
-      <Footer/>
+      <Footer />
     </div>
   );
 };

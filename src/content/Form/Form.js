@@ -41,7 +41,13 @@ const Form = () => {
                 variant="outlined"
                 required="true"
               />
-              <TextField required="true" type="email" name="mail" placeholder="E-mail" variant="outlined" />
+              <TextField
+                required="true"
+                type="email"
+                name="mail"
+                placeholder="E-mail"
+                variant="outlined"
+              />
             </div>
             <TextareaAutosize
               name="message"
@@ -55,7 +61,7 @@ const Form = () => {
             <div className="form-checkbox">
               <FormGroup>
                 <FormControlLabel
-                  control={<Checkbox defaultChecked required="true"/>}
+                  control={<Checkbox defaultChecked required="true" />}
                   label="Даю согласие на обработку персональных данных"
                 />
               </FormGroup>

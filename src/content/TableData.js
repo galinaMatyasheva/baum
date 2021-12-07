@@ -1767,6 +1767,32 @@ const data = [
       },
     ],
   },
+  {
+    tableName: "AIAP 2000",
+    tableProperties: [
+      {
+        property: "Контроллер",
+        value: "2",
+      },
+      {
+        property: "СХД",
+        value: "+",
+      },
+    ],
+  },
+  {
+    tableName: "AIAP 6000",
+    tableProperties: [
+      {
+        property: "Контроллер",
+        value: "6",
+      },
+      {
+        property: "СХД",
+        value: "+",
+      },
+    ],
+  },
 ];
 
 export default data;

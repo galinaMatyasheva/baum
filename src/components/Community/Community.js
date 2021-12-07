@@ -32,7 +32,7 @@ const Community = () => {
 
   return (
     <section className="community-container">
-      <Header/>
+      <Header />
       <div className="community-container-info">
         <div className="community-img community-info">
           <h1>Community</h1>
@@ -123,7 +123,7 @@ const Community = () => {
       </div>
 
       <ApplicationForm />
-      <Footer/>
+      <Footer />
     </section>
   );
 };

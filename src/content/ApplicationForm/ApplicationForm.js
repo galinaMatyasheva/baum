@@ -54,7 +54,7 @@ const ApplicationForm = () => {
               <div className="application-form-checkbox">
                 <FormGroup>
                   <FormControlLabel
-                    control={<Checkbox defaultChecked required="true"/>}
+                    control={<Checkbox defaultChecked required="true" />}
                     label="Даю согласие на обработку персональных данных"
                   />
                 </FormGroup>

@@ -12,10 +12,11 @@
     }
   }
 
-  .model-buttons {
+  .model-buttons-swarm {
     display: flex;
-    margin-top: 2rem;
-    width: 100%;
+    justify-content: center;
+    margin: 2rem auto 0;
+    width: 40%;
 
     .group-first {
       width: 50%;
@@ -168,12 +169,21 @@
   }
 }
 
+@media (max-width: 800px) {
+  .model-wrap {
+    .model-buttons-swarm {
+      width: 65%;
+      max-width: 450px;
+    }
+  }
+}
+
 @media (max-width: 550px) {
   .model-wrap {
     overflow-x: scroll;
     width: auto;
-    .model-buttons {
-      width: 550px;
+    .model-buttons-swarm {
+      width: 450px;
     }
   }
 }

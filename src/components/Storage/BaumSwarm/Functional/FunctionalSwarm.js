@@ -158,7 +158,7 @@ const FunctionalSwarm = () => {
             </AccordionSummary>
             <AccordionDetails>
               <p className="accordion-text">
-              Дисковая отказоустойчивость и высокая доступность данных.
+                Дисковая отказоустойчивость и высокая доступность данных.
               </p>
             </AccordionDetails>
           </Accordion>

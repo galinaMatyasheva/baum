@@ -1,0 +1,65 @@
+.functional-container {
+  .functional-container-info {
+    .title-orange {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #e67700, #f59f00);
+    }
+
+    .functional-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/baum-uds/functional.png");
+    }
+  }
+
+  .accordion-container {
+    display: flex;
+
+    .accordion-info {
+      width: 50%;
+    }
+
+    .accordion-text {
+      li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .pools-structure {
+      display: flex;
+
+      .pools-structure-block {
+        background-color: #d4d4d4;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .functional-about-baum-swarm-content {
+    background-color: #474f56;
+    display: flex;
+  
+    h2,
+    p {
+      color: #fff;
+    }
+  
+    .functional-about-baum-swarm-info {
+      width: 50%;
+      padding: 10% 0;
+      .functional-text {
+        width: 92%;
+        margin: 0 auto;
+      }
+    }
+  
+    .functional-about-baum-swarm-img {
+      background-image: url("/assets/baum-uds/functional-laptop.png");
+    }
+  }
+}

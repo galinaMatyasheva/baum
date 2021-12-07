@@ -26,6 +26,10 @@ import FunctionalSwarm from "./components/Storage/BaumSwarm/Functional/Functiona
 import DocumentationSwarm from "./components/Storage/BaumSwarm/Documentation/DocumentationSwarm";
 import SupportSwarm from "./components/Storage/BaumSwarm/Support/SupportSwarm";
 import ModelSwarm from "./components/Storage/BaumSwarm/Model/ModelSwarm";
+import FunctionalPlatform from "./components/AI/Platform/Functional/FunctionalPlatform";
+import SupportPlatform from "./components/AI/Platform/Support/SupportPlatform";
+import DocumentationPlatform from "./components/AI/Platform/Documentation/DocumentationPlatform";
+import ModelPlatform from "./components/AI/Platform/Model/ModelPlatform";
 
 const App = () => {
   return (
@@ -47,18 +51,31 @@ const App = () => {
         <Route path="/baum-uds/documentation" element={<Documentation />} />
         <Route path="/baum-uds/model" element={<Model />} />
         <Route path="/baum-swarm" element={<BaumSwarm />} />
-        <Route path="/baum-swarm/functional" element={<FunctionalSwarm/>}/>
-        <Route path="/baum-swarm/documentation" element={<DocumentationSwarm/>}/>
-        <Route path="/baum-swarm/support" element={<SupportSwarm/>}/>
-        <Route path="/baum-swarm/model" element={<ModelSwarm/>}/>
+        <Route path="/baum-swarm/functional" element={<FunctionalSwarm />} />
+        <Route
+          path="/baum-swarm/documentation"
+          element={<DocumentationSwarm />}
+        />
+        <Route path="/baum-swarm/support" element={<SupportSwarm />} />
+        <Route path="/baum-swarm/model" element={<ModelSwarm />} />
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/community" element={<Community />} />
         <Route path="/ai/platform" element={<Platform />} />
+        <Route
+          path="/ai/platform/functional"
+          element={<FunctionalPlatform />}
+        />
+        <Route path="/ai/platform/support" element={<SupportPlatform />} />
+        <Route
+          path="/ai/platform/documentation"
+          element={<DocumentationPlatform />}
+        />
+        <Route path="/ai/platform/model" element={<ModelPlatform />} />
         <Route path="/ai/solutionDB" element={<SolutionDB />} />
         <Route path="/ai/solutionTOIR" element={<SolutionTOIR />} />
         <Route path="/education" element={<Education />} />
         <Route path="/news/details/:key" element={<NewsDetails />} />
-        <Route path="/app-form" element={<AppForm/>}/>
+        <Route path="/app-form" element={<AppForm />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,124 @@
+.documentation-container {
+  .documentation-container-info {
+    .title-gray {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #343a40, #868e96);
+    }
+
+    .documentation-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/baum-uds/documentation.png");
+    }
+  }
+
+  .documentation-container-content {
+    width: 100%;
+    padding: 4rem 4rem 5rem;
+
+    a {
+      padding: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    h3 {
+      margin-bottom: 3rem;
+    }
+
+    .documentation-container-text {
+      &:first-child {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  .documentation-models-info {
+    .documentation-models-img {
+      width: 50%;
+      margin-top: 3rem;
+      text-align: center;
+
+      img {
+        width: 50%;
+        text-align: center;
+      }
+    }
+
+    .documentation-models-form {
+      display: flex;
+      margin-bottom: 3rem;
+
+      .MuiFormControl-fullWidth {
+        width: 250px;
+
+        &:first-child {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+
+    .MuiInputLabel-shrink {
+      display: none;
+    }
+
+    .MuiInputLabel-formControl {
+      top: 0;
+      left: 15px;
+      position: absolute;
+      transform: translate(0, 38px) scale(1);
+    }
+
+    .MuiSelect-select.MuiSelect-select {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+    }
+
+    .MuiSelect-select {
+      &:focus {
+        background-color: #fff;
+      }
+    }
+
+    .MuiInput-underline:after {
+      border: none;
+    }
+
+    .MuiInput-underline:hover:not(.Mui-disabled):before {
+      border-bottom: none;
+    }
+
+    .MuiInputBase-root {
+      &:before {
+        border: none;
+      }
+    }
+  }
+
+  .documentation-about-company-content {
+    background-color: #474f56;
+    display: flex;
+
+    h2,
+    p {
+      color: #fff;
+    }
+
+    .documentation-about-company-info {
+      width: 50%;
+      padding: 10% 0;
+
+      .documentation-text {
+        width: 92%;
+        margin: 0 auto;
+      }
+    }
+
+    .documentation-about-company-img {
+      background-image: url("/assets/baum-uds/documentation-about.png");
+    }
+  }
+}

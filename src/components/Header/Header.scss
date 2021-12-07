@@ -32,6 +32,7 @@ header {
       align-items: center;
       width: 85%;
       border-left: 1px solid #eff1f4;
+      padding-top: 1rem;
     }
 
     .img {
@@ -39,6 +40,7 @@ header {
       text-align: center;
 
       img {
+        max-width: 250px;
         width: 80%;
         margin: 0 auto;
       }
@@ -49,6 +51,7 @@ header {
       align-items: center;
       justify-content: flex-end;
       border-bottom: 1px solid #eff1f4;
+      padding-bottom: 1rem;
 
       li {
         padding: 0.5rem 1rem;
@@ -136,6 +139,7 @@ header {
     display: flex;
     align-items: center;
     border-right: 1px solid #eff1f4;
+    padding-bottom: 0.5rem;
 
     .MuiOutlinedInput-input {
       width: 37vw;
