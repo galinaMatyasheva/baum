@@ -1733,6 +1733,40 @@ const data = [
       },
     ],
   },
+  {
+    tableName: "Archive",
+    tableProperties: [
+      {
+        property: "Плотность хранения данных",
+        value: "до 192TB RAW на 1 RU",
+      },
+      {
+        property: "Низкая стоимость",
+        value: "за 1TB",
+      },
+      {
+        property: "Возможность географического распределения системы",
+        value: "Опционально",
+      },
+    ],
+  },
+  {
+    tableName: "Flash",
+    tableProperties: [
+      {
+        property: "lat",
+        value: "< 1 mc",
+      },
+      {
+        property: "lops",
+        value: "> 1 млн",
+      },
+      {
+        property: "Настраиваемая отказоусточивость",
+        value: "Опционально",
+      },
+    ],
+  },
 ];
 
 export default data;

@@ -30,7 +30,8 @@
 
         img {
           width: 100%;
-          height: 245px;
+          min-height: 385px;
+          height: auto;
           object-fit: cover;
         }
       }
