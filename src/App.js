@@ -18,8 +18,6 @@ import Support from "./components/Storage/BaumUds/Support/Support";
 import Documentation from "./components/Storage/BaumUds/Documentation/Documentation";
 import Model from "./components/Storage/BaumUds/Model/Model";
 import Platform from "./components/AI/Platform/Platform";
-import SolutionDB from "./components/AI/SolutionsDB/SolutionDB";
-import SolutionTOIR from "./components/AI/SolutionsTOIR/SolutionTOIR";
 import Education from "./components/Education/Education";
 import AppForm from "./components/AppForm/AppForm";
 import FunctionalSwarm from "./components/Storage/BaumSwarm/Functional/FunctionalSwarm";
@@ -71,8 +69,6 @@ const App = () => {
           element={<DocumentationPlatform />}
         />
         <Route path="/ai/platform/model" element={<ModelPlatform />} />
-        <Route path="/ai/solutionDB" element={<SolutionDB />} />
-        <Route path="/ai/solutionTOIR" element={<SolutionTOIR />} />
         <Route path="/education" element={<Education />} />
         <Route path="/news/details/:key" element={<NewsDetails />} />
         <Route path="/app-form" element={<AppForm />} />

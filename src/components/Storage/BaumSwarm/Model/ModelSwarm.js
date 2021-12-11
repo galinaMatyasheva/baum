@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
 import "./ModelSwarm.scss";
-
-import imgFlash from "../../../../assets/baum-swarm/models-img/flash.png";
-import imgArchive from "../../../../assets/baum-swarm/models-img/archive.png";
+import imgModelB1000F1000 from "../../../../assets/baum-uds/models-img/B1000-F1000.png";
 import modelIcon1 from "../../../../assets/baum-uds/model-icon-1.svg";
 import TableModel from "../../../../content/TableModel/TableModel";
 import data from "../../../../content/TableData";
@@ -43,7 +41,7 @@ const ModelSwarm = () => {
                     <h6>Flash</h6>
                   </div>
                   <div className="model-button-img">
-                    <img src={imgFlash} alt="img" />
+                    <img src={imgModelB1000F1000} alt="img" />
                   </div>
                 </div>
               </div>
@@ -65,7 +63,7 @@ const ModelSwarm = () => {
                     <h6>Archive</h6>
                   </div>
                   <div className="model-button-img">
-                    <img src={imgArchive} alt="img" />
+                    <img src={imgModelB1000F1000} alt="img" />
                   </div>
                 </div>
               </div>

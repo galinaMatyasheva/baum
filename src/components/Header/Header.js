@@ -167,12 +167,6 @@ const Header = () => {
                   <MenuItem onClick={handleCloseLinkAI}>
                     <Link to="/ai/platform">Платформа</Link>
                   </MenuItem>
-                  <MenuItem onClick={handleCloseLinkAI}>
-                    <Link to="/ai/solutionDB">Решения для баз знаний</Link>
-                  </MenuItem>
-                  <MenuItem onClick={handleCloseLinkAI}>
-                    <Link to="/ai/solutionTOIR">Решения для ТОИР</Link>
-                  </MenuItem>
                 </Menu>
               </div>
               <div className="submenu">
@@ -278,14 +272,6 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="/ai/platform">Платформа</Link>
-                </li>
-
-                <li>
-                  <Link to="/ai/solutionDB">Решения для баз знаний</Link>
-                </li>
-
-                <li>
-                  <Link to="/ai/solutionTOIR">Решения для ТОИР</Link>
                 </li>
               </ul>
               <Link to="/community">

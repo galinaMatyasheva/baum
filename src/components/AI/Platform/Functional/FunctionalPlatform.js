@@ -4,102 +4,14 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@material-ui/core";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 import "./FunctionalPlatform.scss";
-import arrowBottomImg from "../../../../assets/arrow-bottom.svg";
-import arrowBottomBlackImg from "../../../../assets/arrow-bottom-black.svg";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 import NavbarSwarm from "../Navbar/Navbar";
 
 const FunctionalPlatform = () => {
-  const [isButtonHoveredLeft, setIsButtonHoveredLeft] = useState({
-    isButtonHoveredLeft: [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ],
-  });
-
-  const [isButtonHoveredRight, setIsButtonHoveredRight] = useState({
-    isButtonHoveredRight: [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ],
-  });
-
-  const changedArrowLeft = (hoverIndex) => {
-    isButtonHoveredLeft.isButtonHoveredLeft = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    isButtonHoveredLeft.isButtonHoveredLeft[hoverIndex] = true;
-    setIsButtonHoveredLeft({ ...isButtonHoveredLeft });
-  };
-
-  const changedArrowLeaveLeft = () => {
-    isButtonHoveredLeft.isButtonHoveredLeft = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    setIsButtonHoveredLeft({ ...isButtonHoveredLeft });
-  };
-
-  const changedArrowRight = (hoverIndex) => {
-    isButtonHoveredRight.isButtonHoveredRight = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    isButtonHoveredRight.isButtonHoveredRight[hoverIndex] = true;
-    setIsButtonHoveredRight({ ...isButtonHoveredRight });
-  };
-
-  const changedArrowLeaveRight = () => {
-    isButtonHoveredRight.isButtonHoveredRight = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    setIsButtonHoveredRight({ ...isButtonHoveredRight });
-  };
-
   return (
     <div className="functional-container">
       <Header />
@@ -112,17 +24,7 @@ const FunctionalPlatform = () => {
       <div className="accordion-container">
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(0)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[0] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Классификация звуков. Определение объекта по звуку</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -135,17 +37,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(1)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[1] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Классификация изображения</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -157,17 +49,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(2)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[2] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Промышленность</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -179,17 +61,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(3)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[3] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Распознавание рукописного текста</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -202,17 +74,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(4)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[4] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Интеллектуальная обработка новостного фона</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -224,17 +86,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(5)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[5] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Чат-бот. Генерация текста</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -251,17 +103,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(6)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[6] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Предактивная аналитика показателей систем СХД</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -273,17 +115,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(7)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[7] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>AI мониторинг и предиктивная аналитика для ТЭЦ</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -297,17 +129,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(8)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[8] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Предсказание лесных пожаров</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -323,17 +145,7 @@ const FunctionalPlatform = () => {
         </div>
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(0)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[0] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Обработка звука. Классификация музыкальных аудиофайлов</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -346,17 +158,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(1)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[1] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Диагностика заболеваний в медицине</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -369,17 +171,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(2)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[2] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Снижение количества ошибок на производстве</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -390,17 +182,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(3)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[3] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Классификация текстов</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -411,17 +193,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(4)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[4] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Рекомендательная система</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -432,17 +204,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(5)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[5] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Гибридная интеллектуальная база знаний</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -457,17 +219,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(6)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[6] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>Оптимизация ресурсов на складе</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -479,17 +231,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(7)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[7] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
               <h4>AI анализ сердечно-сосудистых заболеваний</h4>
             </AccordionSummary>
             <AccordionDetails>

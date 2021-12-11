@@ -1,11 +1,88 @@
-.education-info {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 2rem;
+.education-container {
+  .education-container-info {
+    .title-orange {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #e67700, #f59f00);
+    }
 
-  h1 {
-    text-align: center;
+    .education-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/baum-uds/functional.png");
+    }
+  }
+
+  .education-info-about {
+    background-color: #fff;
+    padding: 4rem;
+
+    h4 {
+      padding-bottom: 2rem;
+    }
+
+    p {
+      padding-bottom: 2rem;
+    }
+
+    a {
+      color: #000;
+      padding-right: 1rem;
+    }
+
+    .link-arrow {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .accordion-container {
+    display: flex;
+
+    .accordion-info {
+      width: 50%;
+    }
+
+    .accordion-text {
+      li {
+        list-style-type: none;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .pools-structure {
+      display: flex;
+
+      .pools-structure-block {
+        background-color: #d4d4d4;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .education-about-content {
+    background-color: #474f56;
+    display: flex;
+  
+    h2,
+    p {
+      color: #fff;
+    }
+  
+    .education-about-info {
+      width: 50%;
+      padding: 10% 0;
+      .education-text {
+        width: 92%;
+        margin: 0 auto;
+      }
+    }
+  
+    .education-about-img {
+      background-image: url("/assets/baum-uds/functional-laptop.png");
+    }
   }
 }

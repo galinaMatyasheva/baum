@@ -5,71 +5,14 @@ import {
   AccordionDetails,
   Button,
 } from "@material-ui/core";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import "./Functional.scss";
-import arrowBottomImg from "../../../../assets/arrow-bottom.svg";
-import arrowBottomBlackImg from "../../../../assets/arrow-bottom-black.svg";
 import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 
 const Functional = () => {
-  const [isButtonHoveredLeft, setIsButtonHoveredLeft] = useState({
-    isButtonHoveredLeft: [false, false, false, false, false, false],
-  });
-
-  const [isButtonHoveredRight, setIsButtonHoveredRight] = useState({
-    isButtonHoveredRight: [false, false, false, false, false],
-  });
-
-  const changedArrowLeft = (hoverIndex) => {
-    isButtonHoveredLeft.isButtonHoveredLeft = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    isButtonHoveredLeft.isButtonHoveredLeft[hoverIndex] = true;
-    setIsButtonHoveredLeft({ ...isButtonHoveredLeft });
-  };
-
-  const changedArrowLeaveLeft = () => {
-    isButtonHoveredLeft.isButtonHoveredLeft = [
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    setIsButtonHoveredLeft({ ...isButtonHoveredLeft });
-  };
-
-  const changedArrowRight = (hoverIndex) => {
-    isButtonHoveredRight.isButtonHoveredRight = [
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    isButtonHoveredRight.isButtonHoveredRight[hoverIndex] = true;
-    setIsButtonHoveredRight({ ...isButtonHoveredRight });
-  };
-
-  const changedArrowLeaveRight = () => {
-    isButtonHoveredRight.isButtonHoveredRight = [
-      false,
-      false,
-      false,
-      false,
-      false,
-    ];
-    setIsButtonHoveredRight({ ...isButtonHoveredRight });
-  };
-
   return (
     <div className="functional-container">
       <Header/>
@@ -82,17 +25,7 @@ const Functional = () => {
       <div className="accordion-container">
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(0)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[0] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>RAID B3</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -120,17 +53,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(1)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[1] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BPOOL</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -154,17 +77,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(2)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[2] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BClone</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -190,17 +103,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(3)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[3] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Deduplication</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -225,17 +128,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(4)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[4] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>B-REPL</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -256,17 +149,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(5)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[5] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BCache</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -288,17 +171,7 @@ const Functional = () => {
         </div>
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(0)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[0] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BAUM FS</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -321,17 +194,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(1)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[1] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Snapshot</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -353,17 +216,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(2)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[2] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BWORM</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -381,17 +234,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(3)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[3] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Compression</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -406,17 +249,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(4)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[4] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>This Provisioning</h4>
             </AccordionSummary>
             <AccordionDetails>

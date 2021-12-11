@@ -25,7 +25,6 @@ const AboutUs = () => {
                 модули Internet of things, цифровая безопасность, искусственный
                 интеллект.
               </p>
-              <Button className="btn btn-dark">Подробнее</Button>
             </div>
           </div>
         </div>

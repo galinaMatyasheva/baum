@@ -9,8 +9,7 @@ import {
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 import "./DocumentationSwarm.scss";
-import imgFlash from "../../../../assets/baum-swarm/models-img/flash.png";
-import imgArchive from "../../../../assets/baum-swarm/models-img/archive.png";
+import imgModelB1000F1000 from "../../../../assets/baum-uds/models-img/B1000-F1000.png";
 import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
@@ -26,15 +25,6 @@ const DocumentationSwarm = () => {
 
   const handleChangeVersion = (e) => {
     setVersion(e.target.value);
-  };
-
-  const imageMapper = (model) => {
-    if (model === "Flash") {
-      return imgFlash;
-    } else if (model === "Archive") {
-      return imgArchive;
-    }
-    return imgFlash;
   };
 
   const models = ["Flash", "Archive"];
@@ -53,7 +43,7 @@ const DocumentationSwarm = () => {
 
       <div className="documentation-models-info">
         <div className="documentation-models-img">
-          <img src={imageMapper(model)} alt="img" />
+          <img src={imgModelB1000F1000} alt="img" />
         </div>
         <div className="documentation-container-content">
           <div className="documentation-models-form">

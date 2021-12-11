@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@material-ui/core";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import "./FunctionalSwarm.scss";
 import arrowBottomImg from "../../../../assets/arrow-bottom.svg";
@@ -13,36 +14,6 @@ import Footer from "../../../Footer/Footer";
 import NavbarSwarm from "../Navbar/Navbar";
 
 const FunctionalSwarm = () => {
-  const [isButtonHoveredLeft, setIsButtonHoveredLeft] = useState({
-    isButtonHoveredLeft: [false, false, false],
-  });
-
-  const [isButtonHoveredRight, setIsButtonHoveredRight] = useState({
-    isButtonHoveredRight: [false, false],
-  });
-
-  const changedArrowLeft = (hoverIndex) => {
-    isButtonHoveredLeft.isButtonHoveredLeft = [false, false, false];
-    isButtonHoveredLeft.isButtonHoveredLeft[hoverIndex] = true;
-    setIsButtonHoveredLeft({ ...isButtonHoveredLeft });
-  };
-
-  const changedArrowLeaveLeft = () => {
-    isButtonHoveredLeft.isButtonHoveredLeft = [false, false];
-    setIsButtonHoveredLeft({ ...isButtonHoveredLeft });
-  };
-
-  const changedArrowRight = (hoverIndex) => {
-    isButtonHoveredRight.isButtonHoveredRight = [false, false, false];
-    isButtonHoveredRight.isButtonHoveredRight[hoverIndex] = true;
-    setIsButtonHoveredRight({ ...isButtonHoveredRight });
-  };
-
-  const changedArrowLeaveRight = () => {
-    isButtonHoveredRight.isButtonHoveredRight = [false, false];
-    setIsButtonHoveredRight({ ...isButtonHoveredRight });
-  };
-
   return (
     <div className="functional-container">
       <Header />
@@ -55,17 +26,7 @@ const FunctionalSwarm = () => {
       <div className="accordion-container">
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(0)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[0] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Производительность</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -78,17 +39,7 @@ const FunctionalSwarm = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(1)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[1] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>SLA</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -98,17 +49,7 @@ const FunctionalSwarm = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowLeft(2)}
-              onMouseLeave={() => changedArrowLeaveLeft()}
-              expandIcon={
-                !isButtonHoveredLeft.isButtonHoveredLeft[2] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Протоколы</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -120,17 +61,7 @@ const FunctionalSwarm = () => {
         </div>
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(0)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[0] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Масштабируемость</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -143,17 +74,7 @@ const FunctionalSwarm = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary
-              onMouseEnter={() => changedArrowRight(1)}
-              onMouseLeave={() => changedArrowLeaveRight()}
-              expandIcon={
-                !isButtonHoveredRight.isButtonHoveredRight[1] ? (
-                  <img src={arrowBottomImg} alt="img" />
-                ) : (
-                  <img src={arrowBottomBlackImg} alt="img" />
-                )
-              }
-            >
+          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Отказоустойчивость</h4>
             </AccordionSummary>
             <AccordionDetails>
