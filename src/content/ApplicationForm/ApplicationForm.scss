@@ -17,11 +17,13 @@
     background-position: 38%;
     background-repeat: no-repeat;
     background-image: url("/assets/form/application-form.png");
+    height: 100%;
+    min-height: 434px;
   }
 
   .application-form-info {
     width: 67.33%;
-    padding: 5% 0;
+    padding: 5% 1%;
 
     a {
       color: #000;

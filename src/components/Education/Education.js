@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -25,6 +25,10 @@ const Education = () => {
 
   const handleClickAboutUs = () => {
     navigate("/about-us");
+    scrollToTop();
+  };
+  const handleClickDetails = (key) => {
+    navigate("/education/details/" + key);
     scrollToTop();
   };
 
@@ -66,6 +70,7 @@ const Education = () => {
                 <Button
                   className="btn btn-outlined-dark"
                   endIcon={<ArrowRightAltIcon />}
+                  onClick={() => handleClickDetails("0")}
                 >
                   Узнать больше
                 </Button>
@@ -85,6 +90,7 @@ const Education = () => {
                 <Button
                   className="btn btn-outlined-dark"
                   endIcon={<ArrowRightAltIcon />}
+                  onClick={() => handleClickDetails("2")}
                 >
                   Узнать больше
                 </Button>
@@ -108,6 +114,7 @@ const Education = () => {
                 <Button
                   className="btn btn-outlined-dark"
                   endIcon={<ArrowRightAltIcon />}
+                  onClick={() => handleClickDetails("4")}
                 >
                   Узнать больше
                 </Button>
@@ -130,6 +137,7 @@ const Education = () => {
                 <Button
                   className="btn btn-outlined-dark"
                   endIcon={<ArrowRightAltIcon />}
+                  onClick={() => handleClickDetails("1")}
                 >
                   Узнать больше
                 </Button>
@@ -149,6 +157,7 @@ const Education = () => {
                 <Button
                   className="btn btn-outlined-dark"
                   endIcon={<ArrowRightAltIcon />}
+                  onClick={() => handleClickDetails("3")}
                 >
                   Узнать больше
                 </Button>
@@ -173,7 +182,7 @@ const Education = () => {
             <Button
               className="btn btn-form"
               onClick={handleClickAboutUs}
-              endIcon={<ArrowRightAltIcon/>}
+              endIcon={<ArrowRightAltIcon />}
             >
               Подробнее
             </Button>

@@ -97,12 +97,12 @@ const TeamInfo = () => {
       <div className="team-img team-info">
         <div className="carousel-content">
           <div className="carousel-gallery">
-            <img src={picList[index]} />
+            <img src={picList[index]} alt="img"/>
             <h4>{titleList[index].name}</h4>
             <p>{titleList[index].position}</p>
           </div>
           <div className="carousel-gallery">
-            <img src={picList[index + 1]} />
+            <img src={picList[index + 1]} alt="img"/>
             <h4>{titleList[index + 1].name}</h4>
             <p>{titleList[index + 1].position}</p>
           </div>
@@ -129,7 +129,7 @@ const TeamInfo = () => {
       <div className="team-img team-info-phone">
         <div className="carousel-content">
           <div className="carousel-gallery">
-            <img src={picList[indexPhone]} />
+            <img src={picList[indexPhone]} alt="img"/>
             <h4>{titleList[indexPhone].name}</h4>
             <p>{titleList[indexPhone].position}</p>
           </div>

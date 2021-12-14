@@ -12,6 +12,10 @@ body {
   src: url("/fonts/helveticaneuecyr_roman.otf");
 }
 
+.MuiOutlinedInput-root {
+  border-radius: 0;
+}
+
 /*header*/
 .MuiPopover-root {
   a {
@@ -268,7 +272,7 @@ body {
   .css-i4bv87-MuiSvgIcon-root {
     font-size: 2rem;
     &:hover {
-      color:#000;
+      color: #000;
     }
   }
 
@@ -335,10 +339,12 @@ body {
   .support-container-info,
   .documentation-container-info,
   .model-container-info,
+  .education-container-info,
   .documentation-models-info,
   .news-container-info,
   .baum-inform-create-container,
-  .store-info-about {
+  .store-info-about,
+  .education-content {
     display: flex;
 
     .feedback-info,
@@ -349,7 +355,8 @@ body {
     .baum-swarm-info,
     .platform-info,
     .main-community-info,
-    .shd-info {
+    .shd-info,
+    .education-content-info {
       width: 50%;
       padding: 10% 0;
     }
@@ -384,11 +391,13 @@ body {
   .support-img,
   .documentation-img,
   .model-img,
+  .education-img,
   .community-img,
   .functional-about-baum-swarm-img,
   .education-about-img,
   .documentation-about-company-img,
-  .news-img {
+  .news-img,
+  .education-content-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -521,13 +530,17 @@ body {
       }
     }
 
-    .functional-container, .education-container {
-      .functional-about-baum-swarm-content, .education-about-content {
+    .functional-container,
+    .education-container {
+      .functional-about-baum-swarm-content,
+      .education-about-content {
         flex-direction: column-reverse;
-        .functional-about-baum-swarm-info, .education-about-info {
+        .functional-about-baum-swarm-info,
+        .education-about-info {
           width: 100%;
         }
-        .functional-about-baum-swarm-img, .education-about-img {
+        .functional-about-baum-swarm-img,
+        .education-about-img {
           height: 400px;
         }
       }
@@ -551,6 +564,7 @@ body {
     .support-container-info,
     .documentation-container-info,
     .model-container-info,
+    .education-container-info,
     .documentation-models-info,
     .news-container-info,
     .baum-inform-create-container,
@@ -558,7 +572,8 @@ body {
     .baum-uds-container-info,
     .baum-swarm-container-info,
     .platform-container-info,
-    .news-details-info {
+    .news-details-info,
+    .education-content {
       flex-direction: column;
 
       .feedback-info,
@@ -573,7 +588,9 @@ body {
       .platform-pages-img,
       .main-community-info,
       .shd-info,
-      .address-info {
+      .address-info,
+      .education-content-info,
+      .education-content-img {
         width: 100%;
         min-height: 650px;
         height: 100%;
@@ -647,6 +664,7 @@ body {
     .education-img,
     .documentation-img,
     .model-img,
+    .education-img,
     .news-img {
       width: 100%;
     }
@@ -798,6 +816,7 @@ body {
     .news-container .news-container-info,
     .functional-container .functional-container-info,
     .model-container .model-container-info,
+    .education-container .education-container-info,
     .documentation-container .documentation-container-info,
     .support-container .support-container-info,
     .education-container .education-container-info {
@@ -956,7 +975,8 @@ body {
   }
 
   @media (max-width: 895px) {
-    .functional-container, .education-container {
+    .functional-container,
+    .education-container {
       .accordion-container {
         flex-direction: column;
         .accordion-info {
@@ -1258,7 +1278,8 @@ body {
       padding: 1rem 1rem 3rem;
     }
 
-    .functional-container, .education-container {
+    .functional-container,
+    .education-container {
       .accordion-container {
         .pools-structure {
           flex-direction: column;

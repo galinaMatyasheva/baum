@@ -28,6 +28,7 @@ import FunctionalPlatform from "./components/AI/Platform/Functional/FunctionalPl
 import SupportPlatform from "./components/AI/Platform/Support/SupportPlatform";
 import DocumentationPlatform from "./components/AI/Platform/Documentation/DocumentationPlatform";
 import ModelPlatform from "./components/AI/Platform/Model/ModelPlatform";
+import EducationDetails from "./components/Education/EducationDetails/EducationDetails";
 
 const App = () => {
   return (
@@ -70,6 +71,7 @@ const App = () => {
         />
         <Route path="/ai/platform/model" element={<ModelPlatform />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/education/details/:key" element={<EducationDetails/>}/>
         <Route path="/news/details/:key" element={<NewsDetails />} />
         <Route path="/app-form" element={<AppForm />} />
       </Routes>

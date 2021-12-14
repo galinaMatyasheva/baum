@@ -1,0 +1,24 @@
+.education-container {
+  .education-container-info {
+    .title-purple {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #5f3dc4, #7048e8);
+    }
+
+    .education-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/baum-uds/model.png");
+    }
+  }
+  .education-content-about {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .education-content-img {
+      background-image: url("/assets/about-us/about-us.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+}
