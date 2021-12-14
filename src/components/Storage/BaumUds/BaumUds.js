@@ -60,19 +60,37 @@ const BaumUds = () => {
 
   return (
     <section className="baum-uds-container">
-      <Header/>
+      <Header />
       <div className="baum-uds-container-info">
         <div className="baum-uds-info">
           <div>
-            <h1 className="title title-dark">BAUM UDS (scale up)</h1>
+            <h1 className="title title-dark">BAUM UDS</h1>
             <div className="baum-uds-content">
               <p className="info-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                BAUM UDS предоставляет качественный продукт для управления
+                данными, с применением современных флэш-технологий, как на
+                файловом, так и на блочном уровне для самых требовательных
+                приложений таких как:
               </p>
-              <Button className="btn btn-dark" variant="contained" onClick={handleClickContactUs}>
+              <ul>
+                <li>Базы данных;</li>
+                <li>Виртуальных сред;</li>
+                <li>Резервного копирования.</li>
+              </ul>
+              <p className="info-text">
+                При этом данные распределяются по всей системе на виртуальных
+                уровнях, что позволяет получить лучшую гибкость и надежность. За
+                счет функционала динамического управления пространством
+                хранения, возможно увеличивать объемы виртуальных уровней без
+                остановки работы подключенных к ним систем. Процесс технического
+                обслуживания (обновление микрокода) систем хранения данных также
+                не повлечет за собой простоя в работе сервисов компании.
+              </p>
+              <Button
+                className="btn btn-dark"
+                variant="contained"
+                onClick={handleClickContactUs}
+              >
                 Оставить заявку
               </Button>
             </div>
@@ -142,7 +160,9 @@ const BaumUds = () => {
           </CardContent>
           <CardActions>
             <Button
-            onClick={()=>{handleClickDetails("68")}}
+              onClick={() => {
+                handleClickDetails("68");
+              }}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -162,7 +182,9 @@ const BaumUds = () => {
           </CardContent>
           <CardActions>
             <Button
-             onClick={()=>{handleClickDetails("73")}}
+              onClick={() => {
+                handleClickDetails("73");
+              }}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -182,7 +204,9 @@ const BaumUds = () => {
           </CardContent>
           <CardActions>
             <Button
-             onClick={()=>{handleClickDetails("71")}}
+              onClick={() => {
+                handleClickDetails("71");
+              }}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -194,7 +218,7 @@ const BaumUds = () => {
       </div>
 
       <ApplicationForm />
-      <Footer/>
+      <Footer />
     </section>
   );
 };

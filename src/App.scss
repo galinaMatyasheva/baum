@@ -109,7 +109,7 @@ body {
 
   .MuiOutlinedInput-input {
     background-color: #fff;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .MuiButton-outlined {
@@ -351,8 +351,6 @@ body {
     .feedback-info,
     .about-us-info,
     .vacancies-info,
-    .about-us-goal-info,
-    .baum-uds-info,
     .baum-swarm-info,
     .platform-info,
     .main-community-info,
@@ -362,9 +360,15 @@ body {
       padding: 10% 0;
     }
 
+    .baum-uds-info {
+      width: 50%;
+      padding-bottom: 7rem;
+    }
+
     .team-info,
     .form-info,
     .ai-info,
+    .about-us-goal-info,
     .baum-inform-create-content {
       padding: 4rem 2rem;
       width: 50%;
@@ -415,6 +419,61 @@ body {
     width: 60%;
   }
 
+  .baum-uds-container,
+  .baum-swarm-container,
+  .platform-container {
+    .baum-uds-container-info,
+    .baum-swarm-container-info,
+    .platform-container-info {
+      .baum-uds-info,
+      .baum-swarm-info,
+      .platform-info {
+        width: 100%;
+      }
+    }
+
+    .baum-uds-container-cards,
+    .baum-swarm-container-cards,
+    .platform-container-cards {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-size: 1.625rem;
+        min-height: 90px;
+        height: 100%;
+      }
+
+      p {
+        height: 75px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .MuiButton-text {
+        span {
+          font-size: 1.25rem;
+          color: #9a9a9a;
+        }
+      }
+
+      .MuiCard-root {
+        overflow: hidden;
+        width: 32%;
+      }
+
+      .MuiPaper-elevation1 {
+        box-shadow: none;
+        padding-bottom: 1.5rem;
+      }
+
+      .MuiCardContent-root {
+        padding: 3rem;
+      }
+    }
+  }
+
   @media (max-width: 1200px) {
     .MuiButtonBase-root {
       span {
@@ -441,93 +500,6 @@ body {
 
       .application-form-info {
         width: 100%;
-      }
-    }
-
-    .baum-uds-container {
-      .baum-uds-container-info {
-        .baum-uds-info {
-          width: 100%;
-        }
-      }
-
-      .baum-uds-container-cards {
-        flex-direction: column;
-
-        h3 {
-          min-height: 0;
-        }
-
-        .MuiCard-root {
-          width: 100%;
-        }
-
-        .MuiCardMedia-media {
-          width: 100%;
-          height: 100%;
-        }
-
-        .MuiCardContent-root {
-          padding: 3rem 3rem 0 3rem;
-        }
-      }
-    }
-
-    .baum-swarm-container {
-      .baum-swarm-container-info {
-        .baum-swarm-info {
-          width: 100%;
-        }
-      }
-
-      .baum-swarm-container-cards {
-        flex-direction: column;
-
-        h3 {
-          min-height: 0;
-        }
-
-        .MuiCard-root {
-          width: 100%;
-        }
-
-        .MuiCardMedia-media {
-          width: 100%;
-          height: 100%;
-        }
-
-        .MuiCardContent-root {
-          padding: 3rem 3rem 0 3rem;
-        }
-      }
-    }
-
-    .platform-container {
-      .platform-container-info {
-        .platform-info {
-          width: 100%;
-        }
-      }
-
-      .platform-container-cards {
-        flex-direction: column;
-
-        h3 {
-          min-height: 0;
-        }
-
-        .MuiCard-root {
-          width: 100%;
-        }
-
-        .MuiCardMedia-media {
-          width: 100%;
-          height: 100%;
-        }
-
-        .MuiCardContent-root {
-          padding: 3rem 3rem 0 3rem;
-        }
       }
     }
 
@@ -631,6 +603,48 @@ body {
       .baum-swarm-info,
       .platform-info {
         padding: 9rem 0;
+      }
+    }
+
+    .baum-uds-container,
+    .baum-swarm-container,
+    .platform-container {
+      .baum-uds-container-info,
+      .baum-swarm-container-info,
+      .platform-container-info {
+        .baum-uds-info,
+        .baum-swarm-info,
+        .platform-info {
+          width: 100%;
+        }
+      }
+
+      .baum-uds-container-cards,
+      .baum-swarm-container-cards,
+      .platform-container-cards {
+        flex-direction: column;
+
+        h3 {
+          min-height: 0;
+        }
+
+        .MuiCard-root {
+          width: 60%;
+          margin: 0 auto 2rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .MuiCardMedia-media {
+          width: 100%;
+          height: 100%;
+        }
+
+        .MuiCardContent-root {
+          padding: 3rem 3rem 0 3rem;
+        }
       }
     }
 
@@ -973,6 +987,18 @@ body {
         }
       }
     }
+    .baum-swarm-container,
+    .baum-uds-container,
+    .platform-container {
+      .baum-uds-container-cards,
+      .baum-swarm-container-cards,
+      .platform-container-cards {
+        .MuiCard-root {
+          width: 70%;
+          margin: 0 auto 2rem;
+        }
+      }
+    }
   }
 
   @media (max-width: 895px) {
@@ -1040,6 +1066,18 @@ body {
       .team-info {
         .carousel-content {
           width: 95%;
+        }
+      }
+    }
+
+    .baum-uds-container,
+    .baum-swarm-container,
+    .platform-container {
+      .baum-uds-container-cards,
+      .baum-swarm-container-cards,
+      .platform-container-cards {
+        .MuiCard-root {
+          width: 100%;
         }
       }
     }

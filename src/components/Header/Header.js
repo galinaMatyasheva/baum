@@ -127,10 +127,10 @@ const Header = () => {
                   getContentAnchorEl={null}
                 >
                   <MenuItem onClick={handleCloseLinkStorage}>
-                    <Link to="/baum-uds">BAUM UDS (scale up)</Link>
+                    <Link to="/baum-uds">BAUM UDS</Link>
                   </MenuItem>
                   <MenuItem onClick={handleCloseLinkStorage}>
-                    <Link to="/baum-swarm">BAUM SWARM (scale out)</Link>
+                    <Link to="/baum-swarm">BAUM SWARM</Link>
                   </MenuItem>
                 </Menu>
               </div>
@@ -260,10 +260,10 @@ const Header = () => {
                   <h4>Storage</h4>
                 </li>
                 <li>
-                  <Link to="/baum-uds">BAUM UDS (scale up)</Link>
+                  <Link to="/baum-uds">BAUM UDS</Link>
                 </li>
                 <li>
-                  <Link to="/baum-swarm">BAUM SWARM (scale out)</Link>
+                  <Link to="/baum-swarm">BAUM SWARM</Link>
                 </li>
               </ul>
               <ul>

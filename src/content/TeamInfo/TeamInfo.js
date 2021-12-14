@@ -97,12 +97,12 @@ const TeamInfo = () => {
       <div className="team-img team-info">
         <div className="carousel-content">
           <div className="carousel-gallery">
-            <img src={picList[index]} alt="img"/>
+            <img src={picList[index]} alt="img" />
             <h4>{titleList[index].name}</h4>
             <p>{titleList[index].position}</p>
           </div>
           <div className="carousel-gallery">
-            <img src={picList[index + 1]} alt="img"/>
+            <img src={picList[index + 1]} alt="img" />
             <h4>{titleList[index + 1].name}</h4>
             <p>{titleList[index + 1].position}</p>
           </div>
@@ -129,7 +129,7 @@ const TeamInfo = () => {
       <div className="team-img team-info-phone">
         <div className="carousel-content">
           <div className="carousel-gallery">
-            <img src={picList[indexPhone]} alt="img"/>
+            <img src={picList[indexPhone]} alt="img" />
             <h4>{titleList[indexPhone].name}</h4>
             <p>{titleList[indexPhone].position}</p>
           </div>
@@ -160,10 +160,9 @@ const TeamInfo = () => {
         <div className="team-content">
           <h2>Наша команда</h2>
           <p className="info-text">
-            Наша IT - команда строит модели, выбирает самые современные
-            технологии, пишет код, оптимизирует его для различного железа,
-            отлаживает, тестирует у заказчиков, вносит коррективы. Мы будем рады
-            обсудить ваши пожелания и идеи.
+            Мы вендор программных и программно-аппаратных комплексов. Мы создаем
+            продукты, которые помогают развивать и увеличивать эффективность
+            всех отраслей экономики России.
           </p>
         </div>
       </div>

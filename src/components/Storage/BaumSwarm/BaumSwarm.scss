@@ -72,44 +72,4 @@
       }
     }
   }
-
-  .baum-swarm-container-cards {
-    display: flex;
-
-    h3 {
-      font-size: 1.625rem;
-      min-height: 90px;
-      height: 100%;
-    }
-
-    p {
-      height: 75px;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-
-    .MuiButton-text {
-      span {
-        font-size: 1.25rem;
-        color: #9a9a9a;
-      }
-    }
-
-    .MuiCard-root {
-      overflow: hidden;
-      width: 33.33%;
-      margin: 0 auto;
-    }
-
-    .MuiPaper-elevation1 {
-      box-shadow: none;
-      padding-bottom: 1.5rem;
-    }
-
-    .MuiCardContent-root {
-      padding: 3rem;
-    }
-  }
 }

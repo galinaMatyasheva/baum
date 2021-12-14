@@ -285,7 +285,7 @@ const Functional = () => {
         <div className="functional-about-baum-swarm-info">
           <div className="functional-text">
             <h2>
-              Ознакомьтесь с системой хранения данных BAUM SWARM (scale out)
+              Ознакомьтесь с системой хранения данных BAUM SWARM
             </h2>
             <p className="info-text">
               Воспользуйтесь преимуществами системы хранения данных,

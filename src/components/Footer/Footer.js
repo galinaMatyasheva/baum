@@ -95,12 +95,12 @@ const Footer = () => {
             </li>
             <li>
               <Button onClick={handleClickBaumUds}>
-                BAUM SWARM (scale out)
+                BAUM SWARM
               </Button>
             </li>
             <li>
               <Button onClick={handleClickBaumSwarm}>
-                BAUM UDS (scale up)
+                BAUM UDS
               </Button>
             </li>
           </ul>

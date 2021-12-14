@@ -68,10 +68,9 @@ const Platform = () => {
             <h1 className="title title-dark">Platform</h1>
             <div className="platform-content">
               <p className="info-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Мы разработали удобный инструмент для профильного аналитика,
+                который сможет при помощи визуального программирования решать
+                свои аналитические задачи без прямого кодирования.
               </p>
               <Button
                 className="btn btn-dark"

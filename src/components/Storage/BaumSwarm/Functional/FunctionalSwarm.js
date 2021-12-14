@@ -26,7 +26,7 @@ const FunctionalSwarm = () => {
       <div className="accordion-container">
         <div className="accordion-info">
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Производительность</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -39,7 +39,7 @@ const FunctionalSwarm = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>SLA</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -49,7 +49,7 @@ const FunctionalSwarm = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Протоколы</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -61,7 +61,7 @@ const FunctionalSwarm = () => {
         </div>
         <div className="accordion-info">
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Масштабируемость</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -74,7 +74,7 @@ const FunctionalSwarm = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Отказоустойчивость</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -90,13 +90,13 @@ const FunctionalSwarm = () => {
         <div className="functional-about-baum-swarm-img functional-about-baum-swarm-info"></div>
         <div className="functional-about-baum-swarm-info">
           <div className="functional-text">
-            <h2>
-              Ознакомьтесь с системой хранения данных BAUM SWARM (scale out)
-            </h2>
+            <h2>Ознакомьтесь с системой хранения данных BAUM UDS</h2>
             <p className="info-text">
-              Воспользуйтесь преимуществами системы хранения данных,
-              использующих постоянный корпоративный сервис по хранению данных в
-              любом облаке по вашему выбору.
+              BAUM UDS предоставляет качественный продукт для управления
+              данными, с применением современных флэш-технологий, как на
+              файловом, так и на блочном уровне для самых требовательных
+              приложений таких как: базы данных, виртуальных сред, резервное
+              копирования.
             </p>
           </div>
         </div>

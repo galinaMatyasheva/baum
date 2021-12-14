@@ -39,7 +39,7 @@ const Form = () => {
       <div className="form-img form-info"></div>
       <div className="form-info">
         {showEmailSuccess ? (
-          <h1>Ваше сообщение отправлено успешно!</h1>
+          <h1 className="form-container-message-success">Ваше сообщение отправлено успешно!</h1>
         ) : (
           <form className="form-content" ref={form}>
             <h2>Остались вопросы? Свяжитесь с нами!</h2>

@@ -38,7 +38,7 @@ const ApplicationForm = () => {
       <div className="application-form-img"></div>
       <div className="application-form-info">
         {showEmailSuccess ? (
-          <h1>Ваше сообщение отправлено успешно!</h1>
+          <h1 className="application-form-massage-success">Ваше сообщение отправлено успешно!</h1>
         ) : (
           <form className="application-form-content" ref={form}>
             <h1>Оставьте заявку и мы с вами свяжемся!</h1>

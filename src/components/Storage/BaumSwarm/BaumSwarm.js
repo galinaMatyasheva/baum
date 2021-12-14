@@ -63,13 +63,16 @@ const BaumSwarm = () => {
       <div className="baum-swarm-container-info">
         <div className="baum-swarm-info">
           <div>
-            <h1 className="title title-dark">BAUM swarm (scale up)</h1>
+            <h1 className="title title-dark">BAUM SWARM</h1>
             <div className="baum-swarm-content">
               <p className="info-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Распределенная система хранения данных (РСХД) предназначена для
+                организации доступа к ресурсам блочного, объектного и файлового
+                хранения по запросу пользователя. РСХД относится к классу
+                горизонтально-масштабируемых систем (scale-out), характеризуемых
+                наличием большого числа серверов, объединенных в кластер.
+                Кластер РСХД, состоит из узлов двух типов: Узлы модулей
+                управления и Узлы модулей хранения.
               </p>
               <Button
                 className="btn btn-dark"
@@ -143,7 +146,9 @@ const BaumSwarm = () => {
           </CardContent>
           <CardActions>
             <Button
-            onClick={()=>{handleClickDetails("68")}}
+              onClick={() => {
+                handleClickDetails("68");
+              }}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -163,7 +168,9 @@ const BaumSwarm = () => {
           </CardContent>
           <CardActions>
             <Button
-             onClick={()=>{handleClickDetails("73")}}
+              onClick={() => {
+                handleClickDetails("73");
+              }}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
@@ -183,7 +190,9 @@ const BaumSwarm = () => {
           </CardContent>
           <CardActions>
             <Button
-             onClick={()=>{handleClickDetails("71")}}
+              onClick={() => {
+                handleClickDetails("71");
+              }}
               className="btn-background-none"
               size="large"
               endIcon={<ArrowRightAltIcon />}
