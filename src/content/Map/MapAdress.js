@@ -12,14 +12,14 @@ import { Button } from "@material-ui/core";
 import "./MapAdress.scss";
 
 const MapAdress = () => {
-  const [isAddress, setIsAddress] = useState("Lab");
+  const [address, setAddress] = useState("Lab");
 
   const onClickAdressLab = () => {
-    setIsAddress("Lab");
+    setAddress("Lab");
   };
 
   const onClickAddressOffice = () => {
-    setIsAddress("Office");
+    setAddress("Office");
   };
 
   return (
@@ -28,14 +28,14 @@ const MapAdress = () => {
         <div className="address-content">
           <h2>Мы расположены по адресам:</h2>
           <div className="address-links">
-            <Button className="btn btn-green" onClick={onClickAdressLab}>
+            <Button className={address === "Lab" ? "btn btn-green" : "btn btn-green-light"} onClick={onClickAdressLab}>
               Лаборатория
             </Button>
-            <Button className="btn btn-light" onClick={onClickAddressOffice}>
+            <Button className={address === "Lab" ? "btn btn-light" : "btn btn-dark"} onClick={onClickAddressOffice}>
               Офис
             </Button>
           </div>
-          {isAddress === "Lab" ? (
+          {address === "Lab" ? (
             <div className="address-lab">
               <h5>Адрес лаборатории</h5>
               <p>г.Москва, Лефортовская наб., 1 Корпус</p>
@@ -57,13 +57,13 @@ const MapAdress = () => {
           <Map
             width="100%"
             height="100%"
-            defaultState={{
-              center: [55.7688, 37.689734],
+            state={{
+              center: address === "Lab" ? [55.7688, 37.689734] : [55.765174, 37.679565],
               zoom: 16,
               controls: [],
             }}
           >
-            <Placemark geometry={[55.7688, 37.689734]} />
+            <Placemark geometry={address === "Lab" ? [55.7688, 37.689734] : ([55.765174, 37.679565])} />
             <ZoomControl
               options={{
                 float: "right",

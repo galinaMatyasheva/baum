@@ -3,9 +3,11 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Button
 } from "@material-ui/core";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { useNavigate } from "react-router-dom";
 
 import "./FunctionalPlatform.scss";
 import Header from "../../../Header/Header";
@@ -13,6 +15,20 @@ import Footer from "../../../Footer/Footer";
 import NavbarSwarm from "../Navbar/Navbar";
 
 const FunctionalPlatform = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickBaumUds = () => {
+    navigate("/baum-uds");
+    scrollToTop();
+  }; 
+
   return (
     <div className="functional-container">
       <Header />
@@ -260,6 +276,13 @@ const FunctionalPlatform = () => {
               приложений таких как: базы данных, виртуальных сред, резервное
               копирования.
             </p>
+            <Button
+              className="btn btn-form"
+              onClick={handleClickBaumUds}
+              endIcon={<ArrowRightAltIcon />}
+            >
+              Подробнее
+            </Button>
           </div>
         </div>
       </div>

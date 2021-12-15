@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import "./EducationDetails.scss";
@@ -11,7 +10,6 @@ import Navbar from "../Navbar/Navbar";
 const EducationDetails = () => {
   let param = useParams();
   const key = param.key;
-  let navigate = useNavigate();
 
   return (
     <div className="education-container">

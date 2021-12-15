@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
   Button,
 } from "@material-ui/core";
+import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useNavigate } from "react-router-dom";
 
 import "./Functional.scss";
 import Navbar from "../Navbar/Navbar";
@@ -13,6 +15,20 @@ import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 
 const Functional = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickBaumSwarm = () => {
+    navigate("/baum-swarm");
+    scrollToTop();
+  }; 
+
   return (
     <div className="functional-container">
       <Header />
@@ -93,12 +109,6 @@ const Functional = () => {
                   <li>Практически не влияет на производительность системы</li>
                   <li>Моментальное создание клона</li>
                 </ul>
-                <Button
-                  className="btn btn-light"
-                  // endIcon={<ArrowRightAltIcon />}
-                >
-                  Читать дальше
-                </Button>
               </div>
             </AccordionDetails>
           </Accordion>
@@ -281,7 +291,7 @@ const Functional = () => {
       </div>
 
       <div className="functional-about-baum-swarm-content">
-        <div className="functional-about-baum-swarm-img functional-about-baum-swarm-info"></div>
+        <div className="functional-about-baum-uds-img functional-about-baum-swarm-info"></div>
         <div className="functional-about-baum-swarm-info">
           <div className="functional-text">
             <h2>Ознакомьтесь с системой хранения данных BAUM SWARM</h2>
@@ -292,6 +302,13 @@ const Functional = () => {
               горизонтально-масштабируемых систем (scale-out), характеризуемых
               наличием большого числа серверов, объединенных в кластер.
             </p>
+            <Button
+              className="btn btn-form"
+              onClick={handleClickBaumSwarm}
+              endIcon={<ArrowRightAltIcon />}
+            >
+              Подробнее
+            </Button>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-/*common*/
 *,
 body {
   margin: 0;
@@ -43,6 +42,7 @@ body {
   .about-us-container,
   .vacancies-container,
   .team-container,
+  .contact-us-container,
   .baum-uds-container,
   .baum-swarm-container,
   .footer-top,
@@ -64,7 +64,8 @@ body {
   .news-details-container,
   .app-form-container,
   .education-container,
-  .partners-container {
+  .partners-container,
+  .team-container {
     width: 95vw;
     margin: 0 auto;
     background-color: #e5e5e5;
@@ -243,6 +244,12 @@ body {
     }
   }
 
+  .btn-green-light {
+    background-color: #fff;
+    border: 1px solid #12b886;
+    color: #12b886;
+  }
+
   .btn-form {
     background-color: transparent;
     color: #fff;
@@ -338,6 +345,7 @@ body {
   .community-container-info,
   .functional-container-info,
   .partners-container-info,
+  .contacts-container-info,
   .education-container-info,
   .support-container-info,
   .documentation-container-info,
@@ -401,8 +409,12 @@ body {
   .education-img,
   .community-img,
   .partners-img,
+  .team-img-title,
+  .contacts-img-title,
   .functional-about-baum-swarm-img,
+  .functional-about-baum-uds-img,
   .education-about-img,
+  .partners-about-img,
   .documentation-about-company-img,
   .news-img,
   .education-content-img {
@@ -419,23 +431,16 @@ body {
   .documentation-img,
   .model-img,
   .news-img,
-  .partners-img {
+  .partners-img,
+  .team-img-title,
+  .contacts-img-title {
     width: 60%;
   }
 
   .baum-uds-container,
   .baum-swarm-container,
   .platform-container {
-    .baum-uds-container-info,
-    .baum-swarm-container-info,
-    .platform-container-info {
-      .baum-uds-info,
-      .baum-swarm-info,
-      .platform-info {
-        width: 100%;
-      }
-    }
-
+    
     .baum-uds-container-cards,
     .baum-swarm-container-cards,
     .platform-container-cards {
@@ -470,6 +475,7 @@ body {
       .MuiPaper-elevation1 {
         box-shadow: none;
         padding-bottom: 1.5rem;
+        margin: 2rem 1rem;
       }
 
       .MuiCardContent-root {
@@ -517,14 +523,20 @@ body {
           width: 100%;
         }
         .functional-about-baum-swarm-img,
-        .education-about-img {
+        .functional-about-baum-uds-img,
+        .education-about-img,
+        .partners-about-img {
           height: 400px;
         }
       }
     }
 
-    .partners-container {
-      .partners-container-info {
+    .partners-container,
+    .team-container,
+    .contact-us-container {
+      .partners-container-info,
+      .team-container-info,
+      .contacts-container-info {
         width: 100%;
         flex-direction: column;
       }
@@ -536,6 +548,7 @@ body {
     .community-container-info,
     .main-community-container-info,
     .team-container-info,
+    .contacts-container-info,
     .address-container-info,
     .form-container-info,
     .about-us-container-info,
@@ -641,11 +654,7 @@ body {
 
         .MuiCard-root {
           width: 60%;
-          margin: 0 auto 2rem;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
+          margin: 2rem auto;
         }
 
         .MuiCardMedia-media {
@@ -679,7 +688,9 @@ body {
     .model-img,
     .community-img,
     .functional-about-baum-swarm-img,
+    .functional-about-baum-uds-img
     .education-about-img,
+    .partners-about-img,
     .documentation-about-company-img,
     .news-img {
       width: 100%;
@@ -841,6 +852,8 @@ body {
 
     .news-container .news-container-info,
     .partners-container .partners-container-info,
+    .team-container .team-container-info,
+    .contact-us-container .contacts-container-info,
     .functional-container .functional-container-info,
     .model-container .model-container-info,
     .education-container .education-container-info,
@@ -962,31 +975,10 @@ body {
 
   @media (max-width: 1090px) {
     .model-container {
-      .model-buttons {
-        flex-wrap: wrap;
-
-        .models-group {
-          width: 85%;
-          margin: 0 auto;
-        }
-      }
-      .model-levels {
-        display: none;
-      }
-    }
-
-    .model-container {
       .model-buttons-swarm {
         .models-group {
-          width: 85%;
           margin: 0 auto;
         }
-      }
-    }
-
-    .table-container {
-      .table-row {
-        width: 95%;
       }
     }
   }
@@ -1007,7 +999,6 @@ body {
       .platform-container-cards {
         .MuiCard-root {
           width: 70%;
-          margin: 0 auto 2rem;
         }
       }
     }
@@ -1197,7 +1188,6 @@ body {
     .app-form-container-info,
     .community-container-info,
     .functional-container-info,
-    // .partners-container-info,
     .education-container-info,
     .support-container-info,
     .documentation-container-info,

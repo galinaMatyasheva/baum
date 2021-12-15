@@ -5,7 +5,7 @@ import {
   Card,
   CardActions,
   CardContent,
-  CardMedia,
+  CardMedia
 } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 

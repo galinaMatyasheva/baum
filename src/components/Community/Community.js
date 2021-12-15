@@ -28,6 +28,12 @@ const Community = () => {
     navigate("/partners");
     scrollToTop();
   };
+
+  const handleClickNews = () => {
+    navigate("/news");
+    scrollToTop();
+  };
+
   return (
     <section className="community-container">
       <Header />
@@ -63,11 +69,23 @@ const Community = () => {
               <h4>Сообщество СХД и ИИ</h4>
             </AccordionSummary>
             <AccordionDetails>
-              <p className="accordion-text">
-                Мы формируем сообщество IT-профессионалов по AI и СХД.
-                Разрабатываем учебные курсы, обучаем, создаем продукты и
-                отстаиваем свои идеи на профессиональных конференциях.
-              </p>
+              <div className="accordion-content">
+                <p className="accordion-text">
+                  Мы формируем сообщество IT-профессионалов по AI и СХД.
+                  Разрабатываем учебные курсы, обучаем, создаем продукты и
+                  отстаиваем свои идеи на профессиональных конференциях. На
+                  профессиональных конференциях, таких как: Армия 2021,
+                  соглашение между МГТУ им Н.Э.Баумана и НИЦ институт им.
+                  Жуковского, ВИТ ЭРА, Связь 2021 и прочее.
+                </p>
+                <Button
+                  className="btn btn-light"
+                  endIcon={<ArrowRightAltIcon />}
+                  onClick={handleClickNews}
+                >
+                  Читать дальше
+                </Button>
+              </div>
             </AccordionDetails>
           </Accordion>
           <Accordion>

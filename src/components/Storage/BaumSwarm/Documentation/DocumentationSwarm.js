@@ -7,6 +7,7 @@ import {
   Button,
 } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { useNavigate } from "react-router-dom";
 
 import "./DocumentationSwarm.scss";
 import imgModelB1000F1000 from "../../../../assets/baum-uds/models-img/B1000-F1000.png";
@@ -30,6 +31,20 @@ const DocumentationSwarm = () => {
   const models = ["Flash", "Archive"];
 
   const versions = ["Версия 1", "Версия 2"];
+
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickAi = () => {
+    navigate("/ai/platform");
+    scrollToTop();
+  }; 
 
   return (
     <div className="documentation-container">
@@ -126,6 +141,7 @@ const DocumentationSwarm = () => {
             <Button
               className="btn btn-outlined-light"
               endIcon={<ArrowRightAltIcon />}
+              onClick={handleClickAi}
             >
               Подробнее
             </Button>

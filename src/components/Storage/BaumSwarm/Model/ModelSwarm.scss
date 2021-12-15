@@ -117,73 +117,18 @@
       }
     }
   }
-
-  .model-levels {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 2rem;
-
-    p {
-      font-size: 1.25rem;
-      color: rgba(0, 0, 0, 0.4);
-    }
-
-    .text-model-level {
-      width: 50%;
-    }
-
-    .model-entry-level,
-    .model-mid-range,
-    .model-high-end {
-      display: flex;
-      align-items: center;
-      width: 100%;
-    }
-
-    .model-entry-level {
-      width: 30%;
-    }
-
-    .model-mid-range {
-      width: 40%;
-    }
-
-    .model-shd {
-      width: 10%;
-    }
-    .model-high-end {
-      width: 20%;
-    }
-
-    .model-level-line {
-      height: 20px;
-      width: 100%;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-      border-right: 1px solid rgba(0, 0, 0, 0.4);
-    }
-
-    .level {
-      padding-left: 1rem;
-    }
-  }
 }
 
-@media (max-width: 800px) {
-  .model-wrap {
-    .model-buttons-swarm {
-      width: 65%;
-      max-width: 450px;
-    }
-  }
-}
-
-@media (max-width: 550px) {
+@media (max-width: 1200px) {
   .model-wrap {
     overflow-x: scroll;
     width: auto;
     .model-buttons-swarm {
-      width: 450px;
+      width: 1200px;
     }
+  }
+
+  .model-container .model-buttons-swarm .group-first {
+    width: 25% !important;
   }
 }

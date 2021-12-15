@@ -142,6 +142,11 @@
 
     .model-entry-level {
       width: 30%;
+      &:after {
+        content: "";
+        position: absolute;
+
+      }
     }
 
     .model-mid-range {
@@ -157,9 +162,33 @@
 
     .model-level-line {
       height: 20px;
-      width: 100%;
       border-bottom: 1px solid rgba(0, 0, 0, 0.4);
       border-right: 1px solid rgba(0, 0, 0, 0.4);
+    }
+
+    .text-entry {
+      width: 25%;
+    }
+
+    .text-mid {
+      width: 25%;
+      margin-left: 1rem;
+    }
+
+    .text-high {
+      width: 40%;
+    }
+
+    .line-entry {
+      width: 90%;
+    }
+
+    .line-mid {
+      width: 125%;
+    }
+
+    .line-high {
+      width: 60%;
     }
 
     .level {
@@ -168,12 +197,18 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1200px) {
   .model-wrap {
     overflow-x: scroll;
     width: auto;
     .model-buttons {
-      width: 550px;
+      width: 1200px;
+    }
+  }
+
+  .model-container {
+    .model-levels {
+      width: 1200px;
     }
   }
 }

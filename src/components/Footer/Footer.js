@@ -21,7 +21,7 @@ const Footer = () => {
   };
 
   const handleClickBaumSwarm = () => {
-    navigate("/baum-uds");
+    navigate("/baum-swarm");
     scrollToTop();
   };
 
@@ -31,7 +31,7 @@ const Footer = () => {
   };
 
   const handleClickCommunity = () => {
-    navigate("/contact-us");
+    navigate("/community");
     scrollToTop();
   };
 
@@ -69,9 +69,6 @@ const Footer = () => {
               <Button onClick={handleClickAboutUs}>О компании</Button>
             </li>
             <li>
-              <Button onClick={handleClickAboutUs}>О нас</Button>
-            </li>
-            <li>
               <Button onClick={handleClickTeam}>Наша команда</Button>
             </li>
             <li>
@@ -94,12 +91,12 @@ const Footer = () => {
               </Button>
             </li>
             <li>
-              <Button onClick={handleClickBaumUds}>
+              <Button onClick={handleClickBaumSwarm}>
                 BAUM SWARM
               </Button>
             </li>
             <li>
-              <Button onClick={handleClickBaumSwarm}>
+              <Button onClick={handleClickBaumUds}>
                 BAUM UDS
               </Button>
             </li>
@@ -125,22 +122,6 @@ const Footer = () => {
           </div>
           <p className="footer-copyright">
             © 2021 Baum-inform. Все права защищены.
-          </p>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <div className="footer-bottom-content">
-          <p>
-            <a href="">Сроки и условия</a>
-          </p>
-          <p>
-            <a href="">
-              Политика конфиденциальности и использования файлов Cookie
-            </a>
-          </p>
-          <p>
-            <a href="/contact-us">Обратная связь с сайтом</a>
           </p>
         </div>
       </div>

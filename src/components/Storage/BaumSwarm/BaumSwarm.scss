@@ -4,6 +4,20 @@
       width: 85%;
       margin: 0 auto;
       padding-top: 5rem;
+
+      li {
+        list-style-type: none;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+
+        &:before {
+          content: "— ";
+        }
+
+        &:first-child {
+          margin-top: 1.5rem;
+        }
+      }
     }
 
     .baum-swarm-info {

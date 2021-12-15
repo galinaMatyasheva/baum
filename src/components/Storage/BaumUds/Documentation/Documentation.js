@@ -7,6 +7,7 @@ import {
   Button,
 } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import { useNavigate } from "react-router-dom";
 
 import "./Documentation.scss";
 import imgModelB1000F1000 from "../../../../assets/baum-uds/models-img/B1000-F1000.png";
@@ -23,6 +24,20 @@ const Documentation = () => {
   const elementRef = useRef();
   const [model, setModel] = useState("");
   const [version, setVersion] = useState("");
+
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickAi = () => {
+    navigate("/ai/platform");
+    scrollToTop();
+  }; 
 
   const handleChangeModel = (e) => {
     setModel(e.target.value);
@@ -174,6 +189,7 @@ const Documentation = () => {
             <Button
               className="btn btn-outlined-light"
               endIcon={<ArrowRightAltIcon />}
+              onClick={handleClickAi}
             >
               Подробнее
             </Button>

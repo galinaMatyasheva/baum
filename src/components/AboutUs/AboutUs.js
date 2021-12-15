@@ -1,6 +1,5 @@
 import React from "react";
 import DescriptionIcon from "@material-ui/icons/Description";
-import { Button } from "@material-ui/core";
 
 import Team from "../../content/TeamInfo/TeamInfo";
 import Form from "../../content/Form/Form";

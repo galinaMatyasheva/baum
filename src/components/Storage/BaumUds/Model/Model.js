@@ -259,19 +259,19 @@ const Model = () => {
 
         <div className="model-levels">
           <div className="model-entry-level level">
-            <p className="text-model-level">Entry Level</p>
-            <div className="model-level-line"></div>
+            <p className="text-model-level text-entry">Entry Level</p>
+            <div className="model-level-line line-entry"></div>
           </div>
           <div className="model-mid-range level">
-            <p className="text-model-level">Mid Range</p>
-            <div className="model-level-line"></div>
+            <p className="text-model-level text-mid">Mid Range</p>
+            <div className="model-level-line line-mid"></div>
           </div>
           <div className="model-shd level">
             <p>Сетр. СХД</p>
           </div>
           <div className="model-high-end level">
-            <p className="text-model-level">High-End NVMe</p>
-            <div className="model-level-line"></div>
+            <p className="text-model-level text-high">High-End NVMe</p>
+            <div className="model-level-line line-high"></div>
           </div>
         </div>
 
