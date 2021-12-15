@@ -7,6 +7,7 @@ import {
 } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useNavigate } from "react-router-dom";
 
 import "./Community.scss";
 import ApplicationForm from "../../content/ApplicationForm/ApplicationForm";
@@ -14,6 +15,19 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 const Community = () => {
+  let navigate = useNavigate();
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      const aboutPageNode = document.getElementById("app");
+      aboutPageNode.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
+  const handleClickPartners = () => {
+    navigate("/partners");
+    scrollToTop();
+  };
   return (
     <section className="community-container">
       <Header />
@@ -23,7 +37,7 @@ const Community = () => {
         </div>
         <div className="community-info">
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>База знаний</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -34,6 +48,8 @@ const Community = () => {
                   любой проблемы.
                 </p>
                 <Button
+                  target="_blank"
+                  href="https://kb.npobaum.ru"
                   className="btn btn-light"
                   endIcon={<ArrowRightAltIcon />}
                 >
@@ -43,7 +59,7 @@ const Community = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Сообщество СХД и ИИ</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -55,7 +71,7 @@ const Community = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Партнёры и дистрибьюторы</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -67,6 +83,7 @@ const Community = () => {
                 <Button
                   className="btn btn-light"
                   endIcon={<ArrowRightAltIcon />}
+                  onClick={handleClickPartners}
                 >
                   Читать дальше
                 </Button>

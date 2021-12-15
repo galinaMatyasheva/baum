@@ -102,14 +102,14 @@ const DocumentationSwarm = () => {
               </div>
             </div>
           </div>
-          <a
+          <Button
             ref={elementRef}
             // href={`/pdf/models-baum-swarm/${model}/${version}.pdf`}
             download
             className="btn btn-dark"
           >
             Скачать pdf файл
-          </a>
+          </Button>
         </div>
       </div>
 
@@ -119,11 +119,9 @@ const DocumentationSwarm = () => {
           <div className="documentation-text">
             <h2>О компании и продуктах</h2>
             <p className="info-text">
-              BAUM Inform – центр компетенций по разработке, производству и
-              продвижению российских продуктов и услуг в сфере IT-технологий:
-              система хранения данных (СХД), аналитика Big DATA, готовые модули
-              Internet of things, цифровая безопасность, искусственный
-              интеллект.
+              Гармоничное развитие нашей схд заключается в разработке платформы
+              прикладного искусственного интеллекта, которая может работать с
+              данными любых источников
             </p>
             <Button
               className="btn btn-outlined-light"

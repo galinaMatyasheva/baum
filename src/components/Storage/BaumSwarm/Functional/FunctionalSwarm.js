@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -7,8 +7,6 @@ import {
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import "./FunctionalSwarm.scss";
-import arrowBottomImg from "../../../../assets/arrow-bottom.svg";
-import arrowBottomBlackImg from "../../../../assets/arrow-bottom-black.svg";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 import NavbarSwarm from "../Navbar/Navbar";

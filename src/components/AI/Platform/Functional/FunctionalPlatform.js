@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
 } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import "./FunctionalPlatform.scss";
 import Header from "../../../Header/Header";
@@ -24,7 +25,7 @@ const FunctionalPlatform = () => {
       <div className="accordion-container">
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Классификация звуков. Определение объекта по звуку</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -37,7 +38,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Классификация изображения</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -49,7 +50,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Промышленность</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -61,7 +62,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Распознавание рукописного текста</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -74,7 +75,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Интеллектуальная обработка новостного фона</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -86,7 +87,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Чат-бот. Генерация текста</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -103,7 +104,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Предактивная аналитика показателей систем СХД</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -115,7 +116,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>AI мониторинг и предиктивная аналитика для ТЭЦ</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -129,7 +130,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Предсказание лесных пожаров</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -145,7 +146,7 @@ const FunctionalPlatform = () => {
         </div>
         <div className="accordion-info">
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Обработка звука. Классификация музыкальных аудиофайлов</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -158,7 +159,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Диагностика заболеваний в медицине</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -171,7 +172,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Снижение количества ошибок на производстве</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -182,7 +183,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Классификация текстов</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -193,7 +194,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Рекомендательная система</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -204,7 +205,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Гибридная интеллектуальная база знаний</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -219,7 +220,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Оптимизация ресурсов на складе</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -231,7 +232,7 @@ const FunctionalPlatform = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-            <AccordionSummary expandIcon={<ArrowRightAltIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>AI анализ сердечно-сосудистых заболеваний</h4>
             </AccordionSummary>
             <AccordionDetails>

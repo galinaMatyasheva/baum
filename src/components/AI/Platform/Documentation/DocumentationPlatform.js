@@ -1,16 +1,8 @@
-import React, { useState, useRef } from "react";
-import {
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Button,
-} from "@material-ui/core";
+import React from "react";
+import { Button } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 import "./DocumentationPlatform.scss";
-import imgFlash from "../../../../assets/baum-swarm/models-img/flash.png";
-import imgArchive from "../../../../assets/baum-swarm/models-img/archive.png";
 import Navbar from "../Navbar/Navbar";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
@@ -30,23 +22,23 @@ const DocumentationPlatform = () => {
         <div className="documentation-container-content">
           <div className="documentation-container-text">
             <h3>Руководство администратора</h3>
-            <a
+            <Button
               href={`/pdf/platform/baum-ai-platform.pdf`}
               download
               className="btn btn-dark"
             >
               Скачать pdf файл
-            </a>
+            </Button>
           </div>
           <div className="documentation-container-text">
             <h3>О компании и продуктах</h3>
-            <a
+            <Button
               href={`/pdf/platform/about-company.pdf`}
               download
               className="btn btn-dark"
             >
               Скачать pdf файл
-            </a>
+            </Button>
           </div>
         </div>
       </div>

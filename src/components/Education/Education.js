@@ -27,6 +27,7 @@ const Education = () => {
     navigate("/about-us");
     scrollToTop();
   };
+  
   const handleClickDetails = (key) => {
     navigate("/education/details/" + key);
     scrollToTop();
@@ -43,15 +44,14 @@ const Education = () => {
       <div className="education-info-about">
         <h4>Обучение на базе МГТУ им. Н.Э. Баумана</h4>
         <p>Обучение осуществляется совместно с МГТУ им. Н.Э. Баумана.</p>
-        <div className="link-arrow">
-          <a
-            target="_blank"
-            href="http://edu.bmstu.ru/napravleniya-obucheniya/"
-          >
-            Узнать больше
-          </a>
-          <ArrowRightAltIcon />
-        </div>
+        <Button
+          className="btn btn-outlined-dark"
+          endIcon={<ArrowRightAltIcon />}
+          target="_blank"
+          href="http://edu.bmstu.ru/napravleniya-obucheniya/"
+        >
+          Узнать больше
+        </Button>
       </div>
 
       <div className="accordion-container">

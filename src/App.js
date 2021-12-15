@@ -29,6 +29,7 @@ import SupportPlatform from "./components/AI/Platform/Support/SupportPlatform";
 import DocumentationPlatform from "./components/AI/Platform/Documentation/DocumentationPlatform";
 import ModelPlatform from "./components/AI/Platform/Model/ModelPlatform";
 import EducationDetails from "./components/Education/EducationDetails/EducationDetails";
+import Partners from "./components/Community/Partners/Partners";
 
 const App = () => {
   return (
@@ -59,6 +60,7 @@ const App = () => {
         <Route path="/baum-swarm/model" element={<ModelSwarm />} />
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/partners" element={<Partners/>}/>
         <Route path="/ai/platform" element={<Platform />} />
         <Route
           path="/ai/platform/functional"

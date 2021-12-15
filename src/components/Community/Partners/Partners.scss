@@ -1,0 +1,37 @@
+.partners-container {
+  .partners-container-info {
+    .title-orange {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #e67700, #f59f00);
+    }
+
+    .partners-img {
+      background-repeat: no-repeat;
+      background-image: url("/assets/baum-uds/functional.png");
+    }
+  }
+
+  .partners-about-content {
+    background-color: #000;
+    display: flex;
+  
+    h2,
+    p {
+      color: #fff;
+    }
+  
+    .partners-about-info {
+      width: 50%;
+      padding: 10% 0;
+      .partners-text {
+        width: 92%;
+        margin: 0 auto;
+      }
+    }
+  
+    .partners-about-img {
+      background-image: url("/assets/baum-uds/functional-laptop.png");
+    }
+  }
+}

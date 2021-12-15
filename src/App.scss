@@ -63,7 +63,8 @@ body {
   .news-container,
   .news-details-container,
   .app-form-container,
-  .education-container {
+  .education-container,
+  .partners-container {
     width: 95vw;
     margin: 0 auto;
     background-color: #e5e5e5;
@@ -336,6 +337,7 @@ body {
   .app-form-container-info,
   .community-container-info,
   .functional-container-info,
+  .partners-container-info,
   .education-container-info,
   .support-container-info,
   .documentation-container-info,
@@ -398,6 +400,7 @@ body {
   .model-img,
   .education-img,
   .community-img,
+  .partners-img,
   .functional-about-baum-swarm-img,
   .education-about-img,
   .documentation-about-company-img,
@@ -415,7 +418,8 @@ body {
   .support-img,
   .documentation-img,
   .model-img,
-  .news-img {
+  .news-img,
+  .partners-img {
     width: 60%;
   }
 
@@ -516,6 +520,13 @@ body {
         .education-about-img {
           height: 400px;
         }
+      }
+    }
+
+    .partners-container {
+      .partners-container-info {
+        width: 100%;
+        flex-direction: column;
       }
     }
 
@@ -829,6 +840,7 @@ body {
     }
 
     .news-container .news-container-info,
+    .partners-container .partners-container-info,
     .functional-container .functional-container-info,
     .model-container .model-container-info,
     .education-container .education-container-info,
@@ -1185,6 +1197,7 @@ body {
     .app-form-container-info,
     .community-container-info,
     .functional-container-info,
+    // .partners-container-info,
     .education-container-info,
     .support-container-info,
     .documentation-container-info,

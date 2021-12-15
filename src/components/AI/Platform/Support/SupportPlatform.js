@@ -1,4 +1,7 @@
 import React from "react";
+import {
+  Button
+} from "@material-ui/core";
 
 import "./SupportPlatform.scss";
 import Form from "../../../../content/Form/Form";
@@ -26,9 +29,9 @@ const SupportPlatform = () => {
             технического обслуживания оборудования и программного обеспечения
             наших продуктов.
           </p>
-          <a href="/pdf/support-platform.pdf" download className="btn btn-dark">
+          <Button href="/pdf/support-platform.pdf" download className="btn btn-dark">
             Скачать pdf файл
-          </a>
+          </Button>
         </div>
       </div>
       <Form />

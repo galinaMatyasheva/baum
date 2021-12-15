@@ -48,6 +48,11 @@ const Main = () => {
     scrollToTop();
   };
 
+  const handleClickCases = () => {
+    navigate("/ai/platform/functional");
+    scrollToTop();
+  }
+
   return (
     <section className="main-container">
       <Header />
@@ -106,15 +111,16 @@ const Main = () => {
       <div className="store-info-about">
         <div className="store-info info-about-left">
           <div className="store-info-text">
-            <h3>Больше вариантов хранения, больше вариантов оплаты</h3>
+            <h3>Разработкой СХД занимаемся с 2010 года</h3>
             <p className="info-text">
-              Разработкой СХД занимаемся с 2010 года. В 2014 году у нас был
+              В 2014 году у нас был
               первый готовый продукт и пошла коммерциализация. В 2017 году мы
               приняли решение разрабатывать платформу прикладного ИИ для
               комплексной аналитики текстовых, числовых, звуковых и видео данных
               пользователя.
             </p>
             <Button
+              onClick={handleClickCases}
               className="btn btn-outlined-light"
               endIcon={<ArrowRightAltIcon />}
             >
@@ -141,7 +147,7 @@ const Main = () => {
               предметного пользователя, а также уникального софта собственной
               разработки, который позволяет создавать, обучать или использовать
               предобученные модели искусственного интеллекта без необходимости
-              прямого кодирования по принципу drag-&-drop.
+              прямого кодирования по принципу drag&drop.
             </p>
             <Button
               className="btn btn-light"
@@ -171,15 +177,13 @@ const Main = () => {
               >
                 Читать
               </Button>
-              <div className="btn btn-dark questionnaire">
-                <a
-                  href="http://npobaum1.tilda.ws/anketa1"
-                  endIcon={<ArrowRightAltIcon />}
-                >
-                  Анкета
-                </a>
-                <ArrowRightAltIcon />
-              </div>
+              <Button
+                className="btn btn-dark"
+                href="http://npobaum1.tilda.ws/anketa1"
+                endIcon={<ArrowRightAltIcon />}
+              >
+                Анкета
+              </Button>
             </div>
           </div>
         </div>

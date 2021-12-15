@@ -15,8 +15,8 @@ import Footer from "../../../Footer/Footer";
 const Functional = () => {
   return (
     <div className="functional-container">
-      <Header/>
-      <Navbar/>
+      <Header />
+      <Navbar />
       <div className="functional-container-info">
         <h1 className="title-baum title-orange">Функционал</h1>
         <div className="functional-img"></div>
@@ -25,7 +25,7 @@ const Functional = () => {
       <div className="accordion-container">
         <div className="accordion-info">
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>RAID B3</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -53,7 +53,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BPOOL</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -77,7 +77,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BClone</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -103,7 +103,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Deduplication</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -128,7 +128,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>B-REPL</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -149,7 +149,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BCache</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -171,7 +171,7 @@ const Functional = () => {
         </div>
         <div className="accordion-info">
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BAUM FS</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -194,7 +194,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Snapshot</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -216,7 +216,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>BWORM</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -234,7 +234,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>Compression</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -249,7 +249,7 @@ const Functional = () => {
             </AccordionDetails>
           </Accordion>
           <Accordion>
-          <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
               <h4>This Provisioning</h4>
             </AccordionSummary>
             <AccordionDetails>
@@ -284,18 +284,18 @@ const Functional = () => {
         <div className="functional-about-baum-swarm-img functional-about-baum-swarm-info"></div>
         <div className="functional-about-baum-swarm-info">
           <div className="functional-text">
-            <h2>
-              Ознакомьтесь с системой хранения данных BAUM SWARM
-            </h2>
+            <h2>Ознакомьтесь с системой хранения данных BAUM SWARM</h2>
             <p className="info-text">
-              Воспользуйтесь преимуществами системы хранения данных,
-              использующих постоянный корпоративный сервис по хранению данных в
-              любом облаке по вашему выбору.
+              Распределенная система хранения данных (РСХД) предназначена для
+              организации доступа к ресурсам блочного, объектного и файлового
+              хранения по запросу пользователя. РСХД относится к классу
+              горизонтально-масштабируемых систем (scale-out), характеризуемых
+              наличием большого числа серверов, объединенных в кластер.
             </p>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
