@@ -53,7 +53,8 @@ const Vacancies = () => {
                 хотите присоединиться к нашей увлеченной и дружной команде,
                 присылайте ваше резюме нашему специалисту по подбору персонала
                 по адресу
-                <a href="mailto:hr@baum-inform.ru">hr@baum-inform.ru</a>
+                {" "}
+                <a href="mailto:hr@baum-inform.ru"> hr@baum-inform.ru</a>
               </p>
             </div>
           </div>

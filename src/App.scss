@@ -1,16 +1,22 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 *,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: "HelveticaNeueCyr", sans-serif;
+  // font-family: "HelveticaNeueCyr", sans-serif;
+  // font-family:  'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  // font-family: 'Lato', sans-serif;
 }
 
-@font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  src: url("/fonts/helveticaneuecyr_roman.otf");
-}
+// @font-face {
+//   font-family: "HelveticaNeueCyr", sans-serif;
+//   src: url("/fonts/helveticaneuecyr_roman.otf");
+// }
 
 .MuiOutlinedInput-root {
   border-radius: 0;
