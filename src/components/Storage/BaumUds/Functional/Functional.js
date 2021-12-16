@@ -27,7 +27,7 @@ const Functional = () => {
   const handleClickBaumSwarm = () => {
     navigate("/baum-swarm");
     scrollToTop();
-  }; 
+  };
 
   return (
     <div className="functional-container">
