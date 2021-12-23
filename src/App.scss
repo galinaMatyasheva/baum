@@ -1,5 +1,5 @@
 // @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 // @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 *,
 body {
@@ -9,7 +9,7 @@ body {
   font-size: 14px;
   // font-family: "HelveticaNeueCyr", sans-serif;
   // font-family:  'Roboto', sans-serif;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   // font-family: 'Lato', sans-serif;
 }
 
@@ -55,7 +55,8 @@ body {
   .support-container,
   .documentation-container,
   .navbar,
-  .platform-container {
+  .platform-container,
+  .search-result-container {
     width: 95vw;
     margin: 0 auto;
     background-color: #fff;
@@ -352,6 +353,7 @@ body {
   .functional-container-info,
   .partners-container-info,
   .contacts-container-info,
+  .search-result-container-info,
   .education-container-info,
   .support-container-info,
   .documentation-container-info,
@@ -439,14 +441,14 @@ body {
   .news-img,
   .partners-img,
   .team-img-title,
-  .contacts-img-title {
+  .contacts-img-title,
+  .search-result-img-title {
     width: 60%;
   }
 
   .baum-uds-container,
   .baum-swarm-container,
   .platform-container {
-    
     .baum-uds-container-cards,
     .baum-swarm-container-cards,
     .platform-container-cards {
@@ -542,7 +544,8 @@ body {
     .contact-us-container {
       .partners-container-info,
       .team-container-info,
-      .contacts-container-info {
+      .contacts-container-info,
+      .search-result-container-info {
         width: 100%;
         flex-direction: column;
       }
@@ -555,6 +558,7 @@ body {
     .main-community-container-info,
     .team-container-info,
     .contacts-container-info,
+    .search-result-container-info,
     .address-container-info,
     .form-container-info,
     .about-us-container-info,
@@ -694,8 +698,7 @@ body {
     .model-img,
     .community-img,
     .functional-about-baum-swarm-img,
-    .functional-about-baum-uds-img
-    .education-about-img,
+    .functional-about-baum-uds-img .education-about-img,
     .partners-about-img,
     .documentation-about-company-img,
     .news-img {
@@ -860,6 +863,7 @@ body {
     .partners-container .partners-container-info,
     .team-container .team-container-info,
     .contact-us-container .contacts-container-info,
+    .search-result-container .search-result-container-info,
     .functional-container .functional-container-info,
     .model-container .model-container-info,
     .education-container .education-container-info,

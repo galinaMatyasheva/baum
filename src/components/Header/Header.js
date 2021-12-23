@@ -14,12 +14,21 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "./Header.scss";
 import logo from "../../assets/logo.svg";
+import SearchBar from "../../content/SearchBar/SearchBar";
+import posts from "../../content/DataForSearch";
+import SearchResult from "../SearchResult/SearchResult";
+import filterPosts from "../../content/Functions/FilterPosts";
 
 const Header = () => {
   const [openLinkStorage, setOpenLinkStorage] = useState(null);
   const [openLinkAI, setOpenLinkAI] = useState(null);
   const [openLinkCompany, setOpenLinkCompany] = useState(null);
   const [openPhoneMenu, setOpenPhoneMenu] = useState(false);
+
+  const { search } = window.location;
+  // const query = new URLSearchParams(search).get("s");
+  // const [searchQuery, setSearchQuery] = useState(query || '');
+  // const filteredPosts = filterPosts(posts, searchQuery);
 
   const anchorStorageRef = useRef(null);
   const anchorAIRef = useRef(null);
@@ -28,8 +37,7 @@ const Header = () => {
   let navigate = useNavigate();
 
   const handleClickOpenPhoneMenu = () => {
-     setOpenPhoneMenu(!openPhoneMenu);
-   
+    setOpenPhoneMenu(!openPhoneMenu);
   };
 
   const handleClickCommunity = () => {
@@ -64,6 +72,19 @@ const Header = () => {
     setOpenLinkCompany(null);
   };
 
+//   const filterPosts = (posts, query) => {
+//     if (!query) {
+//         return [];
+//     }
+
+//     return posts.filter((post) => {
+//         const postName = post.name.toLowerCase();
+//         return postName.includes(query);
+//     });
+// };
+
+// const filteredPosts = filterPosts(posts, query);
+
   return (
     <header className="header-container">
       <nav className="navbar">
@@ -90,12 +111,27 @@ const Header = () => {
           </ul>
 
           <div className="navbar-menu-bottom">
-            <form className="navbar-form-search">
+            {/* <form className="navbar-form-search">
               <TextField placeholder="Что вы ищете?" variant="outlined" />
               <IconButton type="submit" aria-label="search">
                 <SearchIcon fontSize="small" />
               </IconButton>
-            </form>
+            </form> */}
+            {/* <Search />
+            <ul>
+              {posts.map((post) => (
+                <li key={post.id}>{post.name}</li>
+              ))}
+            </ul> */}
+          
+            <SearchBar/>
+              {/* <ul>
+                {filteredPosts.map(post => (
+                    <li key={post.key}>{post.name}</li>
+                ))}
+            </ul> */}
+
+
             <div className="navbar-menu-bottom-links">
               <div className="submenu">
                 <Button
@@ -234,7 +270,7 @@ const Header = () => {
             onClick={handleClickOpenPhoneMenu}
           >
             {openPhoneMenu ? (
-              <CloseIcon className="icon-menu"  />
+              <CloseIcon className="icon-menu" />
             ) : (
               <MenuIcon className="icon-menu" />
             )}
@@ -245,8 +281,8 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        { openPhoneMenu ?
-        <div className="navbar-content-phone">
+        {openPhoneMenu ? (
+          <div className="navbar-content-phone">
             <form className="navbar-form-search">
               <TextField placeholder="Что вы ищете?" variant="outlined" />
               <IconButton type="submit" aria-label="search">
@@ -298,9 +334,10 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-        </div>
-        : ''
-}
+          </div>
+        ) : (
+          ""
+        )}
       </nav>
     </header>
   );

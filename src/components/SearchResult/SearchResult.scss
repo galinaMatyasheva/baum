@@ -1,0 +1,30 @@
+.search-result-container {
+  .search-result-container-info {
+    .title-purple {
+      margin-bottom: 0;
+      width: 40%;
+      background: linear-gradient(to top, #5f3dc4, #7048e8);
+    }
+
+    .search-result-img-title {
+      background-repeat: no-repeat;
+      background-image: url("/assets/news/news.png");
+    }
+  }
+
+  .search-result-content {
+    padding: 4rem;
+
+    .search-result-list {
+      li {
+        list-style-type: none;
+        padding-bottom: 2rem;
+        
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

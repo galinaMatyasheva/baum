@@ -30,8 +30,11 @@ import DocumentationPlatform from "./components/AI/Platform/Documentation/Docume
 import ModelPlatform from "./components/AI/Platform/Model/ModelPlatform";
 import EducationDetails from "./components/Education/EducationDetails/EducationDetails";
 import Partners from "./components/Community/Partners/Partners";
+import SearchResult from "./components/SearchResult/SearchResult";
+
 
 const App = () => {
+  
   return (
     <div id="app" className="app-container">
       <Helmet>
@@ -60,7 +63,7 @@ const App = () => {
         <Route path="/baum-swarm/model" element={<ModelSwarm />} />
         <Route path="/vacancies" element={<Vacancies />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/partners" element={<Partners/>}/>
+        <Route path="/partners" element={<Partners />} />
         <Route path="/ai/platform" element={<Platform />} />
         <Route
           path="/ai/platform/functional"
@@ -73,9 +76,10 @@ const App = () => {
         />
         <Route path="/ai/platform/model" element={<ModelPlatform />} />
         <Route path="/education" element={<Education />} />
-        <Route path="/education/details/:key" element={<EducationDetails/>}/>
+        <Route path="/education/details/:key" element={<EducationDetails />} />
         <Route path="/news/details/:key" element={<NewsDetails />} />
         <Route path="/app-form" element={<AppForm />} />
+        <Route path="/search-result" element={<SearchResult/>}/>
       </Routes>
     </div>
   );
