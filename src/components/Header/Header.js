@@ -15,20 +15,12 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Header.scss";
 import logo from "../../assets/logo.svg";
 import SearchBar from "../../content/SearchBar/SearchBar";
-import posts from "../../content/DataForSearch";
-import SearchResult from "../SearchResult/SearchResult";
-import filterPosts from "../../content/Functions/FilterPosts";
 
 const Header = () => {
   const [openLinkStorage, setOpenLinkStorage] = useState(null);
   const [openLinkAI, setOpenLinkAI] = useState(null);
   const [openLinkCompany, setOpenLinkCompany] = useState(null);
   const [openPhoneMenu, setOpenPhoneMenu] = useState(false);
-
-  const { search } = window.location;
-  // const query = new URLSearchParams(search).get("s");
-  // const [searchQuery, setSearchQuery] = useState(query || '');
-  // const filteredPosts = filterPosts(posts, searchQuery);
 
   const anchorStorageRef = useRef(null);
   const anchorAIRef = useRef(null);
