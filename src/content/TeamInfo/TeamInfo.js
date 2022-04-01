@@ -8,7 +8,6 @@ import cto from "../../assets/team/cto.png";
 import cso from "../../assets/team/cso.png";
 import cao from "../../assets/team/cao.png";
 import clo from "../../assets/team/clo.png";
-import cspo from "../../assets/team/cspo.png";
 import "./TeamInfo.scss";
 
 const TeamInfo = () => {
@@ -17,7 +16,7 @@ const TeamInfo = () => {
   const [value, setValue] = useState(30);
   const [valuePhone, setValuePhone] = useState(6);
 
-  const picList = [ceo, cto, cso, cao, clo, cspo];
+  const picList = [ceo, cto, clo, cao, cso];
   const titleList = [
     {
       name: "Алексей Бородулин",
@@ -28,20 +27,17 @@ const TeamInfo = () => {
       position: "CTO (Chief Technology Officer)",
     },
     {
-      name: "Павел Гундин",
-      position: "CSO (Chief Sales Officer)",
+      name: "Маргарита Стоянова",
+      position: "CLO (Chief Learning Officer)",
     },
     {
       name: "Александр Сапожников",
       position: "CAO (Chief Administrative Officer)",
     },
+
     {
-      name: "Маргарита Стоянова",
-      position: "CLO (Chief Learning Officer)",
-    },
-    {
-      name: "Руслан Чиняков",
-      position: "CSPO (Chief Strategic Planning Officer)",
+      name: "Павел Гундин",
+      position: "CSO (Chief Sales Officer)",
     },
   ];
 
@@ -54,21 +50,21 @@ const TeamInfo = () => {
   };
 
   const onClickNext = () => {
-    if (index + 2 === picList.length) {
+    if (index + 4 === picList.length) {
       setIndex(0);
       setValue(30);
     } else {
-      setIndex(index + 2);
+      setIndex(index + 1);
       setValue(value + 30);
     }
   };
 
   const onClickPrevious = () => {
-    if (index - 2 < 0) {
-      setIndex(picList.length - 2);
-      setValue(90);
+    if (index - 4 < 0) {
+      setIndex(picList.length - 4);
+      setValue(100);
     } else {
-      setIndex(index - 2);
+      setIndex(index - 1);
       setValue(value - 30);
     }
   };
@@ -76,24 +72,35 @@ const TeamInfo = () => {
   const onClickNextPhone = () => {
     if (indexPhone + 1 === picList.length) {
       setIndexPhone(0);
-      setValuePhone(6);
+      setValuePhone(5);
     } else {
       setIndexPhone(indexPhone + 1);
-      setValuePhone(valuePhone + 6);
+      setValuePhone(valuePhone + 5);
     }
   };
 
   const onClickPreviousPhone = () => {
     if (indexPhone - 1 < 0) {
       setIndexPhone(picList.length - 1);
-      setValuePhone(36);
+      setValuePhone(25);
     } else {
       setIndexPhone(indexPhone - 1);
-      setValuePhone(valuePhone - 6);
+      setValuePhone(valuePhone - 5);
     }
   };
+  console.log("index", index);
   return (
     <div className="team-container-info">
+      <div className="team-info-content">
+        <div className="team-content">
+          <h3>Наша команда</h3>
+          <p className="info-text">
+            Мы вендор программных и программно-аппаратных комплексов. Мы создаем
+            продукты, которые помогают развивать и увеличивать эффективность
+            всех отраслей экономики России.
+          </p>
+        </div>
+      </div>
       <div className="team-img team-info">
         <div className="carousel-content">
           <div className="carousel-gallery">
@@ -105,6 +112,16 @@ const TeamInfo = () => {
             <img src={picList[index + 1]} alt="img" />
             <h4>{titleList[index + 1].name}</h4>
             <p>{titleList[index + 1].position}</p>
+          </div>
+          <div className="carousel-gallery">
+            <img src={picList[index + 2]} alt="img" />
+            <h4>{titleList[index + 2].name}</h4>
+            <p>{titleList[index + 2].position}</p>
+          </div>
+          <div className="carousel-gallery">
+            <img src={picList[index + 3]} alt="img" />
+            <h4>{titleList[index + 3].name}</h4>
+            <p>{titleList[index + 3].position}</p>
           </div>
         </div>
         <div className="gallery-slider ">
@@ -126,6 +143,7 @@ const TeamInfo = () => {
           </IconButton>
         </div>
       </div>
+
       <div className="team-img team-info-phone">
         <div className="carousel-content">
           <div className="carousel-gallery">
@@ -154,16 +172,6 @@ const TeamInfo = () => {
           >
             <EastIcon />
           </IconButton>
-        </div>
-      </div>
-      <div className="team-info">
-        <div className="team-content">
-          <h2>Наша команда</h2>
-          <p className="info-text">
-            Мы вендор программных и программно-аппаратных комплексов. Мы создаем
-            продукты, которые помогают развивать и увеличивать эффективность
-            всех отраслей экономики России.
-          </p>
         </div>
       </div>
     </div>

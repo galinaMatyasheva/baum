@@ -1,15 +1,23 @@
 .baum-inform-create-container {
   display: flex;
+  background: #000;
+  align-items: flex-end;
+  padding: 2rem 4rem;
 
   .baum-inform-create-content {
-    background: #000;
     color: #fff;
-    width: 50%;
-    padding: 4rem;
+
     &:first-child {
       display: flex;
       align-items: center;
-      padding-left: 3rem;
+    }
+
+    .info-text {
+      width: 80%;
+    }
+
+    h3 {
+      padding-right: 4rem;
     }
 
     .main-info-link {
@@ -23,6 +31,47 @@
 
     a {
       margin-right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 1295px) {
+    .baum-inform-create-content {
+      h3 {
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 980px) {
+    .baum-inform-create-content {
+      &:first-child {
+        flex-direction: column;
+        align-items: baseline;
+      }
+
+      .info-text {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 695px) {
+    .btn-container {
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 460px) {
+    padding: 2rem 2rem;
+    .baum-inform-create-content {
+      h3 {
+        padding-right: 0;
+        font-size: 1.7rem;
+      }
     }
   }
 }

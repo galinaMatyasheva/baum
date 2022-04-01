@@ -14,12 +14,6 @@
     .btn {
       width: 50%;
     }
-
-    .btn {
-      &:first-child {
-        margin-right: 2rem;
-      }
-    }
   }
 
   .address-info {
@@ -35,8 +29,12 @@
     }
   }
 
-  .address-lab {
+  .address-lab,
+  .address-office {
+    padding: 0 4rem;
     p {
+      line-height: 2;
+
       &:last-child {
         visibility: hidden;
       }

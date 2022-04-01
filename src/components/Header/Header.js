@@ -13,7 +13,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { Link, useNavigate } from "react-router-dom";
 
 import "./Header.scss";
-import logo from "../../assets/logo.svg";
+import logo1 from "../../assets/logo1.png";
 import SearchBar from "../../content/SearchBar/SearchBar";
 
 const Header = () => {
@@ -64,25 +64,12 @@ const Header = () => {
     setOpenLinkCompany(null);
   };
 
-//   const filterPosts = (posts, query) => {
-//     if (!query) {
-//         return [];
-//     }
-
-//     return posts.filter((post) => {
-//         const postName = post.name.toLowerCase();
-//         return postName.includes(query);
-//     });
-// };
-
-// const filteredPosts = filterPosts(posts, query);
-
   return (
     <header className="header-container">
       <nav className="navbar">
         <div className="img">
           <Link to="/">
-            <img src={logo} alt="logo" />
+            <img src={logo1} alt="logo" />
           </Link>
         </div>
 
@@ -101,28 +88,8 @@ const Header = () => {
               <Link to="/contact-us">Контакты</Link>
             </li>
           </ul>
-
           <div className="navbar-menu-bottom">
-            {/* <form className="navbar-form-search">
-              <TextField placeholder="Что вы ищете?" variant="outlined" />
-              <IconButton type="submit" aria-label="search">
-                <SearchIcon fontSize="small" />
-              </IconButton>
-            </form> */}
-            {/* <Search />
-            <ul>
-              {posts.map((post) => (
-                <li key={post.id}>{post.name}</li>
-              ))}
-            </ul> */}
-          
-            <SearchBar/>
-              {/* <ul>
-                {filteredPosts.map(post => (
-                    <li key={post.key}>{post.name}</li>
-                ))}
-            </ul> */}
-
+            <SearchBar />
 
             <div className="navbar-menu-bottom-links">
               <div className="submenu">
@@ -269,7 +236,7 @@ const Header = () => {
           </IconButton>
           <div className="img">
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img src={logo1} alt="logo" />
             </Link>
           </div>
         </div>

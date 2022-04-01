@@ -26,12 +26,12 @@ const MapAdress = () => {
     <div className="address-container-info">
       <div className="address-info">
         <div className="address-content">
-          <h2>Мы расположены по адресам:</h2>
+          <h3>Мы расположены по адресам:</h3>
           <div className="address-links">
-            <Button className={address === "Lab" ? "btn btn-green" : "btn btn-green-light"} onClick={onClickAdressLab}>
+            <Button className={address === "Lab" ? "btn btn-dark-gray" : "btn btn-gray"} onClick={onClickAdressLab}>
               Лаборатория
             </Button>
-            <Button className={address === "Lab" ? "btn btn-light" : "btn btn-dark"} onClick={onClickAddressOffice}>
+            <Button className={address === "Lab" ? "btn btn-gray" : "btn btn-dark-gray"} onClick={onClickAddressOffice}>
               Офис
             </Button>
           </div>
@@ -43,8 +43,8 @@ const MapAdress = () => {
               <p>Лаборатория</p>
             </div>
           ) : (
-            <div>
-              <h5 className="address-office">Адрес офиса</h5>
+            <div className="address-office">
+              <h5 >Адрес офиса</h5>
               <p>г.Москва, Бауманская 68/8 с1</p>
               <p>Телефон: +7 495 249-11-13</p>
               <p>E-mail: info@baum-inform.ru</p>

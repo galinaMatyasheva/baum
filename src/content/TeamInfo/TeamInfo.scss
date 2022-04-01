@@ -1,11 +1,12 @@
 .team-container-info {
-  .team-content {
-    width: 85%;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #EEEEEE;
 
-  .team-img {
-    background-color: #f0f2f3;
+  .team-content {
+    margin-bottom: 4rem;
+    background-color: #F7F8FA;
+    padding: 2rem 4rem;
   }
 
   .team-info {
@@ -22,15 +23,15 @@
       display: flex;
       justify-content: center;
       margin-bottom: 2rem;
+      padding: 0 4rem;
 
       .carousel-gallery {
         margin: 0 1rem;
-        width: 45%;
+        width: 35%;
         text-align: center;
 
         img {
           width: 100%;
-          min-height: 300px;
           height: auto;
           object-fit: cover;
         }
@@ -41,6 +42,7 @@
   .team-info-phone {
     padding: 4rem 2rem;
     display: none;
+    
     &:last-child {
       padding: 12% 0;
     }
@@ -92,7 +94,7 @@
   .gallery-slider {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 30%;
     margin: 0 auto;
 
     .arrow-left {

@@ -1,4 +1,7 @@
 header {
+  position: relative;
+    z-index: 100;
+    
   .navbar {
     display: flex;
     align-items: center;
@@ -32,7 +35,7 @@ header {
       align-items: center;
       width: 85%;
       border-left: 1px solid #eff1f4;
-      padding-top: 1rem;
+      padding-top: 0.3rem;
     }
 
     .img {
@@ -41,7 +44,7 @@ header {
 
       img {
         max-width: 250px;
-        width: 80%;
+        width: 85%;
         margin: 0 auto;
       }
     }
@@ -51,7 +54,7 @@ header {
       align-items: center;
       justify-content: flex-end;
       border-bottom: 1px solid #eff1f4;
-      padding-bottom: 1rem;
+      padding-bottom: 0.3rem;
 
       li {
         padding: 0.5rem 1rem;
@@ -82,6 +85,10 @@ header {
             span {
               font-size: 1rem;
               padding-right: 0.5rem;
+              
+              &:hover {
+                color: #097a80;
+              }
             }
           }
 
@@ -104,7 +111,7 @@ header {
           }
 
           .button-active {
-            color: #d0d0d0;
+            color: #097a80;
           }
 
           .MuiButton-root {
@@ -139,7 +146,10 @@ header {
     display: flex;
     align-items: center;
     border-right: 1px solid #eff1f4;
-    padding-bottom: 0.5rem;
+
+    .MuiOutlinedInput-input {
+      padding: 0px 14px;
+    }
 
     .MuiOutlinedInput-input {
       width: 37vw;
@@ -226,6 +236,16 @@ header {
 
         a {
           font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .navbar-phone {
+      .navbar-phone-icons {
+        img {
+          width: 90%;
         }
       }
     }

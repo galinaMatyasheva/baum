@@ -21,17 +21,23 @@ const BaumInformCreate = () => {
   };
   return (
     <div className="baum-inform-create-container">
-      <div className="baum-inform-create-content">
-        <h3> Надежность. Производительность. Инновационность.</h3>
+      <div className="baum-inform-main-content">
+        <div className="baum-inform-create-content">
+          <h3> Надежность</h3>
+          <h3>Производительность</h3>
+          <h3>Инновационность</h3>
+        </div>
+        <div className="baum-inform-create-content">
+          <p className="info-text">
+            Наша амбициозная команда, создает инновационные системы хранения и
+            обработки информации, которые повышают эффективность принятия
+            решений и улучшают качество жизни.
+          </p>
+        </div>
       </div>
-      <div className="baum-inform-create-content">
-        <p className="info-text">
-          Наша амбициозная команда, создает инновационные системы хранения и
-          обработки информации, которые повышают эффективность принятия решений
-          и улучшают качество жизни.
-        </p>
+      <div className="btn-container">
         <Button
-          className="btn btn-outlined-light"
+          className="btn btn-outlined-light-border"
           endIcon={<ArrowRightAltIcon />}
           onClick={handleClickAboutUs}
         >
