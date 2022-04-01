@@ -134,16 +134,16 @@
     .footer-top {
       .footer-top-contacts {
 
+      .footer-contacts-wrap {
+        padding-bottom: 2rem;
+      }
+
         .footer-contacts {
           flex-direction: column;
           padding: 2rem 2rem 1rem;
 
           .icon-phone {
             margin-right: 1.5rem;
-          }
-
-          p {
-            padding-bottom: 2rem;
           }
         }
       }

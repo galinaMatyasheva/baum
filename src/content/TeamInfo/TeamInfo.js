@@ -13,8 +13,8 @@ import "./TeamInfo.scss";
 const TeamInfo = () => {
   const [index, setIndex] = useState(0);
   const [indexPhone, setIndexPhone] = useState(0);
-  const [value, setValue] = useState(30);
-  const [valuePhone, setValuePhone] = useState(6);
+  const [value, setValue] = useState(25);
+  const [valuePhone, setValuePhone] = useState(5);
 
   const picList = [ceo, cto, clo, cao, cso];
   const titleList = [
@@ -52,20 +52,20 @@ const TeamInfo = () => {
   const onClickNext = () => {
     if (index + 4 === picList.length) {
       setIndex(0);
-      setValue(30);
+      setValue(25);
     } else {
       setIndex(index + 1);
-      setValue(value + 30);
+      setValue(value + 65);
     }
   };
 
   const onClickPrevious = () => {
-    if (index - 4 < 0) {
+    if (index - 1 < 0) {
       setIndex(picList.length - 4);
-      setValue(100);
+      setValue(25);
     } else {
       setIndex(index - 1);
-      setValue(value - 30);
+      setValue(value - 65);
     }
   };
 
@@ -163,7 +163,7 @@ const TeamInfo = () => {
             value={valuePhone}
             step={1}
             min={0}
-            max={36}
+            max={25}
             onChange={updateValuePhone}
           />
           <IconButton
