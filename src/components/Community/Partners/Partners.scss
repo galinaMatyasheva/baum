@@ -15,23 +15,33 @@
   .partners-about-content {
     background-color: #000;
     display: flex;
-  
+
     h2,
     p {
       color: #fff;
     }
-  
+
     .partners-about-info {
       width: 50%;
       padding: 10% 0;
+
       .partners-text {
         width: 92%;
         margin: 0 auto;
       }
     }
-  
+
     .partners-about-img {
       background-image: url("/assets/info-about/laptop1.jpg");
+    }
+  }
+
+  .accordin-details-container-img {
+
+    img {
+      width: 250px;
+      vertical-align: middle;
+      padding: 1rem;
     }
   }
 }
