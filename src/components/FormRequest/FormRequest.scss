@@ -1,0 +1,57 @@
+.form-request {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    background-color: rgb(170, 203, 253);
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+    .main-form {
+        min-height: 100%;
+        height: 100%;
+        padding: 2% 0 5% 0;
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: darkgrey;
+        }
+        ::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .form-column {
+        padding: 1vw 1vw 1vw 1vw;
+    }
+
+    .fieldset {
+        border: 0.5px solid rgb(13, 100, 192);
+        border-radius: 10px;
+        width: 99%;
+        margin: 5px;
+        padding:16px;	
+    }
+
+    .fieldset_questionnaire {
+        border: 1px solid rgb(151, 213, 255);
+        border-radius: 10px;
+        width: 99%;
+        margin: 5px;
+        padding:16px;	
+    }
+
+    .legend_fill {
+        background-color: rgb(174, 206, 253)
+    }
+
+    .legend_questionnaire {
+        background-color: rgb(193, 255, 157)
+    }
+
+}

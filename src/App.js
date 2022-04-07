@@ -31,6 +31,7 @@ import ModelPlatform from "./components/AI/Platform/Model/ModelPlatform";
 import EducationDetails from "./components/Education/EducationDetails/EducationDetails";
 import Partners from "./components/Community/Partners/Partners";
 import SearchResult from "./components/SearchResult/SearchResult";
+import FormRequest from "./components/FormRequest/FormRequest"
 
 
 const App = () => {
@@ -80,6 +81,7 @@ const App = () => {
         <Route path="/news/details/:key" element={<NewsDetails />} />
         <Route path="/app-form" element={<AppForm />} />
         <Route path="/search-result" element={<SearchResult/>}/>
+        <Route path="/form-request" element={<FormRequest/>}/>
       </Routes>
     </div>
   );
