@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   Container,
   Paper,
@@ -17,6 +17,7 @@ import {
   styled,
 } from "@material-ui/core";
 import Backdrop from "@mui/material/Backdrop";
+import axios from 'axios';
 import CircularProgress from "@mui/material/CircularProgress";
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
@@ -29,6 +30,20 @@ import MuiAlert from "@mui/material/Alert";
 import "./FormRequest.scss";
 import logo from "../../assets/BAUM.svg";
 import emailjs from "emailjs-com";
+
+const useFormFields = (initialString = "") => {
+  const [fields, setValues] = useState(initialString);
+
+  return [
+    fields,
+    function (e, name) {
+      setValues({
+        ...fields,
+        [name]: e.target.value,
+      });
+    },
+  ];
+};
 
 const TextLabel = styled(Typography)(({ theme }) => ({
   fontSize: "1.2rem",
@@ -52,6 +67,41 @@ const FormRequest = () => {
   const [questionnaireOpen, setQuestionnaireOpen] = useState(false);
   const [showEmailSuccess, setShowEmailSuccess] = useState(false);
   const [backdrop, setBackdrop] = useState(false);
+  const [formFields, createChangeHandler] = useFormFields({
+    "company-name": "",
+    "TIN": "",
+    "unit": "",
+    "city": "",
+    "project-name": "",
+    "project-targets": "",
+    "storage-space-needed": "",
+    "what-services-used-on-sds": "",
+    "what-sds-owned": "",
+    "what-sds-looking-for": "",
+    "budget": "",
+    "gov-link": "",
+    "name_partner": "",
+    "TIN_partner": "",
+    "fio_manager": "",
+    "email_manager": "",
+    "phone_manager": "",
+    "fio_engeneer": "",
+    "email_engeneer": "",
+    "phone_engeneer": "",
+    "tasks_for_sds": "",
+    "what-ifaces-needed": "",
+    "what-protocols-needed": "",
+    "what-space-needed": "",
+    "what-perf-requirements": "",
+    "have-you-sds": "",
+    "need-migration-to-new-sds": "",
+    "need-deduplication": "",
+    "need-compression": "",
+    "need-backup-apps": "",
+    "what-support-level-needed": "",
+    "look-you-for-another-vendors": "",
+    "when-sds-running-up": "",
+  });
 
   const handleSetBaumSDSOwned = (event) => {
     setIsHasBaumSDS(event.target.value);
@@ -76,26 +126,39 @@ const FormRequest = () => {
 
   const sendEmail = () => {
     setBackdrop(true);
-    emailjs
-      .sendForm(
-        "default_service",
-        "template_i4nkt2p",
-        form.current,
-        "user_7o8SubdpJawLjZzohguRM"
-      )
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-          setBackdrop(false);
-          setShowEmailSuccess(true);
-          setTimeout(() => {
-            setShowEmailSuccess(false);
-          }, 2500);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
+    axios({
+      method: "POST",
+      url: "http://83.220.174.224:8083/send-email",
+      data: formFields
+    })
+    .then((response) => {
+      setShowEmailSuccess(true);
+      setBackdrop(false);
+    })
+    .catch((error) => {
+      setBackdrop(false);
+      console.log(error);
+    })
+    // emailjs
+    //   .send(
+    //     "service_hwjkg37",
+    //     "template_q6p8qsj",
+    //     formFields,
+    //     "snZrHNr-IvmslwE3o",{
+    //       content: techSpec
+    //     }
+    //   )
+    //   .then(
+    //     function (response) {
+    //       console.log("SUCCESS!", response.status, response.text);
+    //       setShowEmailSuccess(true);
+    //       setBackdrop(false);
+    //     },
+    //     function (error) {
+    //       console.log("FAILED...", error);
+    //       setBackdrop(false);
+    //     }
+    //   );
   };
 
   const handleCloseMessage = (event, reason) => {
@@ -134,7 +197,7 @@ const FormRequest = () => {
               >
                 <Typography variant="h5">Форма запроса:</Typography>
               </Box>
-              <form ref={form}>
+              <form enctype="multipart/form-data" ref={form} onSubmit={sendEmail}>
                 <FormControl component="fieldset" className="fieldset">
                   <FormLabel
                     component="Legend"
@@ -154,6 +217,9 @@ const FormRequest = () => {
                             label="Название компании"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "company-name")
+                            }
                             fullWidth
                             required
                           />
@@ -167,6 +233,7 @@ const FormRequest = () => {
                             label="ИНН"
                             variant="outlined"
                             type="text"
+                            onChange={(e) => createChangeHandler(e, "TIN")}
                             fullWidth
                             required
                           />
@@ -180,6 +247,7 @@ const FormRequest = () => {
                             label="Подразделение/филиал"
                             variant="outlined"
                             type="text"
+                            onChange={(e) => createChangeHandler(e, "unit")}
                             fullWidth
                             required
                           />
@@ -193,11 +261,157 @@ const FormRequest = () => {
                             label="Город"
                             variant="outlined"
                             type="text"
+                            onChange={(e) => createChangeHandler(e, "city")}
                             fullWidth
                             required
                           />
                         </Box>
                       </Grid>
+                    </Grid>
+                  </FormGroup>
+                </FormControl>
+                <FormControl component="fieldset" className="fieldset">
+                  <FormLabel
+                    component="Legend"
+                    className="fieldset legend_fill"
+                  >
+                    <center>
+                      <b>Информация о партнере</b>
+                    </center>
+                  </FormLabel>
+                  <FormGroup>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={6}>
+                        <Box className="form-column">
+                          <TextField
+                            name="name_partner"
+                            placeholder="Название компании"
+                            label="Название компании"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "name_partner")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={6}>
+                        <Box className="form-column">
+                          <TextField
+                            name="TIN_partner"
+                            placeholder="ИНН"
+                            label="ИНН"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "TIN_partner")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={4}>
+                        <Box className="form-column">
+                          <TextField
+                            name="fio_manager"
+                            placeholder="ФИО менеджера проекта"
+                            label="ФИО менеджера проекта"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "fio_manager")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={4}>
+                        <Box className="form-column">
+                          <TextField
+                            name="email_manager"
+                            placeholder="E-mail менеджера проекта"
+                            label="E-mail менеджера проекта"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "email_manager")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={4}>
+                        <Box className="form-column">
+                          <TextField
+                            name="phone_manager"
+                            placeholder="Телефон менеджера проекта"
+                            label="Телефон менеджера проекта"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "phone_manager")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={4}>
+                        <Box className="form-column">
+                          <TextField
+                            name="fio_engeneer"
+                            placeholder="ФИО инженера проекта"
+                            label="ФИО инженера проекта"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "fio_engeneer")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={4}>
+                        <Box className="form-column">
+                          <TextField
+                            name="email_engeneer"
+                            placeholder="E-mail инженера проекта"
+                            label="E-mail инженера проекта"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "email_engeneer")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                      <Grid item xs={12} md={4}>
+                        <Box className="form-column">
+                          <TextField
+                            name="phone_engeneer"
+                            placeholder="Телефон инженера проекта"
+                            label="Телефон инженера проекта"
+                            variant="outlined"
+                            type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "phone_engeneer")
+                            }
+                            fullWidth
+                            required
+                          />
+                        </Box>
+                      </Grid>
+                    </Grid>
+                    <Grid item xs={12} md={4}>
+                      <Box className="form-column"></Box>
                     </Grid>
                   </FormGroup>
                 </FormControl>
@@ -220,6 +434,9 @@ const FormRequest = () => {
                             label="Название проекта"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "project-name")
+                            }
                             fullWidth
                             required
                           />
@@ -233,6 +450,9 @@ const FormRequest = () => {
                             label="Цели и задачи проекта"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "project-targets")
+                            }
                             fullWidth
                             required
                           />
@@ -289,6 +509,9 @@ const FormRequest = () => {
                             label="Необходимый объем массива в ТБ"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "storage-space-needed")
+                            }
                             fullWidth
                             required
                           />
@@ -302,6 +525,12 @@ const FormRequest = () => {
                             label="Какие сервисы планируется использовать на СХД"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(
+                                e,
+                                "what-services-used-on-sds"
+                              )
+                            }
                             fullWidth
                             required
                           />
@@ -328,8 +557,15 @@ const FormRequest = () => {
                       <Grid item xs={12} md={4}>
                         <Box className="form-column"></Box>
                       </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column" sx={{}}>
+                      <Grid item xs={12} md={8}>
+                        <Box
+                          className="form-column"
+                          sx={{
+                            display: "flex",
+                            gap: "5rem",
+                            flexDirection: "row",
+                          }}
+                        >
                           <Button
                             variant="contained"
                             component="label"
@@ -343,10 +579,26 @@ const FormRequest = () => {
                             Загрузить файл ТЗ
                             <input
                               type="file"
+                              name="file_tz"
                               onChange={handleUploadTechnicalSpec}
                               hidden
                             />
                           </Button>
+                          <Typography>или</Typography>
+                          {!!!techSpec && (
+                            <Button
+                              variant="contained"
+                              color="error"
+                              size="small"
+                              label="Заполните опросник"
+                              sx={{
+                                padding: "0.6rem 2rem",
+                              }}
+                              onClick={() => setQuestionnaireOpen(true)}
+                            >
+                              Заполните опросник
+                            </Button>
+                          )}
                         </Box>
                       </Grid>
                       <Grid item xs={12} md={4}>
@@ -380,9 +632,6 @@ const FormRequest = () => {
                         </Box>
                       </Grid>
                       <Grid item xs={12} md={4}>
-                        <Box className="form-column"></Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
                         <Box className="form-column">
                           <TextField
                             name="what-sds-owned"
@@ -390,6 +639,9 @@ const FormRequest = () => {
                             label="Какие системы хранения данных уже имеются"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "what-sds-owned")
+                            }
                             fullWidth
                             required
                           />
@@ -403,23 +655,16 @@ const FormRequest = () => {
                             label="Рассматриваются ли другие СХД(какие)"
                             variant="outlined"
                             type="text"
+                            onChange={(e) =>
+                              createChangeHandler(e, "what-sds-looking-for")
+                            }
                             fullWidth
                             required
                           />
                         </Box>
                       </Grid>
                       <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="activities"
-                            placeholder="Проведенные активности"
-                            label="Проведенные активности"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
+                        <Box className="form-column"></Box>
                       </Grid>
                       <Grid item xs={12} md={4}>
                         <Box className="form-column">
@@ -429,6 +674,7 @@ const FormRequest = () => {
                             label="Имеется ли бюджет под проект, какой"
                             variant="outlined"
                             type="text"
+                            onChange={(e) => createChangeHandler(e, "budget")}
                             fullWidth
                             required
                           />
@@ -459,150 +705,12 @@ const FormRequest = () => {
                             label="Ссылки на сайт госзакупок"
                             variant="outlined"
                             type="text"
+                            onChange={(e) => createChangeHandler(e, "gov-link")}
                             fullWidth
                             required
                           />
                         </Box>
                       </Grid>
-                    </Grid>
-                  </FormGroup>
-                </FormControl>
-                <FormControl component="fieldset" className="fieldset">
-                  <FormLabel
-                    component="Legend"
-                    className="fieldset legend_fill"
-                  >
-                    <center>
-                      <b>Информация о партнере</b>
-                    </center>
-                  </FormLabel>
-                  <FormGroup>
-                    <Grid container spacing={2}>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="name_partner"
-                            placeholder="Название компании"
-                            label="Название компании"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="TIN_partner"
-                            placeholder="ИНН"
-                            label="ИНН"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="fio_manager"
-                            placeholder="ФИО менеджера проекта"
-                            label="ФИО менеджера проекта"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="email_manager"
-                            placeholder="E-mail менеджера проекта"
-                            label="E-mail менеджера проекта"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="phone_manager"
-                            placeholder="Телефон менеджера проекта"
-                            label="Телефон менеджера проекта"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="fio_engeneer"
-                            placeholder="ФИО инженера проекта"
-                            label="ФИО инженера проекта"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="email_engeneer"
-                            placeholder="E-mail инженера проекта"
-                            label="E-mail инженера проекта"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <Box className="form-column">
-                          <TextField
-                            name="phone_engeneer"
-                            placeholder="Телефон инженера проекта"
-                            label="Телефон инженера проекта"
-                            variant="outlined"
-                            type="text"
-                            fullWidth
-                            required
-                          />
-                        </Box>
-                      </Grid>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                      <Box className="form-column"></Box>
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                      <Box className="form-column">
-                        {!!!techSpec && (
-                          <Button
-                            variant="contained"
-                            color="error"
-                            size="small"
-                            label="Заполните опросник"
-                            sx={{
-                              padding: "0.6rem 2rem",
-                            }}
-                            onClick={() => setQuestionnaireOpen(true)}
-                          >
-                            Заполните опросник
-                          </Button>
-                        )}
-                      </Box>
                     </Grid>
                   </FormGroup>
                 </FormControl>
@@ -629,6 +737,9 @@ const FormRequest = () => {
                               label="Под какие задачи планируется СХД"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "tasks_for_sds")
+                              }
                               fullWidth
                               required
                             />
@@ -642,6 +753,9 @@ const FormRequest = () => {
                               label="Какие необходимы интерфейсы для подключения к вашей инфраструктуре?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "what-ifaces-needed")
+                              }
                               fullWidth
                               required
                             />
@@ -655,6 +769,9 @@ const FormRequest = () => {
                               label="По каким протоколам будет осуществлена работа с СХД?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "what-protocols-needed")
+                              }
                               fullWidth
                               required
                             />
@@ -668,6 +785,9 @@ const FormRequest = () => {
                               label="Какие необходимы объемы системы хранения данных?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "what-space-needed")
+                              }
                               fullWidth
                               required
                             />
@@ -681,6 +801,9 @@ const FormRequest = () => {
                               label="Есть ли требования к производительности СХД?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "what-perf-requirements")
+                              }
                               fullWidth
                               required
                             />
@@ -694,6 +817,9 @@ const FormRequest = () => {
                               label="Имеется ли сейчас в вашей инфраструктуре СХД?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "have-you-sds")
+                              }
                               fullWidth
                               required
                             />
@@ -707,6 +833,12 @@ const FormRequest = () => {
                               label="Требуется ли миграция данных на новую СХД?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(
+                                  e,
+                                  "need-migration-to-new-sds"
+                                )
+                              }
                               fullWidth
                               required
                             />
@@ -720,6 +852,9 @@ const FormRequest = () => {
                               label="Требуется ли дедупликация данных?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "need-deduplication")
+                              }
                               fullWidth
                               required
                             />
@@ -733,6 +868,9 @@ const FormRequest = () => {
                               label="Требуется ли компрессия данных?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "need-compression")
+                              }
                               fullWidth
                               required
                             />
@@ -746,6 +884,9 @@ const FormRequest = () => {
                               label="Требуется ли резервное копирование приложений?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "need-backup-apps")
+                              }
                               fullWidth
                               required
                             />
@@ -759,6 +900,12 @@ const FormRequest = () => {
                               label="Какой необходим уровень сервисной поддержки?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(
+                                  e,
+                                  "what-support-level-needed"
+                                )
+                              }
                               fullWidth
                               required
                             />
@@ -772,6 +919,12 @@ const FormRequest = () => {
                               label="Рассматривали ли Вы предложения от других производителей?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(
+                                  e,
+                                  "look-you-for-another-vendors"
+                                )
+                              }
                               fullWidth
                               required
                             />
@@ -785,6 +938,9 @@ const FormRequest = () => {
                               label="Когда планируется ввод в эксплуатацию СХД?"
                               variant="outlined"
                               type="text"
+                              onChange={(e) =>
+                                createChangeHandler(e, "when-sds-running-up")
+                              }
                               fullWidth
                               required
                             />
@@ -801,6 +957,7 @@ const FormRequest = () => {
                         variant="contained"
                         color="success"
                         size="small"
+                        type="submit"
                         label="Отправить форму"
                         sx={{
                           width: "100%",
