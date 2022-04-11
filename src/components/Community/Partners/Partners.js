@@ -52,7 +52,7 @@ const Partners = () => {
                 <img src="/assets/partners/partners/logic.png" alt="img" />
                 <img src="/assets/partners/partners/sitronics.png" alt="img" />
                 <img src="/assets/partners/partners/vbk.svg" alt="img" />
-                <img src="/assets/partners/partners/gkmai.jpg" alt="img" />
+                <img src="/assets/partners/partners/mai.png" alt="img" />
                 <img src="/assets/partners/partners/dfacto.jpg" alt="img" />
                 <img src="/assets/partners/partners/technoprom.jpg" alt="img" />
                 <img src="/assets/partners/partners/in.png" alt="img" />
