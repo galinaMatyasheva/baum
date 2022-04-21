@@ -6,7 +6,7 @@ import {
 } from "@material-ui/core";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-import Form from "../../content/Form/Form";
+import VacanciesForm from "../Vacancies/VacanciesForm";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import "./Vacancies.scss";
@@ -109,7 +109,8 @@ const Vacancies = () => {
           ))}
         </div>
       </div>
-      <Form />
+      <VacanciesForm/>
+      {/* <Form /> */}
       <Footer />
     </section>
   );

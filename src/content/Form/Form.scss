@@ -51,8 +51,8 @@
         background-position: 92%;
         top: -45px;
         left: 0;
-         width: 100%;
-         height: 100%;
+        width: 100%;
+        height: 100%;
         background-image: url("/assets/form/lineShot.png");
         background-repeat: no-repeat;
         text-align: center;
@@ -126,6 +126,26 @@
     border-radius: initial;
     outline: none;
     border: none;
+  }
+
+  .form-content-button {
+    display: flex;
+    justify-content: center;
+
+    button {
+      padding: 0.5rem 4rem;
+    }
+  }
+
+  .fields-change {
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 0;
+    justify-content: space-between;
+
+    .MuiFormControl-root {
+      width: 100%;
+    }
   }
 
   @media (max-width: 695px) {
