@@ -69,6 +69,11 @@
       color: #000;
       font-size: 14px;
     }
+
+    .MuiOutlinedInput-root {
+      border: none;
+      border-radius: 0;
+    }
   }
 
   .form-submit-info {
@@ -146,6 +151,12 @@
     .MuiFormControl-root {
       width: 100%;
     }
+  }
+
+  @media (max-width: 1200px) {
+   textarea {
+    padding: 2%;
+  }
   }
 
   @media (max-width: 695px) {

@@ -127,7 +127,7 @@ const Footer = () => {
                 <img src={iconPhone} alt="img" />
               </span>
               <p>
-                Телефон: <a href="tel:+74952491113">+7 495 249-11-13</a>
+                <a href="tel:+74952491113">+7 495 249-11-13</a>
               </p>
             </div>
             <div className="footer-contacts-wrap">
@@ -135,7 +135,6 @@ const Footer = () => {
                 <img src={iconMail} alt="img" />
               </span>
               <p>
-                E-mail:
                 <a href="mailto:info@baum-inform.ru">info@baum-inform.ru</a>
               </p>
             </div>

@@ -72,7 +72,7 @@ const VacanciesForm = () => {
                 />
                 <TextField
                   name="firmName"
-                  placeholder="Название организации"
+                  placeholder="Фамилия"
                   variant="outlined"
                   type="text"
                   required
@@ -96,7 +96,7 @@ const VacanciesForm = () => {
               <TextareaAutosize
                 name="message"
                 // minRows={1.5}
-                placeholder="Текст сообщения"
+                placeholder="Дополнительные сведения"
                 style={{ width: "100%" }}
                 required
               />
