@@ -117,7 +117,6 @@ const Partners = () => {
                   alt="img"
                 />
                 <img src="/assets/partners/partners-soft/nano.png" alt="img" />
-                <img src="/assets/partners/partners-soft/swatcher.jpg" alt="img" />
               </div>
             </AccordionDetails>
           </Accordion>
@@ -169,6 +168,7 @@ const Partners = () => {
                 <img src="/assets/partners/partners/depo.png" alt="img" />
                 <img src="/assets/partners/partners/kraftway.jpg" alt="img" />
                 <img src="/assets/partners/partners-Rnd/ntc.jpg" alt="img" />
+                <img src="/assets/partners/partners-hardware/swatcher.jpg" alt="img" />
               </div>
             </AccordionDetails>
           </Accordion>
