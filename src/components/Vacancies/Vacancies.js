@@ -66,9 +66,7 @@ const Vacancies = () => {
           {data.map((value) => (
             <Accordion>
               <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
-                {/* vacancy */}
-
-                <h3>{value.vacancy}</h3>
+                <h4>{value.vacancy}</h4>
               </AccordionSummary>
 
               <AccordionDetails>

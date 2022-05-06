@@ -1,4 +1,24 @@
 const news = {
+  "78": {
+    photo_links: ["/2022/photo2022-05-01.jpg"],
+    title: "ПАК: система хранения, серверная виртуализация и защита данных BAUM Inform, Infoland, Киберпротект, NERPA",
+    html_blocks: [
+      {
+        name: "textLink",
+        type: "a",
+        text:
+          "Регистрация",
+        text_link: "https://zubrit.ocs.ru/kalendar-sobyitij/calendar/pak-sistema-xraneniya-servernaya-virtualizacziya-i-zashhita-dannyix.html"
+      },
+    ],
+    list_title:
+      "ПАК: система хранения, серверная виртуализация и защита данных BAUM Inform, Infoland, Киберпротект, NERPA",
+    list_text:
+      "Уважаемые заказчики и партнеры, наш дистрибьютор OCS проводит вебинар и мы приглашаем вас зарегистрироваться и принять участие по ссылке",
+    tags: "Мероприятие",
+    year: "2022",
+    key: "78",
+  },
   "77": {
     photo_links: ["/2021/photo2021-19.jpg"],
     title: "“Акронис Защита Данных” показала совместимость с хранилищами BAUM.",

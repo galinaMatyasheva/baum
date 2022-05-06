@@ -37,7 +37,11 @@ const NewsDetails = () => {
           {news[key].html_blocks.map((htmlBlock) => {
             if (htmlBlock.type === "p") {
               return <p className={htmlBlock.name}>{htmlBlock.text}</p>;
-            } else if (htmlBlock.type === "ol") {
+             
+            }  
+            else if (htmlBlock.type === "a"){
+                return <a className= {htmlBlock.name} href={htmlBlock.text_link} target="_blank">{htmlBlock.text}</a>
+              }else if (htmlBlock.type === "ol") {
               return (
                 <ol className={htmlBlock.name}>
                   {htmlBlock.inside_blocks.map((insideBlock) => (

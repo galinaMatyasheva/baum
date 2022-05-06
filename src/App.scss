@@ -106,6 +106,12 @@ body {
     }
   }
 
+  .MuiAccordionSummary-content {
+    h4 {
+      padding-bottom: 1rem;
+    }
+  }
+
   .MuiButton-root {
     padding: 0.8rem 4rem;
   }
@@ -207,6 +213,7 @@ body {
     background-color: #000;
     color: #fff;
     border: 1px solid #000;
+    padding: 0.8rem 4rem;
 
     &:hover {
       background-color: #fff;

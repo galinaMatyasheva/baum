@@ -35,7 +35,7 @@ const News = () => {
     scrollToTop();
   };
 
-  const [curYear, setCurYear] = useState("2021");
+  const [curYear, setCurYear] = useState("2022");
   const uniqueYearsSet = new Set();
   Object.keys(news).map((key) => uniqueYearsSet.add(news[key].year));
   const uniqueYears = Array.from(uniqueYearsSet);

@@ -58,6 +58,7 @@ const Partners = () => {
                 <img src="/assets/partners/partners/in.png" alt="img" />
                 <img src="/assets/partners/partners/rubytech.jpeg" alt="img" />
                 <img src="/assets/partners/partners/kpbs.jpeg" alt="img" />
+                <img src="assets/partners/partners/aiteko.jpg" alt="img" />
                 <img
                   src="/assets/partners/partners/maximatelecom.png"
                   alt="img"
