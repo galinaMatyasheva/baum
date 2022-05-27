@@ -1,19 +1,29 @@
+.baum-inform-main-content {
+  display: flex;
+  flex-direction: row;
+}
 .baum-inform-create-container {
   display: flex;
   background: #000;
-  align-items: flex-end;
   padding: 2rem 4rem;
+  align-items: center;
 
   .baum-inform-create-content {
     color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     &:first-child {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
     }
 
     .info-text {
-      width: 80%;
+      width: 85%;
     }
 
     h3 {
@@ -67,7 +77,17 @@
 
   @media (max-width: 460px) {
     padding: 2rem 2rem;
+    .baum-inform-main-content {
+      display: flex;
+      flex-direction: column;
+    }
     .baum-inform-create-content {
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
       h3 {
         padding-right: 0;
         font-size: 1.7rem;

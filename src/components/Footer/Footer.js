@@ -119,7 +119,7 @@ const Footer = () => {
               </span>
               <p>
                 Москва, ул.Бауманская,
-                <br /> д.68/8, стр.1, помещение IV
+                <br /> д.68/8, стр.1
               </p>
             </div>
             <div className="footer-contacts-wrap">
