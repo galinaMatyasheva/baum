@@ -14,7 +14,8 @@
     }
 
     .pdf-icon {
-      height: 50px !important;
+      height: 200px !important;
+      margin: 10px;
       margin-top: 1.5rem;
     }
 
@@ -23,6 +24,11 @@
       flex-wrap: wrap;
       flex-direction: row;
       width: 100%;
+    }
+
+    .dotted-underline-text {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
     }
 
     .pdf-table-item {
