@@ -70,6 +70,7 @@ const Partners = () => {
                 />
                 <img src="/assets/partners/partners/servionica.png" alt="img" />
                 <img src="/assets/partners/partners/elefus.png" alt="img" />
+                <img src="/assets/partners/partners/infoserv.jpg" alt="img" />
               </div>
             </AccordionDetails>
           </Accordion>

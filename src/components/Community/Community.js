@@ -13,6 +13,15 @@ import "./Community.scss";
 import ApplicationForm from "../../content/ApplicationForm/ApplicationForm";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import pdfIcon from "../../assets/pdf.svg";
+
+const compatibilityCerts = [
+  { name: "Сертификат соместимости Acronis", file: "/pdf/certs_compatible/acronis_compatible_cert.pdf"},
+  { name: "Сертификат соместимости Citronix", file: "/pdf/certs_compatible/citronix_compatible_cert.pdf"},
+  { name: "Сертификат соместимости Zvirt", file: "/pdf/certs_compatible/zvirt_compatible_cert.pdf"},
+  { name: "Сертификат соместимости BAUM Storage: Astra Linux ", file: "/pdf/certs_compatible/astra_compatible_cert_storage.pdf"},
+  { name: "Сертификат соместимости BAUM AI Platform: Astra Linux", file: "/pdf/certs_compatible/astra_compatible_cert_aiplatform.pdf"},
+]
 
 const Community = () => {
   let navigate = useNavigate();
@@ -105,6 +114,29 @@ const Community = () => {
                 >
                   Читать дальше
                 </Button>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
+              <h4>Сертификаты совместимости</h4>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div className="accordion-content">
+                <div className="pdf-file-table">
+                {compatibilityCerts.map(cert => (
+                  <div className="pdf-table-item">
+                    <Button href={cert.file} >
+                      <img
+                          src={pdfIcon}
+                          alt="img"
+                          className="pdf-icon"
+                        />
+                      <p style={{color: 'black', fontSize: '10px'}}>{cert.name}</p>
+                    </Button>
+                  </div>
+                ))}
+                </div>
               </div>
             </AccordionDetails>
           </Accordion>

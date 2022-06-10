@@ -13,6 +13,22 @@
       background-image: url("/assets/community/community.png");
     }
 
+    .pdf-icon {
+      height: 50px !important;
+      margin-top: 1.5rem;
+    }
+
+    .pdf-file-table {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    .pdf-table-item {
+      width: 30rem;
+    }
+
     .community-info {
       border: 1px solid rgba(0, 0, 0, 0.2);
 
