@@ -66,6 +66,7 @@
   }
 
   @media (max-width: 695px) {
+    padding: 2rem 2rem;
     .btn-container {
       width: 100%;
     }
@@ -73,10 +74,7 @@
     .btn {
       width: 100%;
     }
-  }
 
-  @media (max-width: 460px) {
-    padding: 2rem 2rem;
     .baum-inform-main-content {
       display: flex;
       flex-direction: column;
@@ -85,7 +83,6 @@
       &:first-child {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
       }
       h3 {

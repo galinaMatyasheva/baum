@@ -1,33 +1,9 @@
 .main-container {
   .logo {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    left: 25%;
-    transform: translate(-50%, -50%);
     font-family: "Sofachrome Italic";
     text-transform: uppercase;
     color: #fff;
     font-size: 4.6rem;
-
-    &::before {
-      content: attr(data-text);
-      font-family: "Sofachrome Italic";
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform-origin: bottom;
-      transform: rotateX(180deg);
-      line-height: 1em;
-      background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.2) 0,
-        rgba(9, 122, 128, 0.66) 53%
-      );
-      -webkit-background-clip: text;
-      color: rgba(0, 0, 0, 0);
-      opacity: 0.7;
-    }
   }
 
   .data {
@@ -42,13 +18,20 @@
   }
 
   .main-container-info {
-    background: rgb(9, 122, 128);
+    background-image: url("/assets/main/modern.jpg");
+    background-size: cover;
+    background-color: rgb(9, 122, 128);
+    background-repeat: no-repeat;
+
+    .main-content {
+      display: block;
+    }
 
     .main-feedback-content {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10% 0 15%;
+      padding: 10% 10%;
       text-align: left;
 
       .content-img {
@@ -65,33 +48,9 @@
         padding-left: 2rem;
         padding-right: 1rem;
       }
-    }
 
-    .feedback-info {
-      width: 50%;
-    }
-
-    .main-feedback-img {
-      position: relative;
-      background-image: url("/assets/main/modern.png");
-      clip-path: polygon(100% 0, 100% 50%, 100% 101%, 0% 100%, 25% 50%, 0% 0%);
-      
-      &::after {
-        content: '';
-        background: rgb(0, 0, 0);
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 4%;
-        top: 96%;
-        left: 0;
-        z-index: -1;
-      }
-
-      .main-feebback-bkg {
-        background: rgba(9, 122, 128, 0.66);
-        clip-path: polygon(7% 0, 32% 50%, 7% 100%, 0% 100%, 25% 50%, 0% 0%);
-        height: 100%;
+      h1 {
+        margin-bottom: 0;
       }
     }
   }
@@ -251,7 +210,6 @@
       left: 3rem;
       background-image: url("/assets/main/cube3.jpg");
       z-index: 1000;
-
     }
 
     .community-links {
@@ -283,40 +241,8 @@
   }
 }
 
-@media (max-width: 1225px) {
-  .main-container {
-    .data {
-      padding-bottom: 0;
-    }
-
-    .main-container-info {
-      .main-feedback-content {
-        padding: 10% 0;
-
-        .content-img {
-          display: block;
-        }
-      }
-    }
-  }
-
-  .logo {
-    display: none;
-  }
-}
-
 @media (max-width: 1200px) {
   .main-container {
-    .main-container-info {
-      .main-feedback-img {
-        clip-path: none;
-      }
-      
-      .feedback-info {
-        width: 100%;
-      }
-    }
-
     .store-info-about {
       .store-info-img {
         clip-path: none;
@@ -365,6 +291,9 @@
         width: 0;
       }
     }
+    .logo {
+      font-size: 4.2rem;
+    }
   }
 }
 
@@ -375,7 +304,24 @@
         .data {
           justify-content: center;
         }
+
+        p {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
+    }
+
+    .logo {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .main-container {
+    .logo {
+      font-size: 3.2rem;
     }
   }
 }

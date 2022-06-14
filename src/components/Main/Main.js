@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import Form from "../../content/Form/Form";
 import MapAdress from "../../content/Map/MapAdress";
 import TeamInfo from "../../content/TeamInfo/TeamInfo";
-import logo2 from "../../assets/logo2.png";
 import line from "../../assets/line.png";
 import lineGray from "../../assets/main/lineGray.png";
 import "./Main.scss";
@@ -55,21 +54,13 @@ const Main = () => {
         <Header />
         <div className="main-container-info">
           <div className="main-feedback-content feedback-info">
-            <div>
+            <div className="main-content">
               <div className="data">
                 <img src={line} alt="line" />
                 <p>Хранение и обработка данных</p>
               </div>
-              <h1 className="logo" data-text="BAUM AI">
-                BAUM AI
-              </h1>
-              <div className="content-img">
-                <img src={logo2} alt="logo" />
-              </div>
+              <h1 className="logo">BAUM AI</h1>
             </div>
-          </div>
-          <div className="main-feedback-img feedback-info">
-            <div className="main-feebback-bkg"></div>
           </div>
         </div>
         <BaumInformCreate />
