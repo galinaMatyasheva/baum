@@ -29,7 +29,7 @@ const SupportSwarm = () => {
             технического обслуживания оборудования и программного обеспечения
             наших продуктов.
           </p>
-          <Button href="/pdf/support-swarm.pdf" download className="btn btn-dark">
+          <Button href="/pdf/support-baum-ai.pdf" download className="btn btn-dark">
             Скачать pdf файл
           </Button>
         </div>
