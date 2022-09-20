@@ -260,7 +260,7 @@ const Functional = () => {
           </Accordion>
           <Accordion>
             <AccordionSummary expandIcon={<KeyboardArrowDownIcon />}>
-              <h4>This Provisioning</h4>
+              <h4>Thin Provisioning</h4>
             </AccordionSummary>
             <AccordionDetails>
               <div>
