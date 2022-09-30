@@ -171,6 +171,7 @@ const Partners = () => {
                 <img src="/assets/partners/partners/kraftway.jpg" alt="img" />
                 <img src="/assets/partners/partners-Rnd/ntc.jpg" alt="img" />
                 <img src="/assets/partners/partners-hardware/swatcher.jpg" alt="img" />
+                <img src="/assets/partners/partners-hardware/graviton.png" alt="img" />
               </div>
             </AccordionDetails>
           </Accordion>
