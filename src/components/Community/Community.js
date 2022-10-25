@@ -24,6 +24,7 @@ import OrionSkshdCertPreview from "../../assets/certs_preview/orion_comp_cert_sk
 import AstraNpobaumCertPreview from "../../assets/certs_preview/astra_comp_cert_npobaum.png";
 import AstraSkshdCertPreview from "../../assets/certs_preview/astra_comp_cert_sk_shd.png";
 import ZvirtCertPreview from "../../assets/certs_preview/zvirt_comp_cert.png";
+import Cyberprotect from "../../assets/certs_preview/protocol_cyberprotect.png";
 
 
 const compatibilityCerts = [
@@ -32,6 +33,7 @@ const compatibilityCerts = [
   { name: "Сертификат соместимости Zvirt", file: "/pdf/certs_compatible/zvirt_compatible_cert.pdf"},
   { name: "Сертификат соместимости BAUM Storage: Astra Linux ", file: "/pdf/certs_compatible/astra_compatible_cert_storage.pdf"},
   { name: "Сертификат соместимости BAUM AI Platform: Astra Linux", file: "/pdf/certs_compatible/astra_compatible_cert_aiplatform.pdf"},
+  {name: "Протокол подтверждения совместимости Киберпротект", file: "/pdf/certs_compatible/protocol_cyberprotect.pdf"}
 ]
 
 const compatibilityCerts2 = [
@@ -107,6 +109,16 @@ const compatibilityCerts2 = [
         name: "Сертификат соместимости Astra Linux и SK-SHD",
         file: "/pdf/certs_compatible/astra_compatibility_cert_sk_shd.pdf",
         img: AstraSkshdCertPreview
+      },
+    ]
+  },
+  {
+    group: "Протокол подтверждения совместимости Киберпротект" ,
+    certs: [
+      {
+        name: "Протокол подтверждения совместимости Киберпротект",
+        file: "/pdf/certs_compatible/protocol_cyberprotect.pdf",
+        img: Cyberprotect
       },
     ]
   },
