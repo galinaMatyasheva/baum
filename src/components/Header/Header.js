@@ -17,11 +17,13 @@ import logo1 from "../../assets/logo1.png";
 import SearchBar from "../../content/SearchBar/SearchBar";
 
 const Header = () => {
+  const [openLinkDevelopment, setOpenLinkDevelopment] = useState(null);
   const [openLinkStorage, setOpenLinkStorage] = useState(null);
   const [openLinkAI, setOpenLinkAI] = useState(null);
   const [openLinkCompany, setOpenLinkCompany] = useState(null);
   const [openPhoneMenu, setOpenPhoneMenu] = useState(false);
 
+  const anchorDevelopmentRef = useRef(null);
   const anchorStorageRef = useRef(null);
   const anchorAIRef = useRef(null);
   const anchorCompanyRef = useRef(null);
@@ -40,6 +42,10 @@ const Header = () => {
     navigate("/education");
   };
 
+  const handleClickOpenLinkDevelopment = (e) => {
+    setOpenLinkDevelopment(e.currentTarget);
+  };
+
   const handleClickOpenLinkStorage = (e) => {
     setOpenLinkStorage(e.currentTarget);
   };
@@ -51,6 +57,10 @@ const Header = () => {
   const handleClickOpenLinkCompany = (e) => {
     setOpenLinkCompany(e.currentTarget);
   };
+
+  const handleCloseLinkDevelopment = () => {
+    setOpenLinkDevelopment(null);
+  }
 
   const handleCloseLinkStorage = () => {
     setOpenLinkStorage(null);
@@ -92,6 +102,44 @@ const Header = () => {
             <SearchBar />
 
             <div className="navbar-menu-bottom-links">
+              <div className="submenu">
+                <Button
+                  className={!openLinkDevelopment ? "button" : "button-active"}
+                  ref={anchorDevelopmentRef}
+                  aria-haspopup="true"
+                  onClick={handleClickOpenLinkDevelopment}
+                  endIcon={
+                    !openLinkDevelopment ? (
+                      <KeyboardArrowDownIcon />
+                    ) : (
+                      <KeyboardArrowDownIcon
+                        style={{ transform: "rotate(180deg)" }}
+                      />
+                    )
+                  }
+                >
+                  Разработка
+                </Button>
+                <Menu
+                  id="development"
+                  openLink={openLinkDevelopment}
+                  keepMounted
+                  open={openLinkDevelopment}
+                  onClose={handleCloseLinkDevelopment}
+                  anchorEl={anchorDevelopmentRef.current}
+                  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                  transformOrigin={{ vertical: "top", horizontal: "center" }}
+                  getContentAnchorEl={null}
+                >
+                  <MenuItem onClick={handleCloseLinkDevelopment}>
+                    <Link to="/hardware">Программно-технические комплексы</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleCloseLinkDevelopment}>
+                    <Link to="/software">Специальное программное обеспечение</Link>
+                  </MenuItem>
+                </Menu>
+              </div>
+
               <div className="submenu">
                 <Button
                   className={!openLinkStorage ? "button" : "button-active"}
@@ -250,6 +298,17 @@ const Header = () => {
             </form>
 
             <div className="navbar-content-phone-links">
+            <ul>
+                <li>
+                  <h4>Разработка</h4>
+                </li>
+                <li>
+                  <Link to="/hardware">Программно-технические комплексы</Link>
+                </li>
+                <li>
+                  <Link to="/software">Специальное программное обеспечение</Link>
+                </li>
+              </ul>
               <ul>
                 <li>
                   <h4>Storage</h4>

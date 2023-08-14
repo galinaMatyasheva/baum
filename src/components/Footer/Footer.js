@@ -63,6 +63,16 @@ const Footer = () => {
     scrollToTop();
   };
 
+  const handleClickSoftware = () => {
+    navigate("/software");
+    scrollToTop();
+  }
+
+  const handleClickHardware = () => {
+    navigate("/hardware");
+    scrollToTop();
+  }
+
   return (
     <footer className="footer-container">
       <div className="footer-top">
@@ -105,6 +115,12 @@ const Footer = () => {
                 BAUM AI
               </Button>
             </li>
+            <li>
+              <Button onClick={handleClickHardware}>Программно-технические комплексы</Button>
+            </li>
+            <li>
+              <Button onClick={handleClickSoftware}>Специальное программное обеспечение</Button>
+            </li>
           </ul>
         </div>
 
@@ -119,7 +135,7 @@ const Footer = () => {
               </span>
               <p>
                 Москва, ул.Бауманская,
-                <br /> д.68/8, стр.1
+                <br /> д.68/8, с1
               </p>
             </div>
             <div className="footer-contacts-wrap">
@@ -127,7 +143,7 @@ const Footer = () => {
                 <img src={iconPhone} alt="img" />
               </span>
               <p>
-                <a href="tel:+74952491113">+7 495 249-11-13</a>
+                <a href="tel:+7 (962) 366-60-91">+7 (962) 366-60-91</a>
               </p>
             </div>
             <div className="footer-contacts-wrap">

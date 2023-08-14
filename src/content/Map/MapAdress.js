@@ -38,16 +38,16 @@ const MapAdress = () => {
           {address === "Lab" ? (
             <div className="address-lab">
               <h5>Адрес лаборатории</h5>
-              <p>г.Москва, Лефортовская наб., 1 Корпус</p>
-              <p> Энергомашиностроения МГТУ им. Н.Э.Баумана</p>
+              <p>г.Москва, Бауманская 68/8 с1</p>
+              <p>E-mail: info@baum-inform.ru</p>
               <p>Лаборатория</p>
             </div>
           ) : (
             <div className="address-office">
               <h5 >Адрес офиса</h5>
               <p>г.Москва, Бауманская 68/8 с1</p>
-              <p>Телефон: +7 495 249-11-13</p>
-              <p>E-mail: info@baum-inform.ru</p>
+              <p>Телефон: +7 (962) 366-60-91</p>
+              <p>Офис</p>
             </div>
           )}
         </div>
@@ -58,12 +58,14 @@ const MapAdress = () => {
             width="100%"
             height="100%"
             state={{
-              center: address === "Lab" ? [55.7688, 37.689734] : [55.765174, 37.679565],
+              // center: address === "Lab" ? [55.7688, 37.689734] : [55.765174, 37.679565],
+              center: [55.765174, 37.679565],
               zoom: 16,
               controls: [],
             }}
           >
-            <Placemark geometry={address === "Lab" ? [55.7688, 37.689734] : ([55.765174, 37.679565])} />
+            <Placemark geometry={[55.765174, 37.679565]} />
+            {/* <Placemark geometry={address === "Lab" ? [55.7688, 37.689734] : ([55.765174, 37.679565])} /> */}
             <ZoomControl
               options={{
                 float: "right",

@@ -72,6 +72,11 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <img src="/assets/products/products.jpg" className="img-products"/>
+      <img src="/assets/products/uds.jpg" className="img-products"/>
+      <img src="/assets/products/swarm.jpg" className="img-products"/>
+      <img src="/assets/products/ai.jpg" className="img-products"/>
+      <img src="/assets/products/profiles.jpg" className="img-products"/>
 
       <div className="statistics-container-info">
         <div className="statistics-content statistics-info">

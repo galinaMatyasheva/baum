@@ -32,6 +32,8 @@ import EducationDetails from "./components/Education/EducationDetails/EducationD
 import Partners from "./components/Community/Partners/Partners";
 import SearchResult from "./components/SearchResult/SearchResult";
 import FormRequest from "./components/FormRequest/FormRequest"
+import Hardware from "./components/Development/Hardware/Hardware";
+import Software from "./components/Development/Software/Software";
 
 
 const App = () => {
@@ -49,7 +51,9 @@ const App = () => {
         <Route path="/our-team" element={<Team />} />
         <Route path="/news" element={<News />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/baum-uds" element={<BaumUds />} />{" "}
+        <Route path="/hardware" element={<Hardware />} />
+        <Route path="/software" element={<Software />} />
+        <Route path="/baum-uds" element={<BaumUds />} />
         <Route path="/baum-uds/functional" element={<Functional />} />
         <Route path="/baum-uds/support" element={<Support />} />
         <Route path="/baum-uds/documentation" element={<Documentation />} />

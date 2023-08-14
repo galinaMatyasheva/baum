@@ -200,6 +200,16 @@ header {
     }
   }
 
+  @media (max-width: 1450px) {
+    .navbar-content {
+      .navbar-menu-bottom {
+        .navbar-form-search {
+          width: 39%;
+        }
+      }
+    }
+  }
+
   @media (max-width: 1200px) {
     .navbar {
       display: none;

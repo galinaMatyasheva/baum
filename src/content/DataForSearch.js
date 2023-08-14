@@ -27,6 +27,8 @@ const posts = [
   { id: "22", name: "Модель AI", link: "/ai/platform/model" },
   { id: "23", name: "Документация AI", link: "/ai/platform/documentation" },
   { id: "24", name: "Поддержка AI", link: "/ai/platform/support" },
+  { id: "25", name: "Программно-технические комплексы", link: "/hardware" },
+  { id: "26", name: "Специальное программное обеспечение", link: "/software" },
 ];
 
 export default posts;
