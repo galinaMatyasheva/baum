@@ -16,7 +16,7 @@ const TeamInfo = () => {
   const [value, setValue] = useState(25);
   const [valuePhone, setValuePhone] = useState(5);
 
-  const picList = [ceo, cto, clo, cao, cso];
+  const picList = [ceo, cto, cso];
   const titleList = [
     {
       name: "Алексей Бородулин",
@@ -26,14 +26,14 @@ const TeamInfo = () => {
       name: "Андрей Гантимуров",
       position: "CTO (Chief Technology Officer)",
     },
-    {
-      name: "Маргарита Стоянова",
-      position: "CLO (Chief Learning Officer)",
-    },
-    {
-      name: "Александр Сапожников",
-      position: "CAO (Chief Administrative Officer)",
-    },
+    // {
+    //   name: "Маргарита Стоянова",
+    //   position: "CLO (Chief Learning Officer)",
+    // },
+    // {
+    //   name: "Александр Сапожников",
+    //   position: "CAO (Chief Administrative Officer)",
+    // },
 
     {
       name: "Павел Гундин",
@@ -50,7 +50,7 @@ const TeamInfo = () => {
   };
 
   const onClickNext = () => {
-    if (index + 4 === picList.length) {
+    if (index + 2 === picList.length) {
       setIndex(0);
       setValue(25);
     } else {
@@ -61,7 +61,7 @@ const TeamInfo = () => {
 
   const onClickPrevious = () => {
     if (index - 1 < 0) {
-      setIndex(picList.length - 4);
+      setIndex(picList.length - 2);
       setValue(25);
     } else {
       setIndex(index - 1);
@@ -112,16 +112,6 @@ const TeamInfo = () => {
             <img src={picList[index + 1]} alt="img" />
             <h4>{titleList[index + 1].name}</h4>
             <p>{titleList[index + 1].position}</p>
-          </div>
-          <div className="carousel-gallery">
-            <img src={picList[index + 2]} alt="img" />
-            <h4>{titleList[index + 2].name}</h4>
-            <p>{titleList[index + 2].position}</p>
-          </div>
-          <div className="carousel-gallery">
-            <img src={picList[index + 3]} alt="img" />
-            <h4>{titleList[index + 3].name}</h4>
-            <p>{titleList[index + 3].position}</p>
           </div>
         </div>
         <div className="gallery-slider ">
