@@ -156,7 +156,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-copyright">
-            <p>© 2022 Baum-inform. Все права защищены.</p>
+            <p>© {new Date().getFullYear()} Baum-inform. Все права защищены.</p>
           </div>
         </div>
       </div>
