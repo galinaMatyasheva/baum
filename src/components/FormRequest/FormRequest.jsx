@@ -126,6 +126,22 @@ const FormRequest = () => {
 
   const sendEmail = () => {
     setBackdrop(true);
+    emailjs
+    .sendForm(
+      "default_service",
+      "template_pwm9j1b",
+      form.current,
+      "user_7o8SubdpJawLjZzohguRM"
+    )
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        setShowEmailSuccess(true);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
     axios({
       method: "POST",
       url: "http://83.220.174.224:8083/send-email",
