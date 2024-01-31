@@ -67,6 +67,7 @@ const FormRequest = () => {
   const [questionnaireOpen, setQuestionnaireOpen] = useState(false);
   const [showEmailSuccess, setShowEmailSuccess] = useState(false);
   const [backdrop, setBackdrop] = useState(false);
+  const [error, setError] = useState(false);
   const [formFields, createChangeHandler] = useFormFields({
     "company-name": "",
     "TIN": "",
@@ -79,7 +80,6 @@ const FormRequest = () => {
     "what-sds-owned": "",
     "what-sds-looking-for": "",
     "budget": "",
-    "gov-link": "",
     "name_partner": "",
     "TIN_partner": "",
     "fio_manager": "",
@@ -88,19 +88,6 @@ const FormRequest = () => {
     "fio_engeneer": "",
     "email_engeneer": "",
     "phone_engeneer": "",
-    "tasks_for_sds": "",
-    "what-ifaces-needed": "",
-    "what-protocols-needed": "",
-    "what-space-needed": "",
-    "what-perf-requirements": "",
-    "have-you-sds": "",
-    "need-migration-to-new-sds": "",
-    "need-deduplication": "",
-    "need-compression": "",
-    "need-backup-apps": "",
-    "what-support-level-needed": "",
-    "look-you-for-another-vendors": "",
-    "when-sds-running-up": "",
   });
 
   const handleSetBaumSDSOwned = (event) => {
@@ -124,57 +111,54 @@ const FormRequest = () => {
     setTechSpec(null);
   };
 
-  const sendEmail = () => {
+  const getNewElement = (name, value) => {
+    const newElement = document.createElement('input');
+    newElement.type = 'hidden'; // или другой тип поля
+    newElement.name = name;
+    newElement.value = value;
+    return newElement;
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const errorsCount = Object.keys(formFields).filter(field => formFields[field] === "").length;
+    const date = getNewElement("dateOrder", new Date(buyDate).toLocaleDateString());
+    const industrialEq = getNewElement("prom-reestr", (fromIndustrialEq ? "Да":"Нет"));
+    const hasBAUM = getNewElement("has-shd-baum", (hasBAUMSDS ? "Да":"Нет"));
+    form.current.appendChild(date);
+    form.current.appendChild(industrialEq);
+    form.current.appendChild(hasBAUM);
     setBackdrop(true);
-    emailjs
-    .sendForm(
-      "default_service",
-      "template_pwm9j1b",
-      form.current,
-      "user_7o8SubdpJawLjZzohguRM"
-    )
-    .then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-        setShowEmailSuccess(true);
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
-    axios({
-      method: "POST",
-      url: "http://83.220.174.224:8083/send-email",
-      data: formFields
-    })
-    .then((response) => {
-      setShowEmailSuccess(true);
-      setBackdrop(false);
-    })
-    .catch((error) => {
-      setBackdrop(false);
-      console.log(error);
-    })
-    // emailjs
-    //   .send(
-    //     "service_hwjkg37",
-    //     "template_q6p8qsj",
-    //     formFields,
-    //     "snZrHNr-IvmslwE3o",{
-    //       content: techSpec
-    //     }
-    //   )
-    //   .then(
-    //     function (response) {
-    //       console.log("SUCCESS!", response.status, response.text);
-    //       setShowEmailSuccess(true);
-    //       setBackdrop(false);
-    //     },
-    //     function (error) {
-    //       console.log("FAILED...", error);
-    //       setBackdrop(false);
-    //     }
-    //   );
+    if (errorsCount === 0) {
+      emailjs
+        .sendForm(
+          "default_service",
+          "template_pwm9j1b",
+          form.current,
+          "user_7o8SubdpJawLjZzohguRM"
+        )
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            setTimeout(() => {
+              setShowEmailSuccess(true);
+              setBackdrop(false);
+            }, 3000)
+          },
+          function (error) {
+            setBackdrop(false);
+            console.log(error);
+          }
+        );
+
+    } else {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+        setBackdrop(false);
+      }, 3000)
+    }
   };
 
   const handleCloseMessage = (event, reason) => {
@@ -213,7 +197,7 @@ const FormRequest = () => {
               >
                 <Typography variant="h5">Форма запроса:</Typography>
               </Box>
-              <form enctype="multipart/form-data" ref={form} onSubmit={sendEmail}>
+              <form enctype="multipart/form-data" ref={form}>
                 <FormControl component="fieldset" className="fieldset">
                   <FormLabel
                     component="Legend"
@@ -557,6 +541,7 @@ const FormRequest = () => {
                           <FormControlLabel
                             control={
                               <Checkbox
+                                name="prom-reestr"
                                 checked={fromIndustrialEq}
                                 label="СХД должна быть из реестра промышленного оборудования"
                                 onChange={handleSetInIndustrialEq}
@@ -753,9 +738,9 @@ const FormRequest = () => {
                               label="Под какие задачи планируется СХД"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "tasks_for_sds")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "tasks_for_sds")
+                              // }
                               fullWidth
                               required
                             />
@@ -769,9 +754,9 @@ const FormRequest = () => {
                               label="Какие необходимы интерфейсы для подключения к вашей инфраструктуре?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "what-ifaces-needed")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "what-ifaces-needed")
+                              // }
                               fullWidth
                               required
                             />
@@ -785,9 +770,9 @@ const FormRequest = () => {
                               label="По каким протоколам будет осуществлена работа с СХД?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "what-protocols-needed")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "what-protocols-needed")
+                              // }
                               fullWidth
                               required
                             />
@@ -801,9 +786,9 @@ const FormRequest = () => {
                               label="Какие необходимы объемы системы хранения данных?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "what-space-needed")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "what-space-needed")
+                              // }
                               fullWidth
                               required
                             />
@@ -817,9 +802,9 @@ const FormRequest = () => {
                               label="Есть ли требования к производительности СХД?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "what-perf-requirements")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "what-perf-requirements")
+                              // }
                               fullWidth
                               required
                             />
@@ -833,9 +818,9 @@ const FormRequest = () => {
                               label="Имеется ли сейчас в вашей инфраструктуре СХД?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "have-you-sds")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "have-you-sds")
+                              // }
                               fullWidth
                               required
                             />
@@ -849,12 +834,12 @@ const FormRequest = () => {
                               label="Требуется ли миграция данных на новую СХД?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(
-                                  e,
-                                  "need-migration-to-new-sds"
-                                )
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(
+                              //     e,
+                              //     "need-migration-to-new-sds"
+                              //   )
+                              // }
                               fullWidth
                               required
                             />
@@ -868,9 +853,9 @@ const FormRequest = () => {
                               label="Требуется ли дедупликация данных?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "need-deduplication")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "need-deduplication")
+                              // }
                               fullWidth
                               required
                             />
@@ -884,9 +869,9 @@ const FormRequest = () => {
                               label="Требуется ли компрессия данных?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "need-compression")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "need-compression")
+                              // }
                               fullWidth
                               required
                             />
@@ -900,9 +885,9 @@ const FormRequest = () => {
                               label="Требуется ли резервное копирование приложений?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "need-backup-apps")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "need-backup-apps")
+                              // }
                               fullWidth
                               required
                             />
@@ -916,12 +901,12 @@ const FormRequest = () => {
                               label="Какой необходим уровень сервисной поддержки?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(
-                                  e,
-                                  "what-support-level-needed"
-                                )
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(
+                              //     e,
+                              //     "what-support-level-needed"
+                              //   )
+                              // }
                               fullWidth
                               required
                             />
@@ -935,12 +920,12 @@ const FormRequest = () => {
                               label="Рассматривали ли Вы предложения от других производителей?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(
-                                  e,
-                                  "look-you-for-another-vendors"
-                                )
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(
+                              //     e,
+                              //     "look-you-for-another-vendors"
+                              //   )
+                              // }
                               fullWidth
                               required
                             />
@@ -954,9 +939,9 @@ const FormRequest = () => {
                               label="Когда планируется ввод в эксплуатацию СХД?"
                               variant="outlined"
                               type="text"
-                              onChange={(e) =>
-                                createChangeHandler(e, "when-sds-running-up")
-                              }
+                              // onChange={(e) =>
+                              //   createChangeHandler(e, "when-sds-running-up")
+                              // }
                               fullWidth
                               required
                             />
@@ -979,7 +964,7 @@ const FormRequest = () => {
                           width: "100%",
                           padding: "0.6rem 2rem",
                         }}
-                        onClick={sendEmail}
+                        onClick={e => sendEmail(e)}
                       >
                         Отправить
                       </Button>
@@ -1003,6 +988,21 @@ const FormRequest = () => {
             sx={{ width: "100%" }}
           >
             Форма опроса успешно отправлена
+          </Alert>
+        </Snackbar>
+        <Snackbar
+          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+          open={error}
+          autoHideDuration={6000}
+          onClose={handleCloseMessage}
+          key={"bottomright"}
+        >
+          <Alert
+            onClose={handleCloseMessage}
+            severity="error"
+            sx={{ width: "100%" }}
+          >
+            Не все поля формы заполнены!
           </Alert>
         </Snackbar>
       </div>
